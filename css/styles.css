@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  hyphens: auto;
+  font-family: 'Fira Sans', sans-serif; }
+
+/*--------------------------*/
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(41, 41, 41, 0.87);
+  z-index: 10; }
+  .overlay h1,
+  .overlay h2,
+  .overlay h3 {
+    text-align: center;
+    position: relative;
+    color: white;
+    text-shadow: 3px 3px 5px #41B3A3;
+    animation: fade 1s ease-in; }
+  .overlay h1 {
+    top: 7rem;
+    letter-spacing: .25rem;
+    font-size: 3.75rem; }
+  .overlay h2,
+  .overlay h3 {
+    top: 6rem; }
+  .overlay #arrow {
+    display: block;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+    top: 15.5rem;
+    opacity: 0;
+    animation: slide-in 2s ease-in .7s forwards; }
+    .overlay #arrow path {
+      fill: white; }
+      .overlay #arrow path:active {
+        fill: #E8A87B; }
+
+.tile-background {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh; }
+  .tile-background img {
+    width: 20%;
+    height: 25%; }
+
+/*---------- ------ ----------------*/
+.blocks-div {
+  height: 100vh; }
+  .blocks-div h3 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.5rem; }
+  .blocks-div .flex-items {
+    display: flex;
+    justify-content: space-between;
+    background-color: #41B3A3;
+    width: 70%;
+    height: 4rem;
+    margin: 2rem auto;
+    padding: .4rem 2rem;
+    border-radius: .5rem;
+    color: white; }
+    .blocks-div .flex-items:active {
+      border: 3px dashed #E8A87B;
+      border-radius: 2.5rem;
+      transform: scale(1.1); }
+    .blocks-div .flex-items span {
+      margin-top: .5rem; }
+  .blocks-div #globe-svg {
+    transition: transform .5s ease-in; }
+  .blocks-div .about-me:hover svg {
+    transform: rotate(540deg); }
+  .blocks-div .my-skills:hover #line-1,
+  .blocks-div .my-skills:hover #line-2,
+  .blocks-div .my-skills:hover #line-3,
+  .blocks-div .my-skills:hover #line-4,
+  .blocks-div .my-skills:hover #line-5,
+  .blocks-div .my-skills:hover #bulb {
+    fill: yellow; }
+  .blocks-div #top,
+  .blocks-div #body,
+  .blocks-div #backarrow,
+  .blocks-div #forwardarrow,
+  .blocks-div #backslash {
+    transition: fill .4s ease-in; }
+  .blocks-div .my-portfolio:hover #top {
+    fill: #d1bd0b; }
+  .blocks-div .my-portfolio:hover #body {
+    fill: #d75e26; }
+  .blocks-div .my-portfolio:hover #backarrow,
+  .blocks-div .my-portfolio:hover #forwardarrow,
+  .blocks-div .my-portfolio:hover #backslash {
+    fill: #edd3ca; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes slide-in {
+  0% {
+    transform: translateY(-38rem); }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+/*# sourceMappingURL=styles.css.map */

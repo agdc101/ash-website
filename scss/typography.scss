@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    // border: solid 1px red;
+    hyphens: auto;
+    font-family: 'Fira Sans', sans-serif;
+}
+/*--------------------------*/
+.overlay {
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background: rgba(41, 41, 41, 0.87);  
+    z-index: 10; 
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+        position: relative;
+        color: white;
+        text-shadow: 3px 3px 5px $tertiary;
+        animation: fade 1s ease-in;
+    }
+    h1 {
+        top: 7rem;       
+        letter-spacing: .25rem;
+        font-size: 3.75rem;
+    }
+    h2,
+    h3{
+        top: 6rem;
+    }
+    #arrow {
+        display: block;
+        margin: auto;
+        position: relative;
+        cursor: pointer;
+        top: 15.5rem;
+        opacity: 0;
+        animation: slide-in 2s ease-in .7s forwards;
+        path {
+            fill: white;
+            &:active {
+                fill: $secondary;
+            }
+        }
+    }
+
+}
+.tile-background {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    img {
+        width: 20%;
+        height: 25%;       
+    }
+}
+/*---------- ------ ----------------*/
+.blocks-div {
+    height: 100vh;
+    h3 {
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 1.5rem;
+    }
+    .flex-items {
+        display: flex;
+        justify-content: space-between;
+        background-color: $tertiary;
+        width: 70%;
+        height: 4rem;
+        margin: 2rem auto;
+        padding: .4rem 2rem;
+        border-radius: .5rem;
+        color: white;
+        &:active {
+            border: 3px dashed $secondary;
+            border-radius: 2.5rem;
+            transform: scale(1.1);
+        }
+        span {
+            margin-top: .5rem;
+        }
+    }
+    #globe-svg {
+        transition: transform .5s ease-in;
+    }
+    .about-me:hover svg {
+        transform: rotate(540deg);
+    }
+    .my-skills:hover #line-1,
+    .my-skills:hover #line-2,
+    .my-skills:hover #line-3,
+    .my-skills:hover #line-4,
+    .my-skills:hover #line-5,
+    .my-skills:hover #bulb
+      {
+        fill: yellow;
+    }
+    #top,
+    #body,
+    #backarrow,
+    #forwardarrow,
+    #backslash {
+        transition: fill .4s ease-in;
+    }
+    .my-portfolio:hover #top {
+        fill: $darken-top;
+    }
+    .my-portfolio:hover #body {
+        fill: $darken-body;
+    }
+    .my-portfolio:hover #backarrow,
+    .my-portfolio:hover #forwardarrow,
+    .my-portfolio:hover #backslash {
+        fill: $lighten-lines;
+    }
+
+}
