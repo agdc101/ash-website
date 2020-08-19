@@ -15,3 +15,63 @@
         opacity: 1;
     }
 }
+@keyframes ring {
+    0% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+/* --------- ----------- -------------*/
+
+#globe-svg {
+    transition: transform .5s ease-in;
+}
+.about-me:hover svg {
+    transform: rotate(360deg);
+}
+.my-skills:hover #line-1,
+.my-skills:hover #line-2,
+.my-skills:hover #line-3,
+.my-skills:hover #line-4,
+.my-skills:hover #line-5,
+.my-skills:hover #bulb
+  {
+    fill: yellow;
+}
+#top,
+#body,
+#backarrow,
+#forwardarrow,
+#backslash {
+    transition: fill .4s ease-in;
+}
+.my-portfolio:hover #top {
+    fill: $darken-top;
+}
+.my-portfolio:hover #body {
+    fill: $darken-body;
+}
+.my-portfolio:hover #backarrow,
+.my-portfolio:hover #forwardarrow,
+.my-portfolio:hover #backslash {
+    fill: $lighten-lines;
+}
+.contact-me:hover #phone-svg {
+    animation: ring .75s ease infinite forwards;
+}
+.contact-me:hover #wave-1,
+.contact-me:hover #wave-2,
+.contact-me:hover #wave-3 {
+    fill: red;
+}
+#git-logo {
+    transition: fill .4s ease;
+}
+.github:hover #git-logo {
+    fill: black;
+}

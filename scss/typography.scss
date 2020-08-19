@@ -4,6 +4,12 @@
     hyphens: auto;
     font-family: 'Fira Sans', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
+a:hover {
+    text-decoration: none;
+}
 /*--------------------------*/
 .overlay {
     position: absolute;
@@ -20,16 +26,21 @@
         position: relative;
         color: white;
         text-shadow: 3px 3px 5px $tertiary;
-        animation: fade 1s ease-in;
+        animation: fade .75s ease-in;
     }
     h1 {
-        top: 7rem;       
+        font-family: 'Bad Script', cursive;
+        top: 4.5rem;       
         letter-spacing: .25rem;
-        font-size: 3.75rem;
+        font-size: 4rem;
+        margin: 2.5rem .5rem;
     }
     h2,
-    h3{
+    h3 {
+        letter-spacing: .2rem;
+        margin: 1rem 0;
         top: 6rem;
+        font-size: 1.3rem;
     }
     #arrow {
         display: block;
@@ -38,7 +49,7 @@
         cursor: pointer;
         top: 15.5rem;
         opacity: 0;
-        animation: slide-in 2s ease-in .7s forwards;
+        animation: slide-in 1.5s ease-in .7s forwards;
         path {
             fill: white;
             &:active {
@@ -58,12 +69,13 @@
     }
 }
 /*---------- ------ ----------------*/
-.blocks-div {
+.nav-sect {
     height: 100vh;
     h3 {
+        font-family: 'Bad Script', cursive;
         text-align: center;
-        margin: 2rem 0;
-        font-size: 1.5rem;
+        margin: 2.5rem 0;
+        font-size: 1.75rem;
     }
     .flex-items {
         display: flex;
@@ -72,50 +84,41 @@
         width: 70%;
         height: 4rem;
         margin: 2rem auto;
-        padding: .4rem 2rem;
-        border-radius: .5rem;
+        padding: .4rem 1.5rem;
+        border-radius: .25rem;
         color: white;
         &:active {
             border: 3px dashed $secondary;
-            border-radius: 2.5rem;
-            transform: scale(1.1);
+            border-radius: 3.5rem;
+            transform: scale(1.3);
         }
         span {
             margin-top: .5rem;
         }
     }
-    #globe-svg {
-        transition: transform .5s ease-in;
+
+}
+.about-sect {
+    height: 100vh;
+    padding: .5rem;
+    background-color: rgb(246, 255, 242);
+    border-top: 1px solid black;
+    
+    h1 {
+        // text-shadow: 1px 1px 2px $tertiary;
+        font-family: 'Bad Script', cursive;
+        font-size: 2.4rem;
+        margin-top: .5rem;
     }
-    .about-me:hover svg {
-        transform: rotate(540deg);
-    }
-    .my-skills:hover #line-1,
-    .my-skills:hover #line-2,
-    .my-skills:hover #line-3,
-    .my-skills:hover #line-4,
-    .my-skills:hover #line-5,
-    .my-skills:hover #bulb
-      {
-        fill: yellow;
-    }
-    #top,
-    #body,
-    #backarrow,
-    #forwardarrow,
-    #backslash {
-        transition: fill .4s ease-in;
-    }
-    .my-portfolio:hover #top {
-        fill: $darken-top;
-    }
-    .my-portfolio:hover #body {
-        fill: $darken-body;
-    }
-    .my-portfolio:hover #backarrow,
-    .my-portfolio:hover #forwardarrow,
-    .my-portfolio:hover #backslash {
-        fill: $lighten-lines;
+    img {
+       float: left;
+        margin: .5rem 1rem .2rem 0;
+        width: 55%;
+        border: 3px solid $tertiary;
     }
 
+    p:nth-child(2) {   
+        font-weight: bold;
+        margin-top: .75rem;
+    }
 }
