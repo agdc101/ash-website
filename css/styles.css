@@ -1,3 +1,4 @@
+/* ----- universal styles ------ */
 * {
   box-sizing: border-box;
   hyphens: auto;
@@ -16,8 +17,7 @@ a:hover {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(41, 41, 41, 0.87);
-  z-index: 10; }
+  background: rgba(41, 41, 41, 0.87); }
   .overlay h1,
   .overlay h2,
   .overlay h3 {
@@ -27,7 +27,6 @@ a:hover {
     text-shadow: 3px 3px 5px #41B3A3;
     animation: fade .75s ease-in; }
   .overlay h1 {
-    font-family: 'Bad Script', cursive;
     top: 4.5rem;
     letter-spacing: .25rem;
     font-size: 4rem;
@@ -43,64 +42,111 @@ a:hover {
     margin: auto;
     position: relative;
     cursor: pointer;
-    top: 15.5rem;
+    top: 13.5rem;
     opacity: 0;
     animation: slide-in 1.5s ease-in .7s forwards; }
     .overlay #arrow path {
       fill: white; }
       .overlay #arrow path:active {
         fill: #E8A87B; }
+    @media (min-width: 321px) {
+      .overlay #arrow {
+        top: 15.5rem; } }
 
 .tile-background {
+  height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  height: 100vh; }
+  flex-wrap: wrap; }
   .tile-background img {
     width: 20%;
     height: 25%; }
 
 /*---------- ------ ----------------*/
-.nav-sect {
-  height: 100vh; }
-  .nav-sect h3 {
-    font-family: 'Bad Script', cursive;
-    text-align: center;
-    margin: 2.5rem 0;
-    font-size: 1.75rem; }
-  .nav-sect .flex-items {
-    display: flex;
-    justify-content: space-between;
-    background-color: #41B3A3;
-    width: 70%;
-    height: 4rem;
-    margin: 2rem auto;
-    padding: .4rem 1.5rem;
-    border-radius: .25rem;
-    color: white; }
-    .nav-sect .flex-items:active {
-      border: 3px dashed #E8A87B;
-      border-radius: 3.5rem;
-      transform: scale(1.3); }
-    .nav-sect .flex-items span {
-      margin-top: .5rem; }
+/* this media querie ensures that the 100vh property only applies to 
+devices large enough to accomodate without distorting the layout */
+.nav-sect,
+.about-sect,
+.skills-sect {
+  padding: 1rem .5rem 1rem .5rem;
+  border-top: 1px solid black; }
+  @media (min-width: 376px) {
+    .nav-sect,
+    .about-sect,
+    .skills-sect {
+      height: 100vh; } }
+
+/*---------- ------ ----------------*/
+h1 {
+  font-family: 'Bad Script', cursive; }
+
+p {
+  font-size: .9rem; }
+
+.nav-sect h3 {
+  font-family: 'Bad Script', cursive;
+  text-align: center;
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.75rem; }
+.nav-sect .flex-items {
+  display: flex;
+  justify-content: space-between;
+  background-color: #41B3A3;
+  width: 70%;
+  height: 4rem;
+  margin: 2.25rem auto;
+  padding: .4rem 1.5rem;
+  border-radius: .25rem;
+  color: white; }
+  .nav-sect .flex-items:active {
+    border: 3px dashed #E8A87B;
+    border-radius: 3.5rem;
+    transform: scale(1.3); }
+  .nav-sect .flex-items span {
+    margin-top: .5rem; }
+  .nav-sect .flex-items #bulb-svg {
+    position: relative;
+    left: .45rem;
+    bottom: .35rem; }
+  .nav-sect .flex-items #globe-svg {
+    position: relative;
+    top: .3rem;
+    left: .35rem; }
 
 .about-sect {
-  height: 100vh;
-  padding: .5rem;
-  background-color: #f6fff2;
-  border-top: 1px solid black; }
+  background-color: #f9fff7; }
   .about-sect h1 {
-    font-family: 'Bad Script', cursive;
-    font-size: 2.4rem;
-    margin-top: .5rem; }
+    font-size: 2.2rem; }
   .about-sect img {
     float: left;
     margin: .5rem 1rem .2rem 0;
-    width: 55%;
-    border: 3px solid #41B3A3; }
+    width: 50%;
+    border: 2px solid #41B3A3;
+    max-width: 300px; }
   .about-sect p:nth-child(2) {
     font-weight: bold;
     margin-top: .75rem; }
+
+.about-content,
+.skills-content {
+  max-width: 620px;
+  margin: 0 auto; }
+
+.skills-sect {
+  background: url("../img/skills.jpg");
+  background-size: 50%;
+  box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.95); }
+  .skills-sect h1,
+  .skills-sect p {
+    text-align: center; }
+  .skills-sect img {
+    width: 50%;
+    max-width: 195px;
+    display: block;
+    margin: 1rem auto 1.5rem auto;
+    box-shadow: 0px 0px 20px #41B3A3;
+    border-radius: .5rem; }
+  .skills-sect ul {
+    font-size: .9rem; }
 
 @keyframes fade {
   0% {
