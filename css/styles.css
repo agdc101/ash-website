@@ -24,19 +24,22 @@ a:hover {
     text-align: center;
     position: relative;
     color: white;
-    text-shadow: 3px 3px 5px #41B3A3;
+    text-shadow: 6px 6px 16px #597ece;
     animation: fade .75s ease-in; }
   .overlay h1 {
     top: 4.5rem;
     letter-spacing: .25rem;
     font-size: 4rem;
     margin: 2.5rem .5rem; }
+  .overlay h2 {
+    font-size: 1.35rem; }
+  .overlay h3 {
+    font-size: 1.1rem; }
   .overlay h2,
   .overlay h3 {
     letter-spacing: .2rem;
     margin: 1rem 0;
-    top: 6rem;
-    font-size: 1.3rem; }
+    top: 6rem; }
   .overlay #arrow {
     display: block;
     margin: auto;
@@ -90,7 +93,7 @@ p {
 .nav-sect .flex-items {
   display: flex;
   justify-content: space-between;
-  background-color: #41B3A3;
+  background-color: #597ece;
   width: 70%;
   height: 4rem;
   margin: 2.25rem auto;
@@ -112,19 +115,17 @@ p {
     top: .3rem;
     left: .35rem; }
 
-.about-sect {
-  background-color: #f9fff7; }
-  .about-sect h1 {
-    font-size: 2.2rem; }
-  .about-sect img {
-    float: left;
-    margin: .5rem 1rem .2rem 0;
-    width: 50%;
-    border: 2px solid #41B3A3;
-    max-width: 300px; }
-  .about-sect p:nth-child(2) {
-    font-weight: bold;
-    margin-top: .75rem; }
+.about-sect h1 {
+  font-size: 2.2rem; }
+.about-sect img {
+  float: left;
+  margin: .5rem 1rem .2rem 0;
+  width: 50%;
+  border: 2px solid #597ece;
+  max-width: 300px; }
+.about-sect p:nth-child(2) {
+  font-weight: bold;
+  margin-top: .75rem; }
 
 .about-content,
 .skills-content {
@@ -134,19 +135,72 @@ p {
 .skills-sect {
   background: url("../img/skills.jpg");
   background-size: 50%;
-  box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.95); }
+  box-shadow: inset 0 0 0 2000px rgba(54, 54, 54, 0.96); }
+  .skills-sect p:nth-of-type(1) {
+    font-size: 1.05rem;
+    margin: 1.25rem 0; }
   .skills-sect h1,
   .skills-sect p {
+    color: white;
     text-align: center; }
   .skills-sect img {
     width: 50%;
     max-width: 195px;
     display: block;
-    margin: 1rem auto 1.5rem auto;
-    box-shadow: 0px 0px 20px #41B3A3;
+    margin: 2rem auto 1rem auto;
+    box-shadow: 0px 0px 20px #597ece;
     border-radius: .5rem; }
   .skills-sect ul {
+    color: white;
     font-size: .9rem; }
+
+.port-sect {
+  border-top: 2px solid black; }
+  .port-sect h1,
+  .port-sect h2 {
+    text-align: center; }
+  .port-sect h1 {
+    margin-top: 1.5rem; }
+  .port-sect h2 {
+    margin: 2rem 0 1rem 0;
+    font-size: 1.1rem; }
+  .port-sect img {
+    display: block;
+    width: 100%; }
+  .port-sect p {
+    font-size: 1rem; }
+  .port-sect img,
+  .port-sect .project {
+    height: 25%;
+    max-height: 240px;
+    max-width: 300px; }
+  .port-sect .project {
+    position: relative;
+    width: 70%;
+    box-shadow: 0px 0px 18px #597ece;
+    transition: transform .4s ease;
+    margin: 1rem auto;
+    cursor: pointer; }
+  .port-sect .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(89, 126, 206, 0.85);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    opacity: 0;
+    transition: opacity .3s ease-in; }
+    .port-sect .project-overlay p {
+      margin: 1rem 0 2rem 0;
+      font-size: 1rem; }
+  .port-sect .project:active {
+    transform: translateY(8px); }
+  .port-sect .project:active .project-overlay {
+    opacity: 1; }
 
 @keyframes fade {
   0% {
