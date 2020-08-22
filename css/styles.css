@@ -197,10 +197,21 @@ p {
     .port-sect .project-overlay p {
       margin: 1rem 0 2rem 0;
       font-size: 1rem; }
-  .port-sect .project:active {
+  .port-sect .project:hover {
     transform: translateY(8px); }
-  .port-sect .project:active .project-overlay {
+  .port-sect .project:hover .project-overlay {
     opacity: 1; }
+  .port-sect .modal-content h5 {
+    font-size: 1.15rem; }
+  .port-sect .modal-content .modal-body {
+    padding: .7rem .7rem 0 .7rem; }
+    .port-sect .modal-content .modal-body img {
+      width: 80%;
+      margin-bottom: 1rem; }
+    .port-sect .modal-content .modal-body p,
+    .port-sect .modal-content .modal-body span,
+    .port-sect .modal-content .modal-body ul {
+      font-size: .9rem; }
 
 @keyframes fade {
   0% {

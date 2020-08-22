@@ -231,49 +231,29 @@ p {
             font-size: 1rem;
         }
     }
-    .project:active {
+    .project:hover {
         transform: translateY(8px);
     }
-    .project:active .project-overlay {
+    .project:hover .project-overlay {
         opacity: 1;
     }
-    
+    .modal-content {
+        h5 {
+            font-size: 1.15rem;
+        }
+        .modal-body {
+            padding: .7rem .7rem 0 .7rem;
+            img {
+                width: 80%;
+                margin-bottom: 1rem;
+            }
+            p,
+            span,
+            ul {
+                font-size: .9rem;
+            }
+        }
+    }
+  
     
 }
-
-
-
-
-
-
-
-
-// .skills-sect {
-//     color: white;
-//     background-image: url('../img/skills.jpg');
-//     .overlay-skills {
-//         position: absolute;
-//         top: 1840px;
-//         right: 0;
-//         left: 0;
-//         bottom: 0;
-//         background-color: rgba(255, 255, 255, 0.96);
-//         z-index: 1;
-//         h1 {
-//             text-align: center;
-//             font-size: 2.5rem;
-//         }
-//         p {
-//             text-align: center;
-//             font-size: .9rem;
-//         }
-//         img {
-//             display: block;
-//             width: 55%;
-//             margin: 0 auto .75rem auto;
-//             border-radius: 10%;
-//             max-width: 195px;
-//             box-shadow: 1px 1px 16px $tertiary;
-//         }
-//     }
-// }
