@@ -10,7 +10,13 @@ html {
 a:hover {
   text-decoration: none; }
 
-/*--------------------------*/
+/*-----------------------------*/
+/*------ MODAL STYLES ---------*/
+#modal-pic {
+  margin: 0 auto;
+  max-width: 250px; }
+
+/*-----------------------------*/
 .overlay {
   position: absolute;
   left: 0;
@@ -201,17 +207,6 @@ p {
     transform: translateY(8px); }
   .port-sect .project:hover .project-overlay {
     opacity: 1; }
-  .port-sect .modal-content h5 {
-    font-size: 1.15rem; }
-  .port-sect .modal-content .modal-body {
-    padding: .7rem .7rem 0 .7rem; }
-    .port-sect .modal-content .modal-body img {
-      width: 80%;
-      margin-bottom: 1rem; }
-    .port-sect .modal-content .modal-body p,
-    .port-sect .modal-content .modal-body span,
-    .port-sect .modal-content .modal-body ul {
-      font-size: .9rem; }
 
 @keyframes fade {
   0% {

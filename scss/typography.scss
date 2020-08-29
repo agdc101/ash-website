@@ -11,7 +11,14 @@ html {
 a:hover {
     text-decoration: none;
 }
-/*--------------------------*/
+
+/*-----------------------------*/
+/*------ MODAL STYLES ---------*/
+#modal-pic {
+    margin: 0 auto;
+    max-width: 250px; 
+}
+/*-----------------------------*/
 .overlay {
     position: absolute;
     left:0;
@@ -237,23 +244,5 @@ p {
     .project:hover .project-overlay {
         opacity: 1;
     }
-    .modal-content {
-        h5 {
-            font-size: 1.15rem;
-        }
-        .modal-body {
-            padding: .7rem .7rem 0 .7rem;
-            img {
-                width: 80%;
-                margin-bottom: 1rem;
-            }
-            p,
-            span,
-            ul {
-                font-size: .9rem;
-            }
-        }
-    }
-  
-    
+
 }

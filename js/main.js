@@ -1,43 +1,61 @@
 
 const modalHeader = document.querySelector('.modal-header');
-const modalBody = document.querySelector('.modal-body');
-const dashboardDiv = document.querySelector('.dashboard-portfolio');
-let modalHTML = '';
-let modalHeaderHTML = ``;
+const modalBodyContent = document.querySelector('.modal-body');
+const portfolioDiv = document.getElementById('portfolio');
 
 const projects = [
     {
         title: 'SASS Web Layout',
         imageLink: 'img/screenshots/dashboard.png',
-        description: 'A web app dashboard project built as part of my techdegree with Treehouse,This project is mobile responsive and is layed out using CSS grid methods It also features interactive Javasript graphs local storage and other fun interactions',
-        technologies: 'HTML, CSS.'                   
+        imageAlt: 'SASS. a CSS preprocessor, has many great features',
+        description: 'Description: Responsive SASS project demonstrating the power and flexibility of the SASS preprocessor. Featuring SASS loops, maps and functions creating a complex layout with a bare amount of code.',
+        technologies: 'HTML, SASS.' 
     },
     {
         title: 'Guess The Movie Title Game',
         imageLink: 'img/screenshots/game.png',
-        description: 'A javascript driven movie guessing game! The game allows the user 5 lives to guess the correct title. Give it a try!',
+        imageAlt: 'you can make really cool games with javascript',
+        description: 'Description: A javascript driven movie guessing game! The game allows the user 5 lives to guess the correct title. Give it a try!',
         technologies: 'HTML, CSS, Javascript.'
     },
     {
         title: 'Interactive Photo Gallery',
         imageLink: 'img/screenshots/gallery.png',
-        description: 'An interactive photo gallery driven using the Jquery framework. Photos can be filtered and searched using a search-bar and a Jquery plug-in is used for the carousel modal',
+        imageAlt: 'wonderful photo gallery snapshot',
+        description: 'Description: Responsive interactive photo gallery driven using the Jquery framework. Photos can be filtered and searched using a search-bar and a Jquery plug-in is used for the carousel modal',
         technologies: 'HTML, CSS, Jquery.'
 
+    },
+    {
+        title: 'Web App Dashboard',
+        imageLink: 'img/screenshots/dash.png',
+        imageAlt: 'a mockup design of a web app dashboard. many cool interactive features',
+        description: 'Description: Responsive dashboard web app featuring Javascript graphs, local storage, and utilises CSS grid for its layout. This dashboard mock-up shows how fun and interactive javascript can make websites.',
+        technologies: 'HTML, CSS, Jquery.'
+    },
+    {
+        title: 'Employee Directory',
+        imageLink: 'img/screenshots/directory.png',
+        imageAlt: 'using the fetch api to build an awesome directory',
+        description: 'Description: Responsive directory that communicates with a third-party API to retrieve 12 random employee profiles. Also features a modal which contains additional information on each employee.',
+        technologies: 'HTML, CSS, Javascript.'
     }
 ]
 
-
-dashboardDiv.addEventListener('click', (e) => {
+portfolioDiv.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON') {
-        const index = e.target.getAttribute('data-index');
-        console.log(index);
+        let index = e.target.getAttribute('data-index');
         buildModal(index);
     }
 })
-// const modalButton = `<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-//                      <span aria-hidden="true">&times;</span>`;
+
 const buildModal = (index) => {
-    modalHeaderHTML = `${projects[index].title}`;
-    modalHTML = ``;
+    console.log(`${projects[index].title}`);
+    let headerHTML = `<h5>${projects[index].title}</h5>`;
+    headerHTML += `<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>`;
+    modalHeader.innerHTML = headerHTML;
+
+    let bodyHTML = `<img id='modal-pic' src=${projects[index].imageLink} alt='${projects[index].imageAlt}'>`;
+    modalBodyContent.innerHTML = bodyHTML;
 }
