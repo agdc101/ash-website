@@ -11,12 +11,44 @@ html {
 a:hover {
     text-decoration: none;
 }
-
 /*-----------------------------*/
-/*------ MODAL STYLES ---------*/
-#modal-pic {
-    margin: 0 auto;
-    max-width: 250px; 
+/*------ modal styles ---------*/
+#exampleModal {
+    padding: 0 !important;
+    .modal-header {
+        span {
+            font-weight: bold;
+        }
+    }
+    .modal-body {
+        padding-bottom: 0 !important;
+        p, 
+        span {
+            margin: .75rem auto;
+            max-width: 350px; 
+        }
+        span {
+            font-size: .9rem;
+        }
+    }
+    p,
+    span,
+    #modal-pic {
+        display: block;
+    }
+
+    #modal-pic {
+        margin: 0 auto 1rem auto;
+        width: 100%;
+        max-width: 350px;
+    }
+    .modal-footer {
+        display: flex;
+        justify-content: space-around;
+        a img {
+            width: 30px;
+        }
+    }
 }
 /*-----------------------------*/
 .overlay {

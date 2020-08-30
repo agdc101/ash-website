@@ -11,10 +11,32 @@ a:hover {
   text-decoration: none; }
 
 /*-----------------------------*/
-/*------ MODAL STYLES ---------*/
-#modal-pic {
-  margin: 0 auto;
-  max-width: 250px; }
+/*------ modal styles ---------*/
+#exampleModal {
+  padding: 0 !important; }
+  #exampleModal .modal-header span {
+    font-weight: bold; }
+  #exampleModal .modal-body {
+    padding-bottom: 0 !important; }
+    #exampleModal .modal-body p,
+    #exampleModal .modal-body span {
+      margin: .75rem auto;
+      max-width: 350px; }
+    #exampleModal .modal-body span {
+      font-size: .9rem; }
+  #exampleModal p,
+  #exampleModal span,
+  #exampleModal #modal-pic {
+    display: block; }
+  #exampleModal #modal-pic {
+    margin: 0 auto 1rem auto;
+    width: 100%;
+    max-width: 350px; }
+  #exampleModal .modal-footer {
+    display: flex;
+    justify-content: space-around; }
+    #exampleModal .modal-footer a img {
+      width: 30px; }
 
 /*-----------------------------*/
 .overlay {
