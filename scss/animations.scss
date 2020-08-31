@@ -31,15 +31,15 @@
 #globe-svg {
     transition: transform .5s ease-in;
 }
-.about-me:hover svg {
+.about-me:active svg {
     transform: rotate(360deg);
 }
-.my-skills:hover #line-1,
-.my-skills:hover #line-2,
-.my-skills:hover #line-3,
-.my-skills:hover #line-4,
-.my-skills:hover #line-5,
-.my-skills:hover #bulb
+.my-skills:active #line-1,
+.my-skills:active #line-2,
+.my-skills:active #line-3,
+.my-skills:active #line-4,
+.my-skills:active #line-5,
+.my-skills:active #bulb
   {
     fill: yellow;
 }
@@ -50,28 +50,28 @@
 #backslash {
     transition: fill .4s ease-in;
 }
-.my-portfolio:hover #top {
+.my-portfolio:active #top {
     fill: $darken-top;
 }
-.my-portfolio:hover #body {
+.my-portfolio:active #body {
     fill: $darken-body;
 }
-.my-portfolio:hover #backarrow,
-.my-portfolio:hover #forwardarrow,
-.my-portfolio:hover #backslash {
+.my-portfolio:active #backarrow,
+.my-portfolio:active #forwardarrow,
+.my-portfolio:active #backslash {
     fill: $lighten-lines;
 }
-.contact-me:hover #phone-svg {
+.contact-me:active #phone-svg {
     animation: ring .75s ease infinite forwards;
 }
-.contact-me:hover #wave-1,
-.contact-me:hover #wave-2,
-.contact-me:hover #wave-3 {
+.contact-me:active #wave-1,
+.contact-me:active #wave-2,
+.contact-me:active #wave-3 {
     fill: red;
 }
 #git-logo {
     transition: fill .4s ease;
 }
-.github:hover #git-logo {
+.github:active #git-logo {
     fill: black;
 }

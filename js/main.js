@@ -10,21 +10,27 @@ const projects = [
         imageLink: 'img/screenshots/modal-sass-screenshot.png',
         imageAlt: 'SASS. a CSS preprocessor, has many great features',
         description: 'Responsive SASS project demonstrating the power and flexibility of the SASS preprocessor. Featuring SASS loops, maps and functions creating a complex layout with a bare amount of code.',
-        technologies: 'HTML, SASS.' 
+        technologies: 'HTML, SASS/CSS.',
+        siteLink: 'https://agdc101.github.io/sass-webpage-layout/',
+        githubLink: 'https://github.com/agdc101/sass-webpage-layout'
     },
     {
         title: 'Guess The Movie Game',
         imageLink: 'img/screenshots/modal-game-screenshot.png',
         imageAlt: 'you can make really cool games with javascript',
         description: 'A javascript driven movie guessing game! The game allows the user 5 lives to guess the correct title. Give it a try!',
-        technologies: 'HTML, CSS, Javascript.'
+        technologies: 'HTML, CSS, Javascript.',
+        siteLink: 'https://agdc101.github.io/wheel-of-success-game/',
+        githubLink: 'https://github.com/agdc101/wheel-of-success-game'
     },
     {
         title: 'Interactive Photo Gallery',
         imageLink: 'img/screenshots/modal-gallery-screenshot.png',
         imageAlt: 'wonderful photo gallery snapshot',
         description: 'Responsive interactive photo gallery driven using the Jquery framework. Photos can be filtered and searched using a search-bar and a Jquery plug-in is used for the carousel modal',
-        technologies: 'HTML, CSS, Jquery.'
+        technologies: 'HTML, CSS, Jquery.',
+        siteLink: 'https://agdc101.github.io/interactive-photo-gallery/',
+        githubLink: 'https://github.com/agdc101/interactive-photo-gallery'
 
     },
     {
@@ -32,14 +38,18 @@ const projects = [
         imageLink: 'img/screenshots/modal-dash-screenshot.png',
         imageAlt: 'a mockup design of a web app dashboard. many cool interactive features',
         description: 'Responsive dashboard web app featuring Javascript graphs, local storage, and utilises CSS grid for its layout. This dashboard mock-up shows how fun and interactive javascript can make websites.',
-        technologies: 'HTML, CSS, Jquery.'
+        technologies: 'HTML, CSS, Jquery.',
+        siteLink: 'https://agdc101.github.io/dashboard/',
+        githubLink: 'https://github.com/agdc101/dashboard'
     },
     {
         title: 'Employee Directory',
         imageLink: 'img/screenshots/modal-direct-screenshot.png',
         imageAlt: 'using the fetch api to build an awesome directory',
         description: 'Responsive directory that communicates with a third-party API to retrieve 12 random employee profiles. Also features a modal which contains additional information on each employee.',
-        technologies: 'HTML, CSS, Javascript.'
+        technologies: 'HTML, CSS, Javascript.',
+        siteLink: 'https://agdc101.github.io/employee-directory/',
+        githubLink: 'https://github.com/agdc101/employee-directory'
     }
 ]
 
@@ -63,7 +73,7 @@ const buildModal = (index) => {
     bodyHTML += `<span><strong>Technologies used:</strong> ${projects[index].technologies}</span>`;
     modalBodyContent.innerHTML = bodyHTML;
 
-    let footerIcons =  `<a href=''><img src='img/icons/github-icon.png' alt='github logo'></a>
-                        <a href=''><img src='img/icons/internet-icon.png' alt='the internet'></a>`;  
+    let footerIcons =  `<a href=${projects[index].githubLink} target='_blank'><img src='img/icons/github-icon.png' alt='github logo'></a>
+                        <a href=${projects[index].siteLink} target='_blank'><img src='img/icons/internet-icon.png' alt='the internet'></a>`;  
     modalFooter.innerHTML = footerIcons;                
 }

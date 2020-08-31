@@ -16,7 +16,9 @@ a:hover {
 #exampleModal {
     padding: 0 !important;
     .modal-header {
+        background-color: $primary;
         span {
+            color: white;
             font-weight: bold;
         }
     }
@@ -46,11 +48,15 @@ a:hover {
         display: flex;
         justify-content: space-around;
         a img {
-            width: 30px;
+            width: 25px;
+            transition: transform .1s ease;
+            &:active {
+                transform: scale(1.2);
+            }
         }
     }
 }
-/*-----------------------------*/
+/*------------ overlay styles-----------------*/
 .overlay {
     position: absolute;
     left:0;
@@ -64,7 +70,7 @@ a:hover {
         text-align: center;
         position: relative;
         color: white;
-        text-shadow: 6px 6px 16px $tertiary;
+        text-shadow: 6px 6px 16px $primary;
         animation: fade .75s ease-in;
     }
     h1 {
@@ -96,14 +102,13 @@ a:hover {
         path {
             fill: white;
             &:active {
-                fill: $secondary;
+                fill: $primary;
             }
         }
         @media (min-width: 321px) {
             top: 15.5rem;
         }
     }
-
 }
 .tile-background {
     height: 100vh;
@@ -114,25 +119,26 @@ a:hover {
         height: 25%;       
     }
 }
-/*---------- ------ ----------------*/
-/* this media querie ensures that the 100vh property only applies to 
-devices large enough to accomodate without distorting the layout */
+/*--------------------------------*/
+/*--------- PAGE STYLES ----------*/
 .nav-sect,
 .about-sect,
 .skills-sect {
     padding: 1rem .5rem 1rem .5rem;
     border-top: 1px solid black; 
+    /* this media querie ensures that the 100vh property only applies to 
+    devices large enough to accomodate without distorting the layout */
     @media (min-width: 376px) {
         height: 100vh;
     }
 }
-/*---------- ------ ----------------*/
 h1 {
     font-family: 'Bad Script', cursive;
 }
 p {
     font-size: .9rem;
 }
+/*--------- Navigation section styles ----------*/
 .nav-sect {
     h3 {
         font-family: 'Bad Script', cursive;
@@ -143,18 +149,13 @@ p {
     .flex-items {
         display: flex;
         justify-content: space-between;
-        background-color: $tertiary;
+        background-color: $primary;
         width: 70%;
         height: 4rem;
         margin: 2.25rem auto;
         padding: .4rem 1.5rem;
         border-radius: .25rem;
         color: white;
-        &:active {
-            border: 3px dashed $secondary;
-            border-radius: 3.5rem;
-            transform: scale(1.3);
-        }
         span {
             margin-top: .5rem;
         }
@@ -171,6 +172,7 @@ p {
     }
 
 }
+/*--------- About Me section styles ----------*/
 .about-sect {   
         h1 {
             font-size: 2.2rem;
@@ -179,7 +181,7 @@ p {
             float: left;
             margin: .5rem 1rem .2rem 0;
             width: 50%;
-            border: 2px solid $tertiary;
+            border: 2px solid $primary;
             max-width: 300px;
         }   
         p:nth-child(2) {   
@@ -192,6 +194,8 @@ p {
     max-width: 620px;
     margin: 0 auto;
 }
+
+/*--------- Skills section styles ----------*/
 .skills-sect {
     background:url('../img/skills.jpg');
     background-size: 50%;
@@ -210,7 +214,7 @@ p {
         max-width: 195px;
         display: block;
         margin: 2rem auto 1rem auto;
-        box-shadow: 0px 0px 20px $tertiary;
+        box-shadow: 0px 0px 20px $primary;
         border-radius: .5rem;
     }
     ul {
@@ -218,6 +222,7 @@ p {
         font-size: .9rem;
     }
 }
+/*--------- Portfolio section styles ----------*/
 .port-sect {
     border-top: 2px solid black;
     h1,
@@ -247,7 +252,7 @@ p {
     .project {
         position: relative;
         width: 70%;
-        box-shadow: 0px 0px 18px $tertiary;
+        box-shadow: 0px 0px 18px $primary;
         transition: transform .4s ease;
         margin: 1rem auto;
         cursor: pointer;
@@ -275,6 +280,28 @@ p {
     }
     .project:hover .project-overlay {
         opacity: 1;
+    }
+    .this-site {
+        .this-site-content {
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        img {
+            margin: 0 auto;
+            border-radius: 1.5rem;
+            box-shadow: 0px 0px 20px $primary;
+            width: 17%;
+            transition: transform .1s ease;
+            &:active {
+                transform: scale(1.2);
+            }
+        }
     }
 
 }

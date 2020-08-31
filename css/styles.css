@@ -14,8 +14,11 @@ a:hover {
 /*------ modal styles ---------*/
 #exampleModal {
   padding: 0 !important; }
-  #exampleModal .modal-header span {
-    font-weight: bold; }
+  #exampleModal .modal-header {
+    background-color: #81a9ff; }
+    #exampleModal .modal-header span {
+      color: white;
+      font-weight: bold; }
   #exampleModal .modal-body {
     padding-bottom: 0 !important; }
     #exampleModal .modal-body p,
@@ -36,9 +39,12 @@ a:hover {
     display: flex;
     justify-content: space-around; }
     #exampleModal .modal-footer a img {
-      width: 30px; }
+      width: 25px;
+      transition: transform .1s ease; }
+      #exampleModal .modal-footer a img:active {
+        transform: scale(1.2); }
 
-/*-----------------------------*/
+/*------------ overlay styles-----------------*/
 .overlay {
   position: absolute;
   left: 0;
@@ -52,7 +58,7 @@ a:hover {
     text-align: center;
     position: relative;
     color: white;
-    text-shadow: 6px 6px 16px #597ece;
+    text-shadow: 6px 6px 16px #81a9ff;
     animation: fade .75s ease-in; }
   .overlay h1 {
     top: 4.5rem;
@@ -79,7 +85,7 @@ a:hover {
     .overlay #arrow path {
       fill: white; }
       .overlay #arrow path:active {
-        fill: #E8A87B; }
+        fill: #81a9ff; }
     @media (min-width: 321px) {
       .overlay #arrow {
         top: 15.5rem; } }
@@ -92,27 +98,28 @@ a:hover {
     width: 20%;
     height: 25%; }
 
-/*---------- ------ ----------------*/
-/* this media querie ensures that the 100vh property only applies to 
-devices large enough to accomodate without distorting the layout */
+/*--------------------------------*/
+/*--------- PAGE STYLES ----------*/
 .nav-sect,
 .about-sect,
 .skills-sect {
   padding: 1rem .5rem 1rem .5rem;
-  border-top: 1px solid black; }
+  border-top: 1px solid black;
+  /* this media querie ensures that the 100vh property only applies to 
+  devices large enough to accomodate without distorting the layout */ }
   @media (min-width: 376px) {
     .nav-sect,
     .about-sect,
     .skills-sect {
       height: 100vh; } }
 
-/*---------- ------ ----------------*/
 h1 {
   font-family: 'Bad Script', cursive; }
 
 p {
   font-size: .9rem; }
 
+/*--------- Navigation section styles ----------*/
 .nav-sect h3 {
   font-family: 'Bad Script', cursive;
   text-align: center;
@@ -121,17 +128,13 @@ p {
 .nav-sect .flex-items {
   display: flex;
   justify-content: space-between;
-  background-color: #597ece;
+  background-color: #81a9ff;
   width: 70%;
   height: 4rem;
   margin: 2.25rem auto;
   padding: .4rem 1.5rem;
   border-radius: .25rem;
   color: white; }
-  .nav-sect .flex-items:active {
-    border: 3px dashed #E8A87B;
-    border-radius: 3.5rem;
-    transform: scale(1.3); }
   .nav-sect .flex-items span {
     margin-top: .5rem; }
   .nav-sect .flex-items #bulb-svg {
@@ -143,13 +146,14 @@ p {
     top: .3rem;
     left: .35rem; }
 
+/*--------- About Me section styles ----------*/
 .about-sect h1 {
   font-size: 2.2rem; }
 .about-sect img {
   float: left;
   margin: .5rem 1rem .2rem 0;
   width: 50%;
-  border: 2px solid #597ece;
+  border: 2px solid #81a9ff;
   max-width: 300px; }
 .about-sect p:nth-child(2) {
   font-weight: bold;
@@ -160,6 +164,7 @@ p {
   max-width: 620px;
   margin: 0 auto; }
 
+/*--------- Skills section styles ----------*/
 .skills-sect {
   background: url("../img/skills.jpg");
   background-size: 50%;
@@ -176,12 +181,13 @@ p {
     max-width: 195px;
     display: block;
     margin: 2rem auto 1rem auto;
-    box-shadow: 0px 0px 20px #597ece;
+    box-shadow: 0px 0px 20px #81a9ff;
     border-radius: .5rem; }
   .skills-sect ul {
     color: white;
     font-size: .9rem; }
 
+/*--------- Portfolio section styles ----------*/
 .port-sect {
   border-top: 2px solid black; }
   .port-sect h1,
@@ -205,7 +211,7 @@ p {
   .port-sect .project {
     position: relative;
     width: 70%;
-    box-shadow: 0px 0px 18px #597ece;
+    box-shadow: 0px 0px 18px #81a9ff;
     transition: transform .4s ease;
     margin: 1rem auto;
     cursor: pointer; }
@@ -229,6 +235,22 @@ p {
     transform: translateY(8px); }
   .port-sect .project:hover .project-overlay {
     opacity: 1; }
+  .port-sect .this-site .this-site-content {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 600px; }
+  .port-sect .this-site h2 {
+    font-weight: bold;
+    font-size: 1.2rem; }
+  .port-sect .this-site img {
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 20px #81a9ff;
+    width: 17%;
+    transition: transform .1s ease; }
+    .port-sect .this-site img:active {
+      transform: scale(1.2); }
 
 @keyframes fade {
   0% {
@@ -252,15 +274,15 @@ p {
 #globe-svg {
   transition: transform .5s ease-in; }
 
-.about-me:hover svg {
+.about-me:active svg {
   transform: rotate(360deg); }
 
-.my-skills:hover #line-1,
-.my-skills:hover #line-2,
-.my-skills:hover #line-3,
-.my-skills:hover #line-4,
-.my-skills:hover #line-5,
-.my-skills:hover #bulb {
+.my-skills:active #line-1,
+.my-skills:active #line-2,
+.my-skills:active #line-3,
+.my-skills:active #line-4,
+.my-skills:active #line-5,
+.my-skills:active #bulb {
   fill: yellow; }
 
 #top,
@@ -270,29 +292,29 @@ p {
 #backslash {
   transition: fill .4s ease-in; }
 
-.my-portfolio:hover #top {
+.my-portfolio:active #top {
   fill: #d1bd0b; }
 
-.my-portfolio:hover #body {
+.my-portfolio:active #body {
   fill: #d75e26; }
 
-.my-portfolio:hover #backarrow,
-.my-portfolio:hover #forwardarrow,
-.my-portfolio:hover #backslash {
+.my-portfolio:active #backarrow,
+.my-portfolio:active #forwardarrow,
+.my-portfolio:active #backslash {
   fill: #edd3ca; }
 
-.contact-me:hover #phone-svg {
+.contact-me:active #phone-svg {
   animation: ring .75s ease infinite forwards; }
 
-.contact-me:hover #wave-1,
-.contact-me:hover #wave-2,
-.contact-me:hover #wave-3 {
+.contact-me:active #wave-1,
+.contact-me:active #wave-2,
+.contact-me:active #wave-3 {
   fill: red; }
 
 #git-logo {
   transition: fill .4s ease; }
 
-.github:hover #git-logo {
+.github:active #git-logo {
   fill: black; }
 
 /*# sourceMappingURL=styles.css.map */
