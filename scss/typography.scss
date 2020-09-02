@@ -5,7 +5,7 @@
     hyphens: auto;
     font-family: 'Fira Sans', sans-serif;
 }
-html {
+main {
     scroll-behavior: smooth;
 }
 a:hover {
@@ -123,14 +123,11 @@ a:hover {
 /*--------- PAGE STYLES ----------*/
 .nav-sect,
 .about-sect,
-.skills-sect {
-    padding: 1rem .5rem 1rem .5rem;
+.skills-sect,
+.port-sect,
+.contact-sect {
+    padding: 1.5rem .5rem;
     border-top: 1px solid black; 
-    /* this media querie ensures that the 100vh property only applies to 
-    devices large enough to accomodate without distorting the layout */
-    @media (min-width: 376px) {
-        height: 100vh;
-    }
 }
 h1 {
     font-family: 'Bad Script', cursive;
@@ -138,6 +135,7 @@ h1 {
 p {
     font-size: .9rem;
 }
+/*--------- ---------------------- ----------*/
 /*--------- Navigation section styles ----------*/
 .nav-sect {
     h3 {
@@ -170,19 +168,20 @@ p {
             left: .35rem;
         }
     }
-
 }
+/*--------- ---------------------- ----------*/
 /*--------- About Me section styles ----------*/
 .about-sect {   
         h1 {
+            text-align: center;
             font-size: 2.2rem;
         }
         img {
             float: left;
             margin: .5rem 1rem .2rem 0;
-            width: 50%;
+            width: 55%;
             border: 2px solid $primary;
-            max-width: 300px;
+            max-width: 290px;
         }   
         p:nth-child(2) {   
             font-weight: bold;
@@ -194,7 +193,7 @@ p {
     max-width: 620px;
     margin: 0 auto;
 }
-
+/*--------- ---------------------- ----------*/
 /*--------- Skills section styles ----------*/
 .skills-sect {
     background:url('../img/skills.jpg');
@@ -222,6 +221,7 @@ p {
         font-size: .9rem;
     }
 }
+/*--------- ---------------------- ----------*/
 /*--------- Portfolio section styles ----------*/
 .port-sect {
     border-top: 2px solid black;
@@ -282,6 +282,7 @@ p {
         opacity: 1;
     }
     .this-site {
+        padding: 1rem 0;
         .this-site-content {
             text-align: center;
             width: 80%;
@@ -298,10 +299,67 @@ p {
             box-shadow: 0px 0px 20px $primary;
             width: 17%;
             transition: transform .1s ease;
+            max-width: 45px;
             &:active {
                 transform: scale(1.2);
             }
         }
     }
-
 }
+/*--------- ---------------------- ----------*/
+/*--------- Contact section styles ----------*/
+.contact-sect {
+    a {
+        display: block;
+        text-align: center;
+        margin: 2.25rem 0;
+    }
+    form {
+        margin: 0 auto;
+        max-width: 500px;
+    }
+    h1 {
+        text-align: center;
+        margin: 2rem 0;
+    }
+}
+/*--------- ---------------------- ----------*/
+/*------------- Footer styles ---------------*/
+footer {
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    background-color: $primary;
+    a {
+        color: white;
+    }
+}
+/*--------- ---------------------- ----------*/
+/*------------- Sticky footer styles --------------*/
+.sticky-footer {
+    display: flex;
+    align-items: center;
+    height: 2.25rem;
+    background-color: $primary;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translate(0, 2.5rem);   
+    transition: transform .25s ease-in;
+    &:active {
+        box-shadow: inset 0px 0px 20px white;
+    }
+    a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        color: white;
+    }
+}
+.slide {
+    transform: translate(0, 0rem);
+}
+/*--------- ---------------------- ----------*/

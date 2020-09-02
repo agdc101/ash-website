@@ -4,7 +4,7 @@
   hyphens: auto;
   font-family: 'Fira Sans', sans-serif; }
 
-html {
+main {
   scroll-behavior: smooth; }
 
 a:hover {
@@ -15,7 +15,7 @@ a:hover {
 #exampleModal {
   padding: 0 !important; }
   #exampleModal .modal-header {
-    background-color: #81a9ff; }
+    background-color: #5cc0ee; }
     #exampleModal .modal-header span {
       color: white;
       font-weight: bold; }
@@ -58,7 +58,7 @@ a:hover {
     text-align: center;
     position: relative;
     color: white;
-    text-shadow: 6px 6px 16px #81a9ff;
+    text-shadow: 6px 6px 16px #5cc0ee;
     animation: fade .75s ease-in; }
   .overlay h1 {
     top: 4.5rem;
@@ -85,7 +85,7 @@ a:hover {
     .overlay #arrow path {
       fill: white; }
       .overlay #arrow path:active {
-        fill: #81a9ff; }
+        fill: #5cc0ee; }
     @media (min-width: 321px) {
       .overlay #arrow {
         top: 15.5rem; } }
@@ -102,16 +102,11 @@ a:hover {
 /*--------- PAGE STYLES ----------*/
 .nav-sect,
 .about-sect,
-.skills-sect {
-  padding: 1rem .5rem 1rem .5rem;
-  border-top: 1px solid black;
-  /* this media querie ensures that the 100vh property only applies to 
-  devices large enough to accomodate without distorting the layout */ }
-  @media (min-width: 376px) {
-    .nav-sect,
-    .about-sect,
-    .skills-sect {
-      height: 100vh; } }
+.skills-sect,
+.port-sect,
+.contact-sect {
+  padding: 1.5rem .5rem;
+  border-top: 1px solid black; }
 
 h1 {
   font-family: 'Bad Script', cursive; }
@@ -119,6 +114,7 @@ h1 {
 p {
   font-size: .9rem; }
 
+/*--------- ---------------------- ----------*/
 /*--------- Navigation section styles ----------*/
 .nav-sect h3 {
   font-family: 'Bad Script', cursive;
@@ -128,7 +124,7 @@ p {
 .nav-sect .flex-items {
   display: flex;
   justify-content: space-between;
-  background-color: #81a9ff;
+  background-color: #5cc0ee;
   width: 70%;
   height: 4rem;
   margin: 2.25rem auto;
@@ -146,15 +142,17 @@ p {
     top: .3rem;
     left: .35rem; }
 
+/*--------- ---------------------- ----------*/
 /*--------- About Me section styles ----------*/
 .about-sect h1 {
+  text-align: center;
   font-size: 2.2rem; }
 .about-sect img {
   float: left;
   margin: .5rem 1rem .2rem 0;
-  width: 50%;
-  border: 2px solid #81a9ff;
-  max-width: 300px; }
+  width: 55%;
+  border: 2px solid #5cc0ee;
+  max-width: 290px; }
 .about-sect p:nth-child(2) {
   font-weight: bold;
   margin-top: .75rem; }
@@ -164,6 +162,7 @@ p {
   max-width: 620px;
   margin: 0 auto; }
 
+/*--------- ---------------------- ----------*/
 /*--------- Skills section styles ----------*/
 .skills-sect {
   background: url("../img/skills.jpg");
@@ -181,12 +180,13 @@ p {
     max-width: 195px;
     display: block;
     margin: 2rem auto 1rem auto;
-    box-shadow: 0px 0px 20px #81a9ff;
+    box-shadow: 0px 0px 20px #5cc0ee;
     border-radius: .5rem; }
   .skills-sect ul {
     color: white;
     font-size: .9rem; }
 
+/*--------- ---------------------- ----------*/
 /*--------- Portfolio section styles ----------*/
 .port-sect {
   border-top: 2px solid black; }
@@ -211,7 +211,7 @@ p {
   .port-sect .project {
     position: relative;
     width: 70%;
-    box-shadow: 0px 0px 18px #81a9ff;
+    box-shadow: 0px 0px 18px #5cc0ee;
     transition: transform .4s ease;
     margin: 1rem auto;
     cursor: pointer; }
@@ -235,23 +235,76 @@ p {
     transform: translateY(8px); }
   .port-sect .project:hover .project-overlay {
     opacity: 1; }
-  .port-sect .this-site .this-site-content {
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    max-width: 600px; }
-  .port-sect .this-site h2 {
-    font-weight: bold;
-    font-size: 1.2rem; }
-  .port-sect .this-site img {
-    margin: 0 auto;
-    border-radius: 1.5rem;
-    box-shadow: 0px 0px 20px #81a9ff;
-    width: 17%;
-    transition: transform .1s ease; }
-    .port-sect .this-site img:active {
-      transform: scale(1.2); }
+  .port-sect .this-site {
+    padding: 1rem 0; }
+    .port-sect .this-site .this-site-content {
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+      max-width: 600px; }
+    .port-sect .this-site h2 {
+      font-weight: bold;
+      font-size: 1.2rem; }
+    .port-sect .this-site img {
+      margin: 0 auto;
+      border-radius: 1.5rem;
+      box-shadow: 0px 0px 20px #5cc0ee;
+      width: 17%;
+      transition: transform .1s ease;
+      max-width: 45px; }
+      .port-sect .this-site img:active {
+        transform: scale(1.2); }
 
+/*--------- ---------------------- ----------*/
+/*--------- Contact section styles ----------*/
+.contact-sect a {
+  display: block;
+  text-align: center;
+  margin: 2.25rem 0; }
+.contact-sect form {
+  margin: 0 auto;
+  max-width: 500px; }
+.contact-sect h1 {
+  text-align: center;
+  margin: 2rem 0; }
+
+/*--------- ---------------------- ----------*/
+/*------------- Footer styles ---------------*/
+footer {
+  padding: 0 .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+  background-color: #5cc0ee; }
+  footer a {
+    color: white; }
+
+/*--------- ---------------------- ----------*/
+/*------------- Sticky footer styles --------------*/
+.sticky-footer {
+  display: flex;
+  align-items: center;
+  height: 2.25rem;
+  background-color: #5cc0ee;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translate(0, 2.5rem);
+  transition: transform .25s ease-in; }
+  .sticky-footer:active {
+    box-shadow: inset 0px 0px 20px white; }
+  .sticky-footer a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: white; }
+
+.slide {
+  transform: translate(0, 0rem); }
+
+/*--------- ---------------------- ----------*/
 @keyframes fade {
   0% {
     opacity: 0; }

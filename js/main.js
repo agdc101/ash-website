@@ -4,6 +4,9 @@ const modalHeader = document.querySelector('.modal-header');
 const modalBodyContent = document.querySelector('.modal-body');
 const modalFooter = document.querySelector('.modal-footer');
 const modal = document.getElementById('exampleModal');
+const hideStickySects = document.querySelectorAll('.hide-sticky');
+const stickyFooter = document.querySelector('.sticky-footer');
+const aboutMeNav = document.querySelector('.about-nav a');
 const projects = [
     {
         title: 'SASS Web Layout',
@@ -77,3 +80,32 @@ const buildModal = (index) => {
                         <a href=${projects[index].siteLink} target='_blank'><img src='img/icons/internet-icon.png' alt='the internet'></a>`;  
     modalFooter.innerHTML = footerIcons;                
 }
+
+aboutMeNav.addEventListener('click', () => {
+    event.preventDefault();
+    window.scroll({
+        top: 1245,
+        behavior: 'smooth'
+      });
+})
+/*-------------- --------------------------- --------------*/
+/*-------------- sticky footer functionality --------------*/
+window.onbeforeunload = () => {  
+        window.scrollTo(0, 0);   
+}
+
+const appearOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            stickyFooter.classList.toggle('slide');
+            console.log(entry);
+           
+        } else {
+            stickyFooter.classList.toggle('slide');
+            console.log(entry);
+        }
+    })
+})
+hideStickySects.forEach(section =>{
+    appearOnScroll.observe(section);
+})

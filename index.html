@@ -44,7 +44,7 @@
             <img src="img/vanSea.jpeg" alt="">
             <img src="img/dive.jpeg" alt="">
         </div>
-        <section id='nav' class='nav-sect'>
+        <section id='nav' class='nav-sect hide-sticky'>
             <h3>so where do we start....</h3>
             <div class='about-nav'>  
                 <a href="#about-link">            
@@ -104,16 +104,18 @@
                 </a>
             </div>
             <div class='contact-nav'>
-                <div class='contact-me flex-items'>
-                    <span>contact</span>
-                    <!-- phone svg -->
-                    <svg id ='phone-svg' width="56" height="44" viewBox="0 0 168 161" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M164.734 128.021L146.109 116.121L129.552 105.545C126.357 103.508 122.063 104.176 119.704 107.077L109.459 119.699C107.259 122.438 103.3 123.225 100.144 121.55C93.1923 117.845 84.9719 114.356 66.834 96.951C48.6961 79.5466 45.032 71.691 41.1651 65.0291C39.4179 62.0047 40.2391 58.2109 43.0971 56.1022L56.2675 46.2841C59.2951 44.0238 59.9924 39.9086 57.8665 36.8462L47.1697 21.4681L34.4133 3.13063C32.2422 0.00940948 27.8959 -0.92765 24.5392 1.0015L9.82756 9.45956C5.85171 11.7044 2.92914 15.3294 1.66521 19.5829C-2.35788 33.6398 -3.16899 64.6486 48.6873 114.344C100.544 164.04 132.898 163.26 147.566 159.404C152.004 158.193 155.787 155.392 158.129 151.582L166.955 137.484C168.968 134.266 167.99 130.102 164.734 128.021Z" fill="lightblue"/>
-                        <path id='wave-1' d="M95.5846 24.9821C122.767 25.011 144.795 46.1212 144.825 72.1712C144.825 73.7041 146.122 74.9471 147.722 74.9471C149.322 74.9471 150.619 73.7044 150.619 72.1712C150.585 43.0566 125.965 19.4625 95.585 19.4305C93.9854 19.4305 92.6883 20.6732 92.6883 22.2064C92.688 23.739 93.9847 24.9821 95.5846 24.9821Z" fill="transparent"/>
-                        <path id='wave-2' d="M95.5846 41.6369C113.173 41.6567 127.426 55.3157 127.446 72.1709C127.446 73.7038 128.743 74.9468 130.343 74.9468C131.942 74.9468 133.239 73.7041 133.239 72.1709C133.216 52.2508 116.371 36.1079 95.5846 36.085C93.9851 36.085 92.688 37.3277 92.688 38.8609C92.688 40.3942 93.9847 41.6369 95.5846 41.6369Z" fill="transparent"/>
-                        <path id='wave-3' d="M95.5846 58.292C103.579 58.3011 110.058 64.5096 110.067 72.1712C110.067 73.7041 111.364 74.9471 112.964 74.9471C114.564 74.9471 115.861 73.7044 115.861 72.1712C115.848 61.445 106.778 52.7527 95.585 52.7404C93.9854 52.7404 92.6883 53.9831 92.6883 55.5164C92.688 57.0493 93.9847 58.292 95.5846 58.292Z" fill="transparent"/>
-                    </svg> <!-- phone svg END -->
-                </div>
+                <a href="#contact">
+                    <div class='contact-me flex-items'>
+                        <span>contact</span>
+                        <!-- phone svg -->
+                        <svg id ='phone-svg' width="56" height="44" viewBox="0 0 168 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M164.734 128.021L146.109 116.121L129.552 105.545C126.357 103.508 122.063 104.176 119.704 107.077L109.459 119.699C107.259 122.438 103.3 123.225 100.144 121.55C93.1923 117.845 84.9719 114.356 66.834 96.951C48.6961 79.5466 45.032 71.691 41.1651 65.0291C39.4179 62.0047 40.2391 58.2109 43.0971 56.1022L56.2675 46.2841C59.2951 44.0238 59.9924 39.9086 57.8665 36.8462L47.1697 21.4681L34.4133 3.13063C32.2422 0.00940948 27.8959 -0.92765 24.5392 1.0015L9.82756 9.45956C5.85171 11.7044 2.92914 15.3294 1.66521 19.5829C-2.35788 33.6398 -3.16899 64.6486 48.6873 114.344C100.544 164.04 132.898 163.26 147.566 159.404C152.004 158.193 155.787 155.392 158.129 151.582L166.955 137.484C168.968 134.266 167.99 130.102 164.734 128.021Z" fill="lightblue"/>
+                            <path id='wave-1' d="M95.5846 24.9821C122.767 25.011 144.795 46.1212 144.825 72.1712C144.825 73.7041 146.122 74.9471 147.722 74.9471C149.322 74.9471 150.619 73.7044 150.619 72.1712C150.585 43.0566 125.965 19.4625 95.585 19.4305C93.9854 19.4305 92.6883 20.6732 92.6883 22.2064C92.688 23.739 93.9847 24.9821 95.5846 24.9821Z" fill="transparent"/>
+                            <path id='wave-2' d="M95.5846 41.6369C113.173 41.6567 127.426 55.3157 127.446 72.1709C127.446 73.7038 128.743 74.9468 130.343 74.9468C131.942 74.9468 133.239 73.7041 133.239 72.1709C133.216 52.2508 116.371 36.1079 95.5846 36.085C93.9851 36.085 92.688 37.3277 92.688 38.8609C92.688 40.3942 93.9847 41.6369 95.5846 41.6369Z" fill="transparent"/>
+                            <path id='wave-3' d="M95.5846 58.292C103.579 58.3011 110.058 64.5096 110.067 72.1712C110.067 73.7041 111.364 74.9471 112.964 74.9471C114.564 74.9471 115.861 73.7044 115.861 72.1712C115.848 61.445 106.778 52.7527 95.585 52.7404C93.9854 52.7404 92.6883 53.9831 92.6883 55.5164C92.688 57.0493 93.9847 58.292 95.5846 58.292Z" fill="transparent"/>
+                        </svg> <!-- phone svg END -->
+                    </div>
+                </a>
             </div>
             <div class='github-nav'>
                 <a href="https://github.com/agdc101" target='_blank'>
@@ -127,109 +129,137 @@
                 </a>
             </div>
         </header>
-        </section> <!--nav section end-->
-        <section id='about-link' class='about-sect'>
-            <div class='about-content'>
-                <h1>a bit about me..</h1>
-                
-                <p>6 years of feeding the travel bug. Travelling and living in different parts of the world,
-                whilst experiencing some incredible things. Creating amazing memories and meeting awesome
-                people from all over the world.
-                </p>
-                <img src="img/about-me.jpg" alt="">
-                <p>This was proceeded by 2 years at Capgemini, a large tech consultancy. It was ultimately
-                my time at Capgemini which further inspired my interest in tech and coding web applications.<br>
-                1 year ago, i finally decided i wanted to start learning and understanding the hard skills
-                behind building websites and applications.</p>
-                
-                <p>
-                So then Treehouse happened. 12 months of being on the front-end web development techdegree has
-                taken my interest in tech, and transformed it into to a set of skills, a passion and something i want to excel at.
-                </p>
-            </div>
-        </section>
-        <section id='skills-link' class='skills-sect'>
-            <div class='overlay-skills'> 
-                <div class='skills-content'>
-                    <h1>Skills</h1>              
-                    <p class='font-weight-bold'>
-                        writing clean and efficient code with a great understanding 
-                        of design and front-end development.</p>                     
-                    <p>i have good proficiencies in all of the following listed technologies:</p>                    
-                    <ul>
-                        <li>Git - version control. working with Github through a unix terminal.</li>
-                        <li>HTML</li>
-                        <li>CSS - including the <strong>SASS</strong> preprocessor and the <strong>Bootstrap</strong> framework.</li>
-                        <li>Javascript - aswell as the Jquery library.</li>
-                        <li>Figma - SVG graphic creation and animation.</li>
-                    </ul>
-                    <img src="img/skills.jpg" alt="technology. languages">                     
-                </div>
-            </div>           
-        </section>  
-        <section id='portfolio' class='port-sect'>
-            <h1>Portfolio</h1>
-            <div class='sass-portfolio'>
-                <h2>a SASS Web Layout</h2>
-                <div class='project'>
-                    <img src="img/screenshots/sassy.png" alt="sass preprocessor">
-                    <div class='project-overlay'>
-                        <p>The power of SASS! complex layouts made easy.</p>
-                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='0'>See More</button>
-                    </div>                          
-                </div>   
-            </div>
-            <div class='game-portfolio'>
-                <h2>Movie Guessing Game</h2>
-                <div class='project'>
-                    <img src="img/screenshots/game.png" alt="javascript. guess the movie">
-                    <div class='project-overlay'>
-                        <p>A movie guessing game! built and driven with Javascript.</p>
-                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='1'>See More</button>
-                    </div>               
-                </div>   
-            </div>     
-            <div class='gallery-portfolio'>
-                <h2>Photo Gallery</h2>
-                <div class='project'>
-                    <img src="img/screenshots/gallery.png" alt="jquery. photo gallery">
-                    <div class='project-overlay'>
-                        <p>Interactive photo gallery built with Jquery.</p>
-                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='2'>See More</button>
-                    </div>               
-                </div>   
-            </div>    
-            <div class='dashboard-portfolio'>
-                <h2>Dashboard</h2>
-                <div class='project'>
-                    <img src="img/screenshots/dashboard.png" alt="javascript graphs app">
-                    <div class='project-overlay'>
-                        <p>Web App Dashboard featuring interactive Javascript graphs.</p>
-                        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='3'>See More</button>
-                    </div>               
-                </div>   
-            </div>     
-            <div class='directory-portfolio'>
-                <h2>Employee Directory</h2>
-                <div class='project'>
-                    <img src="img/screenshots/directory.png" alt="api. directory">
-                    <div class='project-overlay'>
-                        <p>Interacting with a third party API to display employee profiles.</p>
-                        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='4'>See More</button>
-                    </div>               
-                </div>   
-            </div> 
-            <div class='this-site'>
-                <div class='this-site-content'>
-                    <h2>This Site..</h2>
-                    <p>This website was built using HTML, SASS/CSS, Bootstrap and Javascript languages.
-                        select the icon below to view the code!
+        <main>
+            </section> <!--nav section end-->
+            <section id='about-link' class='about-sect'>
+                <div class='about-content'>
+                    <h1>a bit about me..</h1>
+                    
+                    <p>6 years of feeding the travel bug. Travelling and living in different parts of the world,
+                    whilst experiencing some incredible things. Creating amazing memories and meeting awesome
+                    people from all over the world.
                     </p>
-                    <a href="https://github.com/agdc101/ash-website" target='_blank'><img src="img/icons/github-icon.png" alt="github"></a>
+                    <img src="img/about-me.jpg" alt="">
+                    <p>This was proceeded by 2 years at Capgemini, a large tech consultancy. It was ultimately
+                    my time at Capgemini which further inspired my interest in tech and coding web applications.<br>
+                    1 year ago, i finally decided i wanted to start learning and understanding the hard skills
+                    behind building websites and applications.</p>
+                    
+                    <p>
+                    So then Treehouse happened. 12 months of being on the front-end web development techdegree has
+                    taken my interest in tech, and transformed it into to a set of skills, a passion and something i want to excel at.
+                    </p>
                 </div>
-            </div>
-        </section>       
-            <!-- Modal -->
+            </section>
+            <section id='skills-link' class='skills-sect'>
+                <div class='overlay-skills'> 
+                    <div class='skills-content'>
+                        <h1>Skills</h1>              
+                        <p class='font-weight-bold'>
+                            writing clean and efficient code with a great understanding 
+                            of design and front-end development.</p>                     
+                        <p>i have good proficiencies in all of the following listed technologies:</p>                    
+                        <ul>
+                            <li>Git - version control. working with Github through a unix terminal.</li>
+                            <li>HTML</li>
+                            <li>CSS - including the <strong>SASS</strong> preprocessor and the <strong>Bootstrap</strong> framework.</li>
+                            <li>Javascript - aswell as the Jquery library.</li>
+                            <li>Figma - SVG graphic creation and animation.</li>
+                        </ul>
+                        <img src="img/skills.jpg" alt="technology. languages">                     
+                    </div>
+                </div>           
+            </section>  
+            <section id='portfolio' class='port-sect'>
+                <h1>Portfolio</h1>
+                <div class='sass-portfolio'>
+                    <h2>a SASS Web Layout</h2>
+                    <div class='project'>
+                        <img src="img/screenshots/sassy.png" alt="sass preprocessor">
+                        <div class='project-overlay'>
+                            <p>The power of SASS! complex layouts made easy.</p>
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='0'>See More</button>
+                        </div>                          
+                    </div>   
+                </div>
+                <div class='game-portfolio'>
+                    <h2>Movie Guessing Game</h2>
+                    <div class='project'>
+                        <img src="img/screenshots/game.png" alt="javascript. guess the movie">
+                        <div class='project-overlay'>
+                            <p>A movie guessing game! built and driven with Javascript.</p>
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='1'>See More</button>
+                        </div>               
+                    </div>   
+                </div>     
+                <div class='gallery-portfolio'>
+                    <h2>Photo Gallery</h2>
+                    <div class='project'>
+                        <img src="img/screenshots/gallery.png" alt="jquery. photo gallery">
+                        <div class='project-overlay'>
+                            <p>Interactive photo gallery built with Jquery.</p>
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='2'>See More</button>
+                        </div>               
+                    </div>   
+                </div>    
+                <div class='dashboard-portfolio'>
+                    <h2>Dashboard</h2>
+                    <div class='project'>
+                        <img src="img/screenshots/dashboard.png" alt="javascript graphs app">
+                        <div class='project-overlay'>
+                            <p>Web App Dashboard featuring interactive Javascript graphs.</p>
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='3'>See More</button>
+                        </div>               
+                    </div>   
+                </div>     
+                <div class='directory-portfolio'>
+                    <h2>Employee Directory</h2>
+                    <div class='project'>
+                        <img src="img/screenshots/directory.png" alt="api. directory">
+                        <div class='project-overlay'>
+                            <p>Interacting with a third party API to display employee profiles.</p>
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='4'>See More</button>
+                        </div>               
+                    </div>   
+                </div> 
+                <div class='this-site'>
+                    <div class='this-site-content'>
+                        <h2>This Site..</h2>
+                        <p>This website was built using HTML, SASS/CSS, Bootstrap and Javascript languages.
+                            select the icon below to view the code!
+                        </p>
+                        <a href="https://github.com/agdc101/ash-website" target='_blank'><img src="img/icons/github-icon.png" alt="github"></a>
+                    </div>
+                </div>
+            </section> 
+            <section id='contact' class='contact-sect hide-sticky'>
+                <h1>Get In Contact</h1>
+                <a href=""><span>Download My Resume Here!</span></a>
+                <form>
+                    <div class="form-group">
+                    <label for="exampleFormControlInput1">Name:</label>
+                    <input type="email" class="mb-3 form-control" id="exampleFormControlInput1" placeholder="Kylie Minogue..">
+                    <label for="exampleFormControlInput1">Email address:</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="kylie@example.com..">
+                    </div>
+                    <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="mb-3 btn btn-outline-success btn-lg btn-block">Send!</button>
+                </form>
+            </section> 
+        </main>     
+        <footer>
+            <a href="#about-link">Ashley Campbell</a>
+            <a href="#nav">Back To Top</a>
+        </footer>
+        <!-- sticky footer -->
+        <div class='sticky-footer'>
+            <a href="#nav">Back To Top</a>
+        </div>
+        <!-- sticky footer end -->
+        <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style= 'padding: 0 !important;'>
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -241,7 +271,8 @@
                     </div>
                 </div>
             </div>
-        </div>           
+        </div>    
+        <!-- Modal end -->       
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>   
