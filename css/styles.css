@@ -44,7 +44,7 @@ a:hover {
       #exampleModal .modal-footer a img:active {
         transform: scale(1.2); }
 
-/*------------ overlay styles-----------------*/
+/*------------ top page overlay styles-----------------*/
 .overlay {
   position: absolute;
   left: 0;
@@ -116,6 +116,11 @@ p {
 
 /*--------- ---------------------- ----------*/
 /*--------- Navigation section styles ----------*/
+.flex-items {
+  cursor: pointer; }
+  .flex-items:active {
+    box-shadow: inset 0px 0px 18px #616161; }
+
 .nav-sect h3 {
   font-family: 'Bad Script', cursive;
   text-align: center;
@@ -257,16 +262,31 @@ p {
 
 /*--------- ---------------------- ----------*/
 /*--------- Contact section styles ----------*/
-.contact-sect a {
-  display: block;
-  text-align: center;
-  margin: 2.25rem 0; }
-.contact-sect form {
-  margin: 0 auto;
-  max-width: 500px; }
-.contact-sect h1 {
-  text-align: center;
-  margin: 2rem 0; }
+.contact-sect {
+  background-color: #ecf8ff; }
+  .contact-sect p {
+    font-size: 1rem;
+    display: block;
+    text-align: center; }
+  .contact-sect form {
+    display: block;
+    max-width: 500px;
+    margin: 2rem auto; }
+    .contact-sect form button {
+      padding: .35rem;
+      background-color: white;
+      border-radius: .75rem;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #5cc0ee;
+      color: black; }
+  .contact-sect a {
+    display: block;
+    text-align: center;
+    margin: 2.25rem 0; }
+  .contact-sect h1 {
+    text-align: center;
+    margin: 2rem 0; }
 
 /*--------- ---------------------- ----------*/
 /*------------- Footer styles ---------------*/
@@ -276,8 +296,11 @@ footer {
   justify-content: space-between;
   align-items: center;
   height: 2.5rem;
-  background-color: #5cc0ee; }
+  background-color: #5cc0ee;
+  font-size: .9rem; }
   footer a {
+    color: white; }
+  footer span {
     color: white; }
 
 /*--------- ---------------------- ----------*/

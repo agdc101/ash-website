@@ -56,7 +56,7 @@ a:hover {
         }
     }
 }
-/*------------ overlay styles-----------------*/
+/*------------ top page overlay styles-----------------*/
 .overlay {
     position: absolute;
     left:0;
@@ -137,6 +137,12 @@ p {
 }
 /*--------- ---------------------- ----------*/
 /*--------- Navigation section styles ----------*/
+.flex-items {
+    cursor: pointer;
+    &:active {
+        box-shadow: inset 0px 0px 18px rgb(97, 97, 97);
+    }
+}
 .nav-sect {
     h3 {
         font-family: 'Bad Script', cursive;
@@ -309,14 +315,30 @@ p {
 /*--------- ---------------------- ----------*/
 /*--------- Contact section styles ----------*/
 .contact-sect {
+    background-color: rgb(236, 248, 255);
+    p {
+        font-size: 1rem;
+        display: block;
+        text-align: center;
+    }
+    form {
+        display: block;
+        max-width: 500px;
+        margin: 2rem auto;
+        button {
+            padding: .35rem;
+            background-color: white;
+            border-radius: .75rem;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid $primary;
+            color: black;
+        }
+    }
     a {
         display: block;
         text-align: center;
         margin: 2.25rem 0;
-    }
-    form {
-        margin: 0 auto;
-        max-width: 500px;
     }
     h1 {
         text-align: center;
@@ -332,7 +354,11 @@ footer {
     align-items: center;
     height: 2.5rem;
     background-color: $primary;
+    font-size: .9rem;
     a {
+        color: white;
+    }
+    span {
         color: white;
     }
 }

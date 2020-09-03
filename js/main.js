@@ -1,12 +1,16 @@
-
-const portfolioDiv = document.getElementById('portfolio');
+/*-------------- Variables ---------------*/
+const portfolioDiv = document.querySelector('.port-sect');
 const modalHeader = document.querySelector('.modal-header');
 const modalBodyContent = document.querySelector('.modal-body');
 const modalFooter = document.querySelector('.modal-footer');
 const modal = document.getElementById('exampleModal');
 const hideStickySects = document.querySelectorAll('.hide-sticky');
 const stickyFooter = document.querySelector('.sticky-footer');
-const aboutMeNav = document.querySelector('.about-nav a');
+const navButtons = document.querySelectorAll('.nav-button');
+const navLinks = document.querySelectorAll('.nav-link');
+
+/*-------------- Projects array ---------------*/
+// For the portfolio modal feature.
 const projects = [
     {
         title: 'SASS Web Layout',
@@ -55,7 +59,8 @@ const projects = [
         githubLink: 'https://github.com/agdc101/employee-directory'
     }
 ]
-
+/*-------------- --------------------------- --------------*/
+/*-------------- portfolio modal functionality --------------*/
 portfolioDiv.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON') {
         let index = e.target.getAttribute('data-index');
@@ -65,7 +70,6 @@ portfolioDiv.addEventListener('click', (e) => {
 })
 
 const buildModal = (index) => {
-    console.log(`${projects[index].title}`);
     let headerHTML = `<span>${projects[index].title}</span>`;
     headerHTML += `<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>`;
@@ -80,29 +84,28 @@ const buildModal = (index) => {
                         <a href=${projects[index].siteLink} target='_blank'><img src='img/icons/internet-icon.png' alt='the internet'></a>`;  
     modalFooter.innerHTML = footerIcons;                
 }
+/*-------------- --------------------------- --------------*/
+/*-------------- smooth scroll functionality --------------*/
+for (let j = 0; j < navButtons.length; j += 1) {
+    navButtons[j].addEventListener('click', () => {
+        event.preventDefault();
+        navLinks[j].scrollIntoView({ behavior: 'smooth', block: 'end'});
+    });
+}
 
-aboutMeNav.addEventListener('click', () => {
-    event.preventDefault();
-    window.scroll({
-        top: 1245,
-        behavior: 'smooth'
-      });
-})
 /*-------------- --------------------------- --------------*/
 /*-------------- sticky footer functionality --------------*/
-window.onbeforeunload = () => {  
-        window.scrollTo(0, 0);   
-}
+// window.onbeforeunload = () => {  
+//         window.scrollTo(0, 0);   
+// }
 
 const appearOnScroll = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             stickyFooter.classList.toggle('slide');
-            console.log(entry);
            
         } else {
             stickyFooter.classList.toggle('slide');
-            console.log(entry);
         }
     })
 })
