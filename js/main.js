@@ -7,7 +7,7 @@ const modal = document.getElementById('exampleModal');
 const hideStickySects = document.querySelectorAll('.hide-sticky');
 const stickyFooter = document.querySelector('.sticky-footer');
 const navButtons = document.querySelectorAll('.nav-button');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.navigate');
 
 /*-------------- Projects array ---------------*/
 // For the portfolio modal feature.
