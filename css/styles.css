@@ -65,10 +65,19 @@ a:hover {
     letter-spacing: .25rem;
     font-size: 4rem;
     margin: 2.5rem .5rem; }
+    @media (min-width: 768px) {
+      .overlay h1 {
+        font-size: 5rem; } }
   .overlay h2 {
     font-size: 1.35rem; }
+    @media (min-width: 768px) {
+      .overlay h2 {
+        font-size: 1.75rem; } }
   .overlay h3 {
     font-size: 1.1rem; }
+    @media (min-width: 768px) {
+      .overlay h3 {
+        font-size: 1.25rem; } }
   .overlay h2,
   .overlay h3 {
     letter-spacing: .2rem;
@@ -81,7 +90,10 @@ a:hover {
     cursor: pointer;
     top: 13.5rem;
     opacity: 0;
-    animation: slide-in 1.5s ease-in .7s forwards; }
+    animation: slide-in 1.5s ease-in .7s forwards;
+    border: 2px solid #5cc0ee;
+    border-radius: 1rem;
+    padding: .75rem; }
     .overlay #arrow path {
       fill: white; }
       .overlay #arrow path:active {
@@ -100,13 +112,18 @@ a:hover {
 
 /*--------------------------------*/
 /*--------- PAGE STYLES ----------*/
-.nav-sect,
 .about-sect,
 .skills-sect,
 .port-sect,
 .contact-sect {
   padding: 1.5rem .5rem;
   border-top: 1px solid black; }
+  @media (min-width: 768px) {
+    .about-sect,
+    .skills-sect,
+    .port-sect,
+    .contact-sect {
+      padding: 5.5rem .75rem; } }
 
 h1 {
   font-family: 'Bad Script', cursive; }
@@ -121,43 +138,94 @@ p {
   .flex-items:active {
     box-shadow: inset 0px 0px 18px white; }
 
-.nav-sect h3 {
-  font-family: 'Bad Script', cursive;
-  text-align: center;
-  margin: 1.5rem 0 1rem 0;
-  font-size: 1.75rem; }
-.nav-sect .flex-items {
-  display: flex;
-  justify-content: space-between;
-  background-color: #5cc0ee;
-  width: 70%;
-  height: 4rem;
-  margin: 2.25rem auto;
-  padding: .4rem 1.5rem;
-  border-radius: .25rem;
-  color: white; }
-  .nav-sect .flex-items span {
-    margin-top: .5rem; }
-  .nav-sect .flex-items #bulb-svg {
-    position: relative;
-    left: .45rem;
-    bottom: .35rem; }
-  .nav-sect .flex-items #globe-svg {
-    position: relative;
-    top: .3rem;
-    left: .35rem; }
+.nav-sect {
+  padding: 1.25rem 0;
+  margin: 0 auto;
+  max-width: 590px; }
+  .nav-sect h3 {
+    font-family: 'Bad Script', cursive;
+    text-align: center;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.75rem; }
+    @media (min-width: 768px) {
+      .nav-sect h3 {
+        font-size: 2.25rem; } }
+  .nav-sect .flex-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5cc0ee;
+    width: 70%;
+    height: 4rem;
+    margin: 2.25rem auto;
+    padding: .4rem 1.5rem;
+    border-radius: .25rem;
+    color: white; }
+    @media (min-width: 768px) {
+      .nav-sect .flex-items {
+        height: 5rem; } }
+    @media (min-width: 768px) {
+      .nav-sect .flex-items span {
+        font-size: 1.15rem; } }
+    .nav-sect .flex-items #globe-svg {
+      width: 70px;
+      height: 40px;
+      position: relative;
+      top: .1rem;
+      left: .35rem; }
+      @media (min-width: 768px) {
+        .nav-sect .flex-items #globe-svg {
+          height: 50px; } }
+    .nav-sect .flex-items #bulb-svg {
+      width: 70px;
+      height: 50px;
+      position: relative;
+      left: .45rem;
+      bottom: .35rem; }
+      @media (min-width: 768px) {
+        .nav-sect .flex-items #bulb-svg {
+          height: 60px; } }
+    .nav-sect .flex-items #port-svg {
+      width: 50px;
+      height: 50px; }
+      @media (min-width: 768px) {
+        .nav-sect .flex-items #port-svg {
+          width: 60px;
+          height: 60px; } }
+    .nav-sect .flex-items #phone-svg {
+      width: 50px;
+      height: 40px; }
+      @media (min-width: 768px) {
+        .nav-sect .flex-items #phone-svg {
+          height: 50px; } }
+    .nav-sect .flex-items #git-svg {
+      width: 60px;
+      height: 45px; }
+      @media (min-width: 768px) {
+        .nav-sect .flex-items #git-svg {
+          height: 55px; } }
 
 /*--------- ---------------------- ----------*/
 /*--------- About Me section styles ----------*/
 .about-sect h1 {
   text-align: center;
   font-size: 2.2rem; }
+  @media (min-width: 768px) {
+    .about-sect h1 {
+      font-size: 3.5rem;
+      margin-bottom: 2.5rem; } }
+@media (min-width: 768px) {
+  .about-sect p {
+    font-size: 1.15rem; } }
 .about-sect img {
   float: left;
   margin: .5rem 1rem .2rem 0;
   width: 55%;
   border: 2px solid #5cc0ee;
-  max-width: 290px; }
+  max-width: 285px; }
+  @media (min-width: 768px) {
+    .about-sect img {
+      margin: .5rem 1.75rem 1.25rem 0; } }
 .about-sect p:nth-child(2) {
   font-weight: bold;
   margin-top: .75rem; }
@@ -176,43 +244,73 @@ p {
   .skills-sect p:nth-of-type(1) {
     font-size: 1.05rem;
     margin: 1.25rem 0; }
+    @media (min-width: 768px) {
+      .skills-sect p:nth-of-type(1) {
+        margin: 2.5rem 0;
+        font-size: 1.25rem; } }
+  @media (min-width: 768px) {
+    .skills-sect h1 {
+      font-size: 3.5rem; } }
   .skills-sect h1,
   .skills-sect p {
     color: white;
     text-align: center; }
   .skills-sect img {
-    width: 50%;
-    max-width: 195px;
+    width: 37.5%;
+    max-width: 215px;
     display: block;
-    margin: 2rem auto 1rem auto;
+    margin: 2rem auto 0 auto;
     box-shadow: 0px 0px 20px #5cc0ee;
     border-radius: .5rem; }
+    @media (min-width: 768px) {
+      .skills-sect img {
+        margin: 4rem auto 0 auto; } }
   .skills-sect ul {
     color: white;
     font-size: .9rem; }
+  @media (min-width: 768px) {
+    .skills-sect p,
+    .skills-sect ul {
+      font-size: 1.15rem; } }
 
 /*--------- ---------------------- ----------*/
 /*--------- Portfolio section styles ----------*/
 .port-sect {
   border-top: 2px solid black; }
+  @media (min-width: 768px) {
+    .port-sect .flex-projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; } }
   .port-sect h1,
   .port-sect h2 {
     text-align: center; }
   .port-sect h1 {
-    margin-top: 1.5rem; }
+    margin-top: 1.25rem; }
+    @media (min-width: 768px) {
+      .port-sect h1 {
+        font-size: 3.5rem;
+        margin: 0 0 2.5rem 0; } }
   .port-sect h2 {
     margin: 2rem 0 1rem 0;
     font-size: 1.1rem; }
+    @media (min-width: 768px) {
+      .port-sect h2 {
+        margin: 2.5rem 0 2rem 0; } }
   .port-sect img {
     display: block;
     width: 100%; }
   .port-sect p {
     font-size: 1rem; }
-  .port-sect img,
+  .port-sect .project img,
   .port-sect .project {
     height: 25%;
-    max-height: 240px;
     max-width: 300px; }
+    @media (min-width: 768px) {
+      .port-sect .project img,
+      .port-sect .project {
+        height: 225px;
+        max-width: 360px; } }
   .port-sect .project {
     position: relative;
     width: 70%;
@@ -236,9 +334,9 @@ p {
     .port-sect .project-overlay p {
       margin: 1rem 0 2rem 0;
       font-size: 1rem; }
-  .port-sect .project:hover {
+  .port-sect .project:active {
     transform: translateY(8px); }
-  .port-sect .project:hover .project-overlay {
+  .port-sect .project:active .project-overlay {
     opacity: 1; }
   .port-sect .this-site {
     padding: 1rem 0; }
@@ -246,17 +344,24 @@ p {
       text-align: center;
       width: 80%;
       margin: 0 auto;
-      max-width: 600px; }
+      max-width: 475px; }
+    @media (min-width: 768px) {
+      .port-sect .this-site p {
+        margin-bottom: 2.5rem; } }
     .port-sect .this-site h2 {
+      font-family: 'Bad Script', cursive;
       font-weight: bold;
-      font-size: 1.2rem; }
+      font-size: 1.5rem; }
+      @media (min-width: 768px) {
+        .port-sect .this-site h2 {
+          font-size: 2rem; } }
     .port-sect .this-site img {
       margin: 0 auto;
-      border-radius: 1.5rem;
+      border-radius: 2.4rem;
       box-shadow: 0px 0px 20px #5cc0ee;
       width: 17%;
       transition: transform .1s ease;
-      max-width: 45px; }
+      max-width: 65px; }
       .port-sect .this-site img:active {
         transform: scale(1.2); }
 
@@ -264,10 +369,19 @@ p {
 /*--------- Contact section styles ----------*/
 .contact-sect {
   background-color: #ecf8ff; }
+  .contact-sect h1 {
+    text-align: center; }
+    @media (min-width: 768px) {
+      .contact-sect h1 {
+        font-size: 3rem;
+        margin-bottom: 3rem; } }
   .contact-sect p {
     font-size: 1rem;
     display: block;
     text-align: center; }
+    @media (min-width: 768px) {
+      .contact-sect p {
+        font-size: 1.2rem; } }
   .contact-sect form {
     display: block;
     max-width: 500px;
@@ -275,18 +389,18 @@ p {
     .contact-sect form button {
       padding: .35rem;
       background-color: white;
-      border-radius: .75rem;
+      border-radius: .5rem;
       display: block;
       margin: 0 auto;
       color: black;
       border: none; }
+      @media (min-width: 768px) {
+        .contact-sect form button {
+          font-size: 1.1rem; } }
   .contact-sect a {
     display: block;
     text-align: center;
     margin: 2.25rem 0; }
-  .contact-sect h1 {
-    text-align: center;
-    margin: 2rem 0; }
 
 /*--------- ---------------------- ----------*/
 /*------------- Footer styles ---------------*/
@@ -295,7 +409,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 2.5rem;
+  height: 3rem;
   background-color: #5cc0ee;
   font-size: .9rem; }
   footer a {
@@ -304,7 +418,7 @@ footer {
     color: white; }
 
 /*--------- ---------------------- ----------*/
-/*------------- Sticky footer styles --------------*/
+/*---------- Sticky footer styles -----------*/
 .sticky-footer {
   display: flex;
   align-items: center;
