@@ -31,9 +31,16 @@
 #globe-svg {
     transition: transform .5s ease-in;
 }
+/*----------------------*/
 .about-me:active svg {
     transform: rotate(360deg);
 }
+.about-me:hover svg {
+    @media (min-width: $desktop) {
+        transform: rotate(360deg);
+    }
+}
+/*----------------------*/
 .my-skills:active #line-1,
 .my-skills:active #line-2,
 .my-skills:active #line-3,
@@ -43,6 +50,17 @@
   {
     fill: yellow;
 }
+.my-skills:hover #line-1,
+.my-skills:hover #line-2,
+.my-skills:hover #line-3,
+.my-skills:hover #line-4,
+.my-skills:hover #line-5,
+.my-skills:hover #bulb {
+    @media (min-width: $desktop) {
+        fill: yellow;
+    }
+}
+/*----------------------*/
 #top,
 #body,
 #backarrow,
@@ -50,28 +68,68 @@
 #backslash {
     transition: fill .4s ease-in;
 }
+/*----------------------*/
 .my-portfolio:active #top {
     fill: $darken-top;
 }
+.my-portfolio:hover #top {
+    @media (min-width: $desktop) {
+        fill: $darken-top;
+    }
+}
+/*----------------------*/
 .my-portfolio:active #body {
     fill: $darken-body;
 }
+.my-portfolio:hover #body {
+    @media (min-width: $desktop) {
+        fill: $darken-body;
+    }  
+}
+/*----------------------*/
 .my-portfolio:active #backarrow,
 .my-portfolio:active #forwardarrow,
 .my-portfolio:active #backslash {
     fill: $lighten-lines;
 }
+.my-portfolio:hover #backarrow,
+.my-portfolio:hover #forwardarrow,
+.my-portfolio:hover #backslash {
+    @media (min-width: $desktop) {
+        fill: $lighten-lines;
+    }
+}
+/*----------------------*/
 .contact-me:active #phone-svg {
     animation: ring .75s ease infinite forwards;
 }
+.contact-me:hover #phone-svg {
+    @media (min-width: $desktop) {
+        animation: ring .75s ease infinite forwards;
+    } 
+}
+/*----------------------*/
 .contact-me:active #wave-1,
 .contact-me:active #wave-2,
 .contact-me:active #wave-3 {
     fill: red;
 }
+.contact-me:hover #wave-1,
+.contact-me:hover #wave-2,
+.contact-me:hover #wave-3 {
+    @media (min-width: $desktop) {
+        fill: red;
+    }
+}
+/*----------------------*/
 #git-logo {
     transition: fill .4s ease;
 }
 .github:active #git-logo {
     fill: black;
+}
+.github:hover #git-logo {
+    @media (min-width: $desktop) {
+        fill: black;
+    }
 }

@@ -80,25 +80,28 @@ const buildModal = (index) => {
     bodyHTML += `<span><strong>Technologies used:</strong> ${projects[index].technologies}</span>`;
     modalBodyContent.innerHTML = bodyHTML;
 
-    let footerIcons =  `<a href=${projects[index].githubLink} target='_blank'><img src='img/icons/github-icon.png' alt='github logo'></a>
+    let footerIcons =  `<a href=${projects[index].githubLink} target='_blank'><img src='img/icons/github-modal.png' alt='github logo'></a>
                         <a href=${projects[index].siteLink} target='_blank'><img src='img/icons/internet-icon.png' alt='the internet'></a>`;  
     modalFooter.innerHTML = footerIcons;                
 }
 /*-------------- --------------------------- --------------*/
 /*-------------- smooth scroll functionality --------------*/
 for (let j = 0; j < navButtons.length; j += 1) {
-    navButtons[j].addEventListener('click', () => {
-        event.preventDefault();
-        navLinks[j].scrollIntoView({ behavior: 'smooth', block: 'end'});
+    navButtons[j].addEventListener('click', (e) => {
+        e.preventDefault();
+            navLinks[j].scrollIntoView({ 
+                behavior: 'smooth', block: 'end'
+            });        
     });
 }
-
 /*-------------- --------------------------- --------------*/
 /*-------------- sticky footer functionality --------------*/
 // window.onbeforeunload = () => {  
 //         window.scrollTo(0, 0);   
 // }
-
+const appearOptions = {
+    rootMargin: '-200px 0px 0px 0px'
+}
 const appearOnScroll = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -108,7 +111,7 @@ const appearOnScroll = new IntersectionObserver((entries) => {
             stickyFooter.classList.toggle('slide');
         }
     })
-})
+}, appearOptions)
 hideStickySects.forEach(section =>{
     appearOnScroll.observe(section);
 })

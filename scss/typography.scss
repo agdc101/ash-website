@@ -1,7 +1,6 @@
 /* ----- universal styles ------ */
 * {
     box-sizing: border-box;
-    // border: solid 1px red;
     hyphens: auto;
     font-family: 'Fira Sans', sans-serif;
 }
@@ -11,8 +10,8 @@ main {
 a:hover {
     text-decoration: none;
 }
-/*-----------------------------*/
-/*------ modal styles ---------*/
+/*-------------------------------------*/
+/*------ project modal styles ---------*/
 #exampleModal {
     padding: 0 !important;
     .modal-header {
@@ -24,13 +23,16 @@ a:hover {
     }
     .modal-body {
         padding-bottom: 0 !important;
+        span {
+            font-size: .9rem;
+        }
         p, 
         span {
             margin: .75rem auto;
             max-width: 350px; 
-        }
-        span {
-            font-size: .9rem;
+            @media (min-width: $tablet) {
+                font-size: 1rem;
+            }
         }
     }
     p,
@@ -42,20 +44,27 @@ a:hover {
     #modal-pic {
         margin: 0 auto 1rem auto;
         width: 100%;
-        max-width: 350px;
+        max-width: 400px;
     }
     .modal-footer {
         display: flex;
         justify-content: space-around;
-        a img {
-            width: 25px;
-            transition: transform .1s ease;
-            &:active {
-                transform: scale(1.2);
+        a {
+            display: flex;
+            justify-content: center;
+            img {
+                border-radius: 2.75rem;
+                box-shadow: 0 0 12px $secondary;
+                width: 60%;
+                transition: transform .1s ease;
+                &:active {
+                    transform: scale(1.2);
+                }
             }
-        }
+        }       
     }
 }
+/*-----------------------------------------------------*/
 /*------------ top page overlay styles-----------------*/
 .overlay {
     position: absolute;
@@ -63,14 +72,14 @@ a:hover {
     right:0;
     top:0;
     bottom:0;
-    background: rgba(41, 41, 41, 0.9);  
+    background: rgba(41, 41, 41, 0.94);  
     h1,
     h2,
     h3 {
         text-align: center;
         position: relative;
         color: white;
-        text-shadow: 6px 6px 16px $primary;
+        text-shadow: 6px 6px 16px $secondary;
         animation: fade .75s ease-in;
     }
     h1 {
@@ -105,10 +114,10 @@ a:hover {
         margin: auto;
         position: relative;
         cursor: pointer;
-        top: 13.5rem;
+        top: 12.5rem;
         opacity: 0;
         animation: slide-in 1.5s ease-in .7s forwards;
-        border: 2px solid $primary;
+        border: 2px solid $secondary;
         border-radius: 1rem;
         padding: .75rem;
         path {
@@ -128,11 +137,29 @@ a:hover {
     flex-wrap: wrap;
     img {
         width: 20%;
-        height: 25%;       
+        height: 20%;       
     }
 }
 /*--------------------------------*/
 /*--------- PAGE STYLES ----------*/
+.nav-sect,
+.about-sect,
+.skills-sect,
+.overlay {
+    @media (min-width: $tablet) {
+        height: 100vh;
+    }
+    @media (min-width: $tablet) and  (min-height: 1023px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.overlay h1 {
+    @media (min-width: $tablet) and  (min-height: 1023px) {
+        top: 0;
+    }
+}
 .about-sect,
 .skills-sect,
 .port-sect,
@@ -140,7 +167,7 @@ a:hover {
     padding: 1.5rem .5rem;
     border-top: 1px solid black; 
     @media (min-width:$tablet) {
-        padding: 5.5rem .75rem;
+        padding: 2.5rem .75rem;
     }
 }
 h1 {
@@ -161,20 +188,22 @@ p {
     padding: 1.25rem 0;
     margin: 0 auto;
     max-width: 590px;
+    @media (min-width: $tablet) {
+        padding: 2.5rem 0;
+    }
     h3 {
         font-family: 'Bad Script', cursive;
         text-align: center;
-        margin: 1.5rem 0 1rem 0;
         font-size: 1.75rem;
         @media (min-width: $tablet) {
-            font-size: 2.25rem;
+            font-size: 2.5rem;
         }
     }
     .flex-items {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $primary;
+        background-color: rgba(80, 113, 156, 0.97);
         width: 70%;
         height: 4rem;
         margin: 2.25rem auto;
@@ -182,11 +211,18 @@ p {
         border-radius: .25rem;
         color: white;
         @media (min-width: $tablet) {
-            height: 5rem;
+            width: 85%;
+            margin: 1.3rem auto;
+            height: 4.75rem;
         }
+        // @media (min-width: $desktop) {
+        //     width: 85%;
+        // }
         span {
+            font-family: 'Bad Script', cursive;
+            font-size: 1.3rem;
             @media (min-width: $tablet) {
-                font-size: 1.15rem;
+                font-size: 1.75rem;
             }
         }
         #globe-svg {
@@ -236,82 +272,99 @@ p {
 /*--------- ---------------------- ----------*/
 /*--------- About Me section styles ----------*/
 .about-sect {   
-        h1 {
-            text-align: center;
-            font-size: 2.2rem;
-            @media (min-width: $tablet) {
-                font-size: 3.5rem;
-                margin-bottom: 2.5rem;
-            }
+    background-color: rgb(228, 242, 255);
+    h1 {
+        text-align: center;
+        font-size: 2.2rem;
+        @media (min-width: $tablet) {
+            font-size: 3.25rem;
+            margin-bottom: 2.5rem;
         }
-        p {
-            @media (min-width: $tablet) {
-                font-size: 1.15rem;
-            }
+    }
+    p {
+        @media (min-width: $tablet) {
+            font-size: 1.1rem;
         }
-        img {
-            float: left;
-            margin: .5rem 1rem .2rem 0;
-            width: 55%;
-            border: 2px solid $primary;
-            max-width: 285px;
-            @media (min-width: $tablet) {
-                margin: .5rem 1.75rem 1.25rem 0;
-            }
-        }   
-        p:nth-child(2) {   
-            font-weight: bold;
-            margin-top: .75rem;
-        }    
+    }
+    img {
+        float: left;
+        margin: .5rem 1rem .2rem 0;
+        width: 55%;
+        border: 2px solid $secondary;
+        max-width: 260px;
+        @media (min-width: $tablet) {
+            margin: .5rem 1.75rem 1.25rem 0;
+        }
+    }   
+    p:nth-child(2) {   
+        font-weight: bold;
+        margin-top: .75rem;
+    }    
 }
 .about-content,
 .skills-content {
-    max-width: 620px;
+    max-width: 675px;
     margin: 0 auto;
 }
 /*--------- ---------------------- ----------*/
 /*--------- Skills section styles ----------*/
 .skills-sect {
     background:url('../img/skills.jpg');
-    background-size: 50%;
-    box-shadow:inset 0 0 0 2000px rgba(54, 54, 54, 0.96);
+    background-size: 100%;
+    box-shadow:inset 0 0 0 2000px rgba(80, 113, 156, 0.97);
     p:nth-of-type(1) {
         font-size: 1.05rem;
         margin: 1.25rem 0;
         @media (min-width: $tablet) {
-            margin: 2.5rem 0;
-            font-size: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
         }
     }
     h1 {
+        text-align: center;
         @media (min-width: $tablet) {
-            font-size: 3.5rem;
+            font-size: 3.25rem;
         }
     }
     h1,
     p {
         color: white;
-        text-align: center;
+    }
+    p {
+        text-align: left;
     }
     img {
         width: 37.5%;
-        max-width: 215px;
+        max-width: 180px;
         display: block;
         margin: 2rem auto 0 auto;
-        box-shadow: 0px 0px 20px $primary;
+        box-shadow: 0px 0px 16px white;
         border-radius: .5rem;
         @media (min-width: $tablet) {
-            margin: 4rem auto 0 auto;
+            margin: 0;
         }
     }
     ul {
         color: white;
         font-size: .9rem;
+        @media (min-width: $tablet) {
+            padding: 0;
+        }
+        li {
+            margin-top: .4rem;
+        }
     }
     p,
     ul {
         @media (min-width: $tablet) {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
+        }
+    }
+    .flex-items {
+        @media (min-width: $tablet) {
+            display: flex;
+            align-items: center;
+            margin-top: 3rem;
         }
     }
 }
@@ -363,10 +416,13 @@ p {
     .project {
         position: relative;
         width: 70%;
-        box-shadow: 0px 0px 18px $primary;
+        box-shadow: 0px 0px 18px $secondary;
         transition: transform .4s ease;
         margin: 1rem auto;
         cursor: pointer;
+        @media (min-width: $desktop) {
+            width: 80%;
+        }
     }
     .project-overlay {
         position: absolute;
@@ -392,44 +448,58 @@ p {
     .project:active .project-overlay {
         opacity: 1;
     }
-    .this-site {
-        padding: 1rem 0;
+}
+.site-underlay {
+    color: white;
+    background:url('../img/mac.jpeg');
+    background-size: 400px;
+    box-shadow:inset 0 0 0 2000px rgba(80, 113, 156, 0.94);
+    border-top: 1px solid black;
+    padding: 1rem 0;
+    .this-site {   
+        padding: 1.5rem 0;
+        @media (min-width: $tablet) {
+            padding: 3rem 0;
+        }
         .this-site-content {
             text-align: center;
             width: 80%;
             margin: 0 auto;
             max-width: 475px;
-        }
-        p {
-            @media (min-width: $tablet) {
-                margin-bottom: 2.5rem;
+            a {
+                display: inline;
             }
-        }
-        h2 {
-            font-family: 'Bad Script', cursive;
-            font-weight: bold;
-            font-size: 1.5rem;
-            @media (min-width: $tablet) {
-                font-size: 2rem;
+            p {
+                @media (min-width: $tablet) {
+                    font-size: 1.1rem;
+                    margin: 2.5rem 0;
+                }
             }
-        }
-        img {
-            margin: 0 auto;
-            border-radius: 2.4rem;
-            box-shadow: 0px 0px 20px $primary;
-            width: 17%;
-            transition: transform .1s ease;
-            max-width: 65px;
-            &:active {
-                transform: scale(1.2);
+            h2 {
+                font-family: 'Bad Script', cursive;
+                font-size: 1.5rem;
+                @media (min-width: $tablet) {
+                    font-size: 2.35rem;
+                }
             }
-        }
+            img {
+                margin: 0 auto;
+                border-radius: 2.4rem;
+                box-shadow: 0px 0px 20px $secondary;
+                width: 16%;
+                max-width: 250px;
+                transition: transform .1s ease;
+                &:active {
+                    transform: scale(1.2);
+                }
+            }
+        }       
     }
-}
+}   
+
 /*--------- ---------------------- ----------*/
 /*--------- Contact section styles ----------*/
 .contact-sect {
-    background-color: rgb(236, 248, 255);
     h1 {       
         text-align: center;
         @media (min-width: $tablet) {
@@ -450,13 +520,13 @@ p {
         max-width: 500px;
         margin: 2rem auto;
         button {
-            padding: .35rem;
+            padding: .35rem .75rem;
             background-color: white;
+            border: 2px solid $primary;
             border-radius: .5rem;
             display: block;
             margin: 0 auto;
             color: black;
-            border: none;
             @media (min-width: $tablet) {
                 font-size: 1.1rem;
             }
@@ -476,10 +546,13 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 3rem;
-    background-color: $primary;
+    background-color: $secondary;
     font-size: .9rem;
     a {
         color: white;
+        @media (min-width: $tablet) {
+            font-size: 1.1rem;
+        }
     }
     span {
         color: white;
@@ -491,7 +564,7 @@ footer {
     display: flex;
     align-items: center;
     height: 2.25rem;
-    background-color: $primary;
+    background-color: $secondary;
     position: fixed;
     bottom: 0;
     left: 0;
