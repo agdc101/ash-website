@@ -44,7 +44,8 @@ a:hover {
     #modal-pic {
         margin: 0 auto 1rem auto;
         width: 100%;
-        max-width: 400px;
+        max-width: 380px;
+        max-height: 340px;
     }
     .modal-footer {
         display: flex;
@@ -90,11 +91,17 @@ a:hover {
         @media (min-width: $tablet) {
             font-size: 5rem;
         }
+        @media (min-width: $largeDesktop) {
+            font-size: 6rem;
+        }
     }
     h2 {
         font-size: 1.35rem;
         @media (min-width: $tablet) {
             font-size: 1.75rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 2.25rem;
         }
     }
     h3 {
@@ -102,11 +109,14 @@ a:hover {
         @media (min-width: $tablet) {
             font-size: 1.25rem;
         }
+        @media (min-width: $largeDesktop) {
+            font-size: 1.75rem;
+        }
     }
     h2,
     h3 {
-        letter-spacing: .2rem;
-        margin: 1rem 0;
+        letter-spacing: .4rem;
+        margin: 2.5rem 0;
         top: 6rem;
     }
     #arrow {
@@ -114,12 +124,14 @@ a:hover {
         margin: auto;
         position: relative;
         cursor: pointer;
-        top: 12.5rem;
+        top: 10.5rem;
         opacity: 0;
         animation: slide-in 1.5s ease-in .7s forwards;
         border: 2px solid $secondary;
         border-radius: 1rem;
         padding: .75rem;
+        width: 55px;
+        height: 50px; 
         path {
             fill: white;
             &:active {
@@ -127,7 +139,11 @@ a:hover {
             }
         }
         @media (min-width: 321px) {
-            top: 15.5rem;
+            top: 11.5rem;
+        }
+        @media (min-width: $desktop) {
+            width: 70px;
+            height: 65px;
         }
     }
 }
@@ -140,8 +156,8 @@ a:hover {
         height: 20%;       
     }
 }
-/*--------------------------------*/
-/*--------- PAGE STYLES ----------*/
+/*----------------------------------------*/
+/*------------- PAGE STYLES --------------*/
 .nav-sect,
 .about-sect,
 .skills-sect,
@@ -155,19 +171,25 @@ a:hover {
         justify-content: center;
     }
 }
+.about-sect,
+.skills-sect,
+.nav-sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .overlay h1 {
     @media (min-width: $tablet) and  (min-height: 1023px) {
         top: 0;
     }
 }
-.about-sect,
 .skills-sect,
 .port-sect,
 .contact-sect {
-    padding: 1.5rem .5rem;
+    padding: 1rem .5rem;
     border-top: 1px solid black; 
     @media (min-width:$tablet) {
-        padding: 2.5rem .75rem;
+        padding: 2rem .75rem;
     }
 }
 h1 {
@@ -176,7 +198,7 @@ h1 {
 p {
     font-size: .9rem;
 }
-/*--------- ---------------------- ----------*/
+/*--------- ---------------------- -------------*/
 /*--------- Navigation section styles ----------*/
 .flex-items {
     cursor: pointer;
@@ -198,6 +220,9 @@ p {
         @media (min-width: $tablet) {
             font-size: 2.5rem;
         }
+        @media (min-width: $largeDesktop) {
+            font-size: 3rem;
+        }
     }
     .flex-items {
         display: flex;
@@ -211,18 +236,21 @@ p {
         border-radius: .25rem;
         color: white;
         @media (min-width: $tablet) {
-            width: 85%;
+            width: 75%;
             margin: 1.3rem auto;
             height: 4.75rem;
         }
-        // @media (min-width: $desktop) {
-        //     width: 85%;
-        // }
+        @media (min-width: $largeDesktop) {
+            height: 5.25rem;
+        }
         span {
             font-family: 'Bad Script', cursive;
             font-size: 1.3rem;
             @media (min-width: $tablet) {
                 font-size: 1.75rem;
+            }
+            @media (min-width: $largeDesktop) {
+                font-size: 2.1rem;
             }
         }
         #globe-svg {
@@ -234,6 +262,9 @@ p {
             @media (min-width: $tablet) {
                 height: 50px;
             }
+            @media (min-width: $largeDesktop) {
+                height: 60px;
+            }
         }
         #bulb-svg {
             width: 70px; 
@@ -244,6 +275,9 @@ p {
             @media (min-width: $tablet) {
                 height: 60px;
             }
+            @media (min-width: $largeDesktop) {
+                height: 70px;
+            }
         }     
         #port-svg {
             width: 50px; 
@@ -252,6 +286,10 @@ p {
                 width: 60px;
                 height: 60px;
             }
+            @media (min-width: $largeDesktop) {
+                width: 70px;
+                height: 70px;
+            }
         }
         #phone-svg {
             width: 50px; 
@@ -259,6 +297,11 @@ p {
             @media (min-width: $tablet) {
                 height: 50px;
             }
+            @media (min-width: $largeDesktop) {
+                height: 60px;
+                width: 60px;
+            }
+            
         }
         #git-svg {
             width: 60px; 
@@ -266,64 +309,98 @@ p {
             @media (min-width: $tablet) {
                 height: 55px;
             }
+            @media (min-width: $largeDesktop) {
+                height: 65px;
+            }
         }
     }
 }
 /*--------- ---------------------- ----------*/
 /*--------- About Me section styles ----------*/
-.about-sect {   
-    background-color: rgb(228, 242, 255);
+.about-sect { 
+    padding: 1.75rem 0;
+    border-top: solid 1px black;  
+    background-color: rgb(236, 246, 255);
     h1 {
-        text-align: center;
         font-size: 2.2rem;
         @media (min-width: $tablet) {
-            font-size: 3.25rem;
-            margin-bottom: 2.5rem;
+            font-size: 3rem;
+            margin-bottom: 1.75rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 3.5rem;
         }
     }
     p {
+        margin-bottom: .5rem;
         @media (min-width: $tablet) {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+        }
+        @media (min-width: $desktop) {
+            margin-bottom: 1.75rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 1.2rem;
         }
     }
     img {
         float: left;
         margin: .5rem 1rem .2rem 0;
-        width: 55%;
-        border: 2px solid $secondary;
-        max-width: 260px;
+        width: 60%;
+        max-width: 300px;
         @media (min-width: $tablet) {
             margin: .5rem 1.75rem 1.25rem 0;
         }
-    }   
-    p:nth-child(2) {   
-        font-weight: bold;
-        margin-top: .75rem;
-    }    
+    }     
 }
+/*--------- ---------------------- ----------*/
 .about-content,
 .skills-content {
-    max-width: 675px;
+    max-width: 920px;
+    width: 90%;
     margin: 0 auto;
 }
 /*--------- ---------------------- ----------*/
+.skills-sect img,
+.about-sect img {
+    border-radius: 9rem;
+    transition: border-radius .3s ease, transform .4s ease-out;
+    &:active {
+        border-radius: 0;
+        transform: scale(1.04);
+    }
+    &:hover {
+        @media (min-width: $desktop) {
+            border-radius: 0;
+            transform: scale(1.03);
+        }
+    }
+}
 /*--------- Skills section styles ----------*/
 .skills-sect {
     background:url('../img/skills.jpg');
     background-size: 100%;
     box-shadow:inset 0 0 0 2000px rgba(80, 113, 156, 0.97);
-    p:nth-of-type(1) {
-        font-size: 1.05rem;
-        margin: 1.25rem 0;
-        @media (min-width: $tablet) {
-            margin: 1.5rem 0;
-            font-size: 1.2rem;
-        }
-    }
     h1 {
         text-align: center;
         @media (min-width: $tablet) {
             font-size: 3.25rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 4rem;
+        }
+    }
+    p:nth-of-type(1),
+    p:nth-of-type(2) {
+        font-weight: bold;
+        font-size: 1.05rem;
+        margin: 1.25rem 0;
+        @media (min-width: $tablet) {
+            margin: 1.5rem 0;
+            font-size: 1.3rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 1.5rem;
         }
     }
     h1,
@@ -334,14 +411,13 @@ p {
         text-align: left;
     }
     img {
-        width: 37.5%;
-        max-width: 180px;
+        width: 50%;
+        max-width: 250px;
         display: block;
         margin: 2rem auto 0 auto;
         box-shadow: 0px 0px 16px white;
-        border-radius: .5rem;
         @media (min-width: $tablet) {
-            margin: 0;
+            margin: 0 1.75rem;
         }
     }
     ul {
@@ -353,18 +429,25 @@ p {
         li {
             margin-top: .4rem;
         }
+        #no-style {
+            font-weight: bold;
+            list-style: none;
+        }
     }
     p,
     ul {
         @media (min-width: $tablet) {
             font-size: 1.05rem;
         }
+        @media (min-width: $largeDesktop) {
+            font-size: 1.25rem;
+        }
     }
-    .flex-items {
+    .flex-skills {
         @media (min-width: $tablet) {
             display: flex;
             align-items: center;
-            margin-top: 3rem;
+            margin-top: 1.5rem;
         }
     }
 }
@@ -373,6 +456,8 @@ p {
 .port-sect {
     border-top: 2px solid black;
     .flex-projects {
+        max-width: 1200px;
+        margin: 0 auto;
         @media (min-width: $tablet) {
             display: flex;
             flex-wrap: wrap;
@@ -387,7 +472,10 @@ p {
         margin-top: 1.25rem;
         @media (min-width: $tablet) {
             font-size: 3.5rem;
-            margin: 0 0 2.5rem 0;
+            margin: 3rem 0 2.5rem 0;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 4rem;
         }
     }
     h2 {
@@ -395,6 +483,9 @@ p {
         font-size: 1.1rem;
         @media (min-width: $tablet) {
             margin: 2.5rem 0 2rem 0;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 1.3rem;
         }
     }
     img {
@@ -407,10 +498,12 @@ p {
     .project img,
     .project {
         height: 25%;
-        max-width: 300px;
+        max-width: 370px;
         @media (min-width: $tablet) {
             height: 225px;
-            max-width: 360px;
+        }
+        @media (min-width: $desktop) {
+            height: 250px;
         }
     }
     .project {
@@ -440,13 +533,26 @@ p {
         p {
             margin: 1rem 0 2rem 0;
             font-size: 1rem;
+            @media (min-width: $desktop) {
+                font-size: 1.25rem;
+            }
         }
     }
     .project:active {
         transform: translateY(8px);
     }
+    .project:hover {
+        @media (min-width: $desktop) {
+            transform: translateY(8px);
+        }
+    }
     .project:active .project-overlay {
         opacity: 1;
+    }
+    .project:hover .project-overlay {
+        @media (min-width: $desktop) {
+            opacity: 1;
+        }
     }
 }
 .site-underlay {
@@ -574,6 +680,8 @@ footer {
     &:active {
         box-shadow: inset 0px 0px 20px white;
     }
+    /*- Intersect observer not supported on IE. this media query deactivates the sticky footer
+    function for IE users -*/
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         transform: translate(0, 0);
     }

@@ -38,7 +38,8 @@ a:hover {
   #exampleModal #modal-pic {
     margin: 0 auto 1rem auto;
     width: 100%;
-    max-width: 400px; }
+    max-width: 380px;
+    max-height: 340px; }
   #exampleModal .modal-footer {
     display: flex;
     justify-content: space-around; }
@@ -78,39 +79,54 @@ a:hover {
     @media (min-width: 768px) {
       .overlay h1 {
         font-size: 5rem; } }
+    @media (min-width: 1324px) {
+      .overlay h1 {
+        font-size: 6rem; } }
   .overlay h2 {
     font-size: 1.35rem; }
     @media (min-width: 768px) {
       .overlay h2 {
         font-size: 1.75rem; } }
+    @media (min-width: 1324px) {
+      .overlay h2 {
+        font-size: 2.25rem; } }
   .overlay h3 {
     font-size: 1.1rem; }
     @media (min-width: 768px) {
       .overlay h3 {
         font-size: 1.25rem; } }
+    @media (min-width: 1324px) {
+      .overlay h3 {
+        font-size: 1.75rem; } }
   .overlay h2,
   .overlay h3 {
-    letter-spacing: .2rem;
-    margin: 1rem 0;
+    letter-spacing: .4rem;
+    margin: 2.5rem 0;
     top: 6rem; }
   .overlay #arrow {
     display: block;
     margin: auto;
     position: relative;
     cursor: pointer;
-    top: 12.5rem;
+    top: 10.5rem;
     opacity: 0;
     animation: slide-in 1.5s ease-in .7s forwards;
     border: 2px solid #5cc0ee;
     border-radius: 1rem;
-    padding: .75rem; }
+    padding: .75rem;
+    width: 55px;
+    height: 50px; }
     .overlay #arrow path {
       fill: white; }
       .overlay #arrow path:active {
         fill: #50719c; }
     @media (min-width: 321px) {
       .overlay #arrow {
-        top: 15.5rem; } }
+        top: 11.5rem; } }
+    @media (min-width: 1024px) {
+      .overlay #arrow {
+        width: 70px;
+        height: 65px; } }
 
 .tile-background {
   height: 100vh;
@@ -120,8 +136,8 @@ a:hover {
     width: 20%;
     height: 20%; }
 
-/*--------------------------------*/
-/*--------- PAGE STYLES ----------*/
+/*----------------------------------------*/
+/*------------- PAGE STYLES --------------*/
 @media (min-width: 768px) {
   .nav-sect,
   .about-sect,
@@ -137,22 +153,27 @@ a:hover {
     flex-direction: column;
     justify-content: center; } }
 
+.about-sect,
+.skills-sect,
+.nav-sect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
 @media (min-width: 768px) and (min-height: 1023px) {
   .overlay h1 {
     top: 0; } }
 
-.about-sect,
 .skills-sect,
 .port-sect,
 .contact-sect {
-  padding: 1.5rem .5rem;
+  padding: 1rem .5rem;
   border-top: 1px solid black; }
   @media (min-width: 768px) {
-    .about-sect,
     .skills-sect,
     .port-sect,
     .contact-sect {
-      padding: 2.5rem .75rem; } }
+      padding: 2rem .75rem; } }
 
 h1 {
   font-family: 'Bad Script', cursive; }
@@ -160,7 +181,7 @@ h1 {
 p {
   font-size: .9rem; }
 
-/*--------- ---------------------- ----------*/
+/*--------- ---------------------- -------------*/
 /*--------- Navigation section styles ----------*/
 .flex-items {
   cursor: pointer; }
@@ -181,6 +202,9 @@ p {
     @media (min-width: 768px) {
       .nav-sect h3 {
         font-size: 2.5rem; } }
+    @media (min-width: 1324px) {
+      .nav-sect h3 {
+        font-size: 3rem; } }
   .nav-sect .flex-items {
     display: flex;
     justify-content: space-between;
@@ -194,15 +218,21 @@ p {
     color: white; }
     @media (min-width: 768px) {
       .nav-sect .flex-items {
-        width: 85%;
+        width: 75%;
         margin: 1.3rem auto;
         height: 4.75rem; } }
+    @media (min-width: 1324px) {
+      .nav-sect .flex-items {
+        height: 5.25rem; } }
     .nav-sect .flex-items span {
       font-family: 'Bad Script', cursive;
       font-size: 1.3rem; }
       @media (min-width: 768px) {
         .nav-sect .flex-items span {
           font-size: 1.75rem; } }
+      @media (min-width: 1324px) {
+        .nav-sect .flex-items span {
+          font-size: 2.1rem; } }
     .nav-sect .flex-items #globe-svg {
       width: 70px;
       height: 40px;
@@ -212,6 +242,9 @@ p {
       @media (min-width: 768px) {
         .nav-sect .flex-items #globe-svg {
           height: 50px; } }
+      @media (min-width: 1324px) {
+        .nav-sect .flex-items #globe-svg {
+          height: 60px; } }
     .nav-sect .flex-items #bulb-svg {
       width: 70px;
       height: 50px;
@@ -221,6 +254,9 @@ p {
       @media (min-width: 768px) {
         .nav-sect .flex-items #bulb-svg {
           height: 60px; } }
+      @media (min-width: 1324px) {
+        .nav-sect .flex-items #bulb-svg {
+          height: 70px; } }
     .nav-sect .flex-items #port-svg {
       width: 50px;
       height: 50px; }
@@ -228,84 +264,128 @@ p {
         .nav-sect .flex-items #port-svg {
           width: 60px;
           height: 60px; } }
+      @media (min-width: 1324px) {
+        .nav-sect .flex-items #port-svg {
+          width: 70px;
+          height: 70px; } }
     .nav-sect .flex-items #phone-svg {
       width: 50px;
       height: 40px; }
       @media (min-width: 768px) {
         .nav-sect .flex-items #phone-svg {
           height: 50px; } }
+      @media (min-width: 1324px) {
+        .nav-sect .flex-items #phone-svg {
+          height: 60px;
+          width: 60px; } }
     .nav-sect .flex-items #git-svg {
       width: 60px;
       height: 45px; }
       @media (min-width: 768px) {
         .nav-sect .flex-items #git-svg {
           height: 55px; } }
+      @media (min-width: 1324px) {
+        .nav-sect .flex-items #git-svg {
+          height: 65px; } }
 
 /*--------- ---------------------- ----------*/
 /*--------- About Me section styles ----------*/
 .about-sect {
-  background-color: #e4f2ff; }
+  padding: 1.75rem 0;
+  border-top: solid 1px black;
+  background-color: #ecf6ff; }
   .about-sect h1 {
-    text-align: center;
     font-size: 2.2rem; }
     @media (min-width: 768px) {
       .about-sect h1 {
-        font-size: 3.25rem;
-        margin-bottom: 2.5rem; } }
-  @media (min-width: 768px) {
-    .about-sect p {
-      font-size: 1.1rem; } }
+        font-size: 3rem;
+        margin-bottom: 1.75rem; } }
+    @media (min-width: 1324px) {
+      .about-sect h1 {
+        font-size: 3.5rem; } }
+  .about-sect p {
+    margin-bottom: .5rem; }
+    @media (min-width: 768px) {
+      .about-sect p {
+        font-size: 1.05rem; } }
+    @media (min-width: 1024px) {
+      .about-sect p {
+        margin-bottom: 1.75rem; } }
+    @media (min-width: 1324px) {
+      .about-sect p {
+        font-size: 1.2rem; } }
   .about-sect img {
     float: left;
     margin: .5rem 1rem .2rem 0;
-    width: 55%;
-    border: 2px solid #5cc0ee;
-    max-width: 260px; }
+    width: 60%;
+    max-width: 300px; }
     @media (min-width: 768px) {
       .about-sect img {
         margin: .5rem 1.75rem 1.25rem 0; } }
-  .about-sect p:nth-child(2) {
-    font-weight: bold;
-    margin-top: .75rem; }
 
+/*--------- ---------------------- ----------*/
 .about-content,
 .skills-content {
-  max-width: 675px;
+  max-width: 920px;
+  width: 90%;
   margin: 0 auto; }
 
 /*--------- ---------------------- ----------*/
+.skills-sect img,
+.about-sect img {
+  border-radius: 9rem;
+  transition: border-radius .3s ease, transform .4s ease-out; }
+  .skills-sect img:active,
+  .about-sect img:active {
+    border-radius: 0;
+    transform: scale(1.04); }
+  @media (min-width: 1024px) {
+    .skills-sect img:hover,
+    .about-sect img:hover {
+      border-radius: 0;
+      transform: scale(1.03); } }
+
 /*--------- Skills section styles ----------*/
 .skills-sect {
   background: url("../img/skills.jpg");
   background-size: 100%;
   box-shadow: inset 0 0 0 2000px rgba(80, 113, 156, 0.97); }
-  .skills-sect p:nth-of-type(1) {
-    font-size: 1.05rem;
-    margin: 1.25rem 0; }
-    @media (min-width: 768px) {
-      .skills-sect p:nth-of-type(1) {
-        margin: 1.5rem 0;
-        font-size: 1.2rem; } }
   .skills-sect h1 {
     text-align: center; }
     @media (min-width: 768px) {
       .skills-sect h1 {
         font-size: 3.25rem; } }
+    @media (min-width: 1324px) {
+      .skills-sect h1 {
+        font-size: 4rem; } }
+  .skills-sect p:nth-of-type(1),
+  .skills-sect p:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin: 1.25rem 0; }
+    @media (min-width: 768px) {
+      .skills-sect p:nth-of-type(1),
+      .skills-sect p:nth-of-type(2) {
+        margin: 1.5rem 0;
+        font-size: 1.3rem; } }
+    @media (min-width: 1324px) {
+      .skills-sect p:nth-of-type(1),
+      .skills-sect p:nth-of-type(2) {
+        font-size: 1.5rem; } }
   .skills-sect h1,
   .skills-sect p {
     color: white; }
   .skills-sect p {
     text-align: left; }
   .skills-sect img {
-    width: 37.5%;
-    max-width: 180px;
+    width: 50%;
+    max-width: 250px;
     display: block;
     margin: 2rem auto 0 auto;
-    box-shadow: 0px 0px 16px white;
-    border-radius: .5rem; }
+    box-shadow: 0px 0px 16px white; }
     @media (min-width: 768px) {
       .skills-sect img {
-        margin: 0; } }
+        margin: 0 1.75rem; } }
   .skills-sect ul {
     color: white;
     font-size: .9rem; }
@@ -314,25 +394,35 @@ p {
         padding: 0; } }
     .skills-sect ul li {
       margin-top: .4rem; }
+    .skills-sect ul #no-style {
+      font-weight: bold;
+      list-style: none; }
   @media (min-width: 768px) {
     .skills-sect p,
     .skills-sect ul {
       font-size: 1.05rem; } }
+  @media (min-width: 1324px) {
+    .skills-sect p,
+    .skills-sect ul {
+      font-size: 1.25rem; } }
   @media (min-width: 768px) {
-    .skills-sect .flex-items {
+    .skills-sect .flex-skills {
       display: flex;
       align-items: center;
-      margin-top: 3rem; } }
+      margin-top: 1.5rem; } }
 
 /*--------- ---------------------- ----------*/
 /*--------- Portfolio section styles ----------*/
 .port-sect {
   border-top: 2px solid black; }
-  @media (min-width: 768px) {
-    .port-sect .flex-projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; } }
+  .port-sect .flex-projects {
+    max-width: 1200px;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .port-sect .flex-projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; } }
   .port-sect h1,
   .port-sect h2 {
     text-align: center; }
@@ -341,13 +431,19 @@ p {
     @media (min-width: 768px) {
       .port-sect h1 {
         font-size: 3.5rem;
-        margin: 0 0 2.5rem 0; } }
+        margin: 3rem 0 2.5rem 0; } }
+    @media (min-width: 1324px) {
+      .port-sect h1 {
+        font-size: 4rem; } }
   .port-sect h2 {
     margin: 2rem 0 1rem 0;
     font-size: 1.1rem; }
     @media (min-width: 768px) {
       .port-sect h2 {
         margin: 2.5rem 0 2rem 0; } }
+    @media (min-width: 1324px) {
+      .port-sect h2 {
+        font-size: 1.3rem; } }
   .port-sect img {
     display: block;
     width: 100%; }
@@ -356,12 +452,15 @@ p {
   .port-sect .project img,
   .port-sect .project {
     height: 25%;
-    max-width: 300px; }
+    max-width: 370px; }
     @media (min-width: 768px) {
       .port-sect .project img,
       .port-sect .project {
-        height: 225px;
-        max-width: 360px; } }
+        height: 225px; } }
+    @media (min-width: 1024px) {
+      .port-sect .project img,
+      .port-sect .project {
+        height: 250px; } }
   .port-sect .project {
     position: relative;
     width: 70%;
@@ -388,10 +487,19 @@ p {
     .port-sect .project-overlay p {
       margin: 1rem 0 2rem 0;
       font-size: 1rem; }
+      @media (min-width: 1024px) {
+        .port-sect .project-overlay p {
+          font-size: 1.25rem; } }
   .port-sect .project:active {
     transform: translateY(8px); }
+  @media (min-width: 1024px) {
+    .port-sect .project:hover {
+      transform: translateY(8px); } }
   .port-sect .project:active .project-overlay {
     opacity: 1; }
+  @media (min-width: 1024px) {
+    .port-sect .project:hover .project-overlay {
+      opacity: 1; } }
 
 .site-underlay {
   color: white;
@@ -497,7 +605,9 @@ footer {
   left: 0;
   right: 0;
   transform: translate(0, 2.5rem);
-  transition: transform .25s ease-in; }
+  transition: transform .25s ease-in;
+  /*- Intersect observer not supported on IE. this media query deactivates the sticky footer
+  function for IE users -*/ }
   .sticky-footer:active {
     box-shadow: inset 0px 0px 20px white; }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
