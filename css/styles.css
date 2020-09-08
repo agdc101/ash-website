@@ -10,50 +10,6 @@ main {
 a:hover {
   text-decoration: none; }
 
-/*-------------------------------------*/
-/*------ project modal styles ---------*/
-#exampleModal {
-  padding: 0 !important; }
-  #exampleModal .modal-header {
-    background-color: #50719c; }
-    #exampleModal .modal-header span {
-      color: white;
-      font-weight: bold; }
-  #exampleModal .modal-body {
-    padding-bottom: 0 !important; }
-    #exampleModal .modal-body span {
-      font-size: .9rem; }
-    #exampleModal .modal-body p,
-    #exampleModal .modal-body span {
-      margin: .75rem auto;
-      max-width: 350px; }
-      @media (min-width: 768px) {
-        #exampleModal .modal-body p,
-        #exampleModal .modal-body span {
-          font-size: 1rem; } }
-  #exampleModal p,
-  #exampleModal span,
-  #exampleModal #modal-pic {
-    display: block; }
-  #exampleModal #modal-pic {
-    margin: 0 auto 1rem auto;
-    width: 100%;
-    max-width: 380px;
-    max-height: 340px; }
-  #exampleModal .modal-footer {
-    display: flex;
-    justify-content: space-around; }
-    #exampleModal .modal-footer a {
-      display: flex;
-      justify-content: center; }
-      #exampleModal .modal-footer a img {
-        border-radius: 2.75rem;
-        box-shadow: 0 0 12px #5cc0ee;
-        width: 60%;
-        transition: transform .1s ease; }
-        #exampleModal .modal-footer a img:active {
-          transform: scale(1.2); }
-
 /*-----------------------------------------------------*/
 /*------------ top page overlay styles-----------------*/
 .overlay {
@@ -62,7 +18,8 @@ a:hover {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(41, 41, 41, 0.94); }
+  background: rgba(41, 41, 41, 0.94);
+  height: 100vh; }
   .overlay h1,
   .overlay h2,
   .overlay h3 {
@@ -72,7 +29,6 @@ a:hover {
     text-shadow: 6px 6px 16px #5cc0ee;
     animation: fade .75s ease-in; }
   .overlay h1 {
-    top: 4.5rem;
     letter-spacing: .25rem;
     font-size: 4rem;
     margin: 2.5rem .5rem; }
@@ -101,29 +57,33 @@ a:hover {
   .overlay h2,
   .overlay h3 {
     letter-spacing: .4rem;
-    margin: 2.5rem 0;
-    top: 6rem; }
-  .overlay #arrow {
-    display: block;
-    margin: auto;
+    margin: 2rem 0; }
+  .overlay a {
     position: relative;
+    top: 3.75rem;
+    text-align: center;
+    display: block;
+    width: 50px;
+    margin: 0 auto; }
+    @media (min-width: 1024px) {
+      .overlay a:hover #arrow {
+        background-color: #5cc0ee; } }
+  .overlay #arrow {
     cursor: pointer;
-    top: 10.5rem;
     opacity: 0;
-    animation: slide-in 1.5s ease-in .7s forwards;
+    animation: slide-in 1.5s ease-in .7s forwards, scale 1.5s ease 2.8s infinite;
     border: 2px solid #5cc0ee;
     border-radius: 1rem;
-    padding: .75rem;
+    padding: .7rem;
     width: 55px;
-    height: 50px; }
+    height: 50px;
+    transition: transform 2s ease; }
     .overlay #arrow path {
       fill: white; }
-      .overlay #arrow path:active {
-        fill: #50719c; }
     @media (min-width: 321px) {
       .overlay #arrow {
         top: 11.5rem; } }
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       .overlay #arrow {
         width: 70px;
         height: 65px; } }
@@ -138,12 +98,6 @@ a:hover {
 
 /*----------------------------------------*/
 /*------------- PAGE STYLES --------------*/
-@media (min-width: 768px) {
-  .nav-sect,
-  .about-sect,
-  .skills-sect,
-  .overlay {
-    height: 100vh; } }
 @media (min-width: 768px) and (min-height: 1023px) {
   .nav-sect,
   .about-sect,
@@ -155,10 +109,17 @@ a:hover {
 
 .about-sect,
 .skills-sect,
-.nav-sect {
+.nav-sect,
+.overlay {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media (min-width: 768px) {
+    .about-sect,
+    .skills-sect,
+    .nav-sect,
+    .overlay {
+      height: 100vh; } }
 
 @media (min-width: 768px) and (min-height: 1023px) {
   .overlay h1 {
@@ -183,11 +144,6 @@ p {
 
 /*--------- ---------------------- -------------*/
 /*--------- Navigation section styles ----------*/
-.flex-items {
-  cursor: pointer; }
-  .flex-items:active {
-    box-shadow: inset 0px 0px 18px white; }
-
 .nav-sect {
   padding: 1.25rem 0;
   margin: 0 auto;
@@ -209,6 +165,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    transition: transform .1s ease;
     background-color: rgba(80, 113, 156, 0.97);
     width: 70%;
     height: 4rem;
@@ -216,11 +174,16 @@ p {
     padding: .4rem 1.5rem;
     border-radius: .25rem;
     color: white; }
+    .nav-sect .flex-items:active {
+      box-shadow: inset 0px 0px 18px white; }
     @media (min-width: 768px) {
       .nav-sect .flex-items {
         width: 75%;
         margin: 1.3rem auto;
         height: 4.75rem; } }
+    @media (min-width: 1024px) {
+      .nav-sect .flex-items:hover {
+        transform: scale(1.025); } }
     @media (min-width: 1324px) {
       .nav-sect .flex-items {
         height: 5.25rem; } }
@@ -354,7 +317,8 @@ p {
     text-align: center; }
     @media (min-width: 768px) {
       .skills-sect h1 {
-        font-size: 3.25rem; } }
+        font-size: 3.75rem;
+        text-align: left; } }
     @media (min-width: 1324px) {
       .skills-sect h1 {
         font-size: 4rem; } }
@@ -411,6 +375,53 @@ p {
       align-items: center;
       margin-top: 1.5rem; } }
 
+/*-----------------------------------------------*/
+/*------ portfolio-section modal styles ---------*/
+#exampleModal {
+  padding: 0 !important; }
+  #exampleModal .modal-header {
+    background-color: #50719c; }
+    #exampleModal .modal-header span {
+      color: white;
+      font-weight: bold; }
+  #exampleModal .modal-body {
+    padding-bottom: 0 !important; }
+    #exampleModal .modal-body span {
+      font-size: .9rem; }
+    #exampleModal .modal-body p,
+    #exampleModal .modal-body span {
+      margin: .75rem auto;
+      max-width: 350px; }
+      @media (min-width: 768px) {
+        #exampleModal .modal-body p,
+        #exampleModal .modal-body span {
+          font-size: .95rem; } }
+  #exampleModal p,
+  #exampleModal span,
+  #exampleModal #modal-pic {
+    display: block; }
+  #exampleModal #modal-pic {
+    margin: 0 auto 1rem auto;
+    width: 100%;
+    max-width: 345px;
+    max-height: 290px; }
+  #exampleModal .modal-footer {
+    display: flex;
+    justify-content: space-around; }
+    #exampleModal .modal-footer a {
+      display: flex;
+      justify-content: center; }
+      #exampleModal .modal-footer a img {
+        border-radius: 1rem;
+        box-shadow: 0 0 14px #5cc0ee;
+        width: 60%;
+        transition: transform .2s ease-in; }
+        #exampleModal .modal-footer a img:active {
+          transform: scale(1.2); }
+        @media (min-width: 1024px) {
+          #exampleModal .modal-footer a img:hover {
+            transform: scale(1.2); } }
+
 /*--------- ---------------------- ----------*/
 /*--------- Portfolio section styles ----------*/
 .port-sect {
@@ -437,13 +448,14 @@ p {
         font-size: 4rem; } }
   .port-sect h2 {
     margin: 2rem 0 1rem 0;
-    font-size: 1.1rem; }
+    font-size: 1.05rem; }
     @media (min-width: 768px) {
       .port-sect h2 {
-        margin: 2.5rem 0 2rem 0; } }
+        margin: 2.5rem 0 2rem 0;
+        font-size: 1.15rem; } }
     @media (min-width: 1324px) {
       .port-sect h2 {
-        font-size: 1.3rem; } }
+        font-size: 1.25rem; } }
   .port-sect img {
     display: block;
     width: 100%; }
@@ -452,15 +464,16 @@ p {
   .port-sect .project img,
   .port-sect .project {
     height: 25%;
-    max-width: 370px; }
+    max-width: 300px; }
     @media (min-width: 768px) {
       .port-sect .project img,
       .port-sect .project {
-        height: 225px; } }
+        max-width: 350px;
+        height: 210px; } }
     @media (min-width: 1024px) {
       .port-sect .project img,
       .port-sect .project {
-        height: 250px; } }
+        height: 240px; } }
   .port-sect .project {
     position: relative;
     width: 70%;
@@ -489,7 +502,10 @@ p {
       font-size: 1rem; }
       @media (min-width: 1024px) {
         .port-sect .project-overlay p {
-          font-size: 1.25rem; } }
+          font-size: 1.1rem; } }
+    @media (min-width: 768px) {
+      .port-sect .project-overlay button {
+        font-size: 1.2rem; } }
   .port-sect .project:active {
     transform: translateY(8px); }
   @media (min-width: 1024px) {
@@ -512,7 +528,7 @@ p {
     padding: 1.5rem 0; }
     @media (min-width: 768px) {
       .site-underlay .this-site {
-        padding: 3rem 0; } }
+        padding: 1.5rem 0; } }
     .site-underlay .this-site .this-site-content {
       text-align: center;
       width: 80%;
@@ -529,7 +545,7 @@ p {
         font-size: 1.5rem; }
         @media (min-width: 768px) {
           .site-underlay .this-site .this-site-content h2 {
-            font-size: 2.35rem; } }
+            font-size: 2.4rem; } }
       .site-underlay .this-site .this-site-content img {
         margin: 0 auto;
         border-radius: 2.4rem;
@@ -539,6 +555,9 @@ p {
         transition: transform .1s ease; }
         .site-underlay .this-site .this-site-content img:active {
           transform: scale(1.2); }
+        @media (min-width: 1024px) {
+          .site-underlay .this-site .this-site-content img:hover {
+            transform: scale(1.2); } }
 
 /*--------- ---------------------- ----------*/
 /*--------- Contact section styles ----------*/
@@ -578,6 +597,7 @@ p {
 /*--------- ---------------------- ----------*/
 /*------------- Footer styles ---------------*/
 footer {
+  color: white;
   padding: 0 .5rem;
   display: flex;
   justify-content: space-between;
@@ -585,26 +605,28 @@ footer {
   height: 3rem;
   background-color: #5cc0ee;
   font-size: .9rem; }
+  @media (min-width: 1024px) {
+    footer {
+      height: 4rem;
+      font-size: 1.1rem; } }
   footer a {
     color: white; }
     @media (min-width: 768px) {
       footer a {
         font-size: 1.1rem; } }
-  footer span {
-    color: white; }
 
 /*--------- ---------------------- ----------*/
 /*---------- Sticky footer styles -----------*/
 .sticky-footer {
   display: flex;
   align-items: center;
-  height: 2.25rem;
+  height: 2.75rem;
   background-color: #5cc0ee;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  transform: translate(0, 2.5rem);
+  transform: translate(0, 2.75rem);
   transition: transform .25s ease-in;
   /*- Intersect observer not supported on IE. this media query deactivates the sticky footer
   function for IE users -*/ }
@@ -618,6 +640,13 @@ footer {
     text-align: center;
     width: 100%;
     color: white; }
+    @media (min-width: 768px) {
+      .sticky-footer a {
+        font-size: 1.25rem;
+        letter-spacing: .25rem; } }
+    @media (min-width: 1024px) {
+      .sticky-footer a:hover {
+        color: #50719c; } }
 
 .slide {
   transform: translate(0, 0rem); }
@@ -641,6 +670,13 @@ footer {
     transform: rotate(20deg); }
   100% {
     transform: rotate(0deg); } }
+@keyframes scale {
+  0% {
+    transform: scale(1.2);
+    border-radius: 0rem; }
+  100% {
+    transform: scale(1);
+    border-radius: 2.5rem; } }
 /* --------- ----------- -------------*/
 #globe-svg {
   transition: transform .5s ease-in; }

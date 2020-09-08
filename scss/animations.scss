@@ -26,6 +26,16 @@
         transform: rotate(0deg);
     }
 }
+@keyframes scale {
+    0% {
+        transform: scale(1.2);
+        border-radius: 0rem;
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 2.5rem;
+    }
+}
 /* --------- ----------- -------------*/
 
 #globe-svg {
