@@ -1,100 +1,138 @@
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes slide-in {
+  0% {
+    transform: translateY(-38rem); }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes ring {
+  0% {
+    transform: rotate(-20deg); }
+  50% {
+    transform: rotate(20deg); }
+  100% {
+    transform: rotate(0deg); } }
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    border-radius: .25rem; }
+  50% {
+    transform: scale(1.3);
+    border-radius: 3.75rem; }
+  100% {
+    transform: scale(0.9);
+    border-radius: .25rem; } }
+/* --------- ----------- -------------*/
+#globe-svg {
+  transition: transform .5s ease-in; }
+
+/*----------------------*/
+.about-me:active svg {
+  transform: rotate(360deg); }
+
+@media (min-width: 1024px) {
+  .about-me:hover svg {
+    transform: rotate(360deg); } }
+
+/*----------------------*/
+.my-skills:active #line-1,
+.my-skills:active #line-2,
+.my-skills:active #line-3,
+.my-skills:active #line-4,
+.my-skills:active #line-5,
+.my-skills:active #bulb {
+  fill: yellow; }
+
+@media (min-width: 1024px) {
+  .my-skills:hover #line-1,
+  .my-skills:hover #line-2,
+  .my-skills:hover #line-3,
+  .my-skills:hover #line-4,
+  .my-skills:hover #line-5,
+  .my-skills:hover #bulb {
+    fill: yellow; } }
+
+/*----------------------*/
+#top,
+#body,
+#backarrow,
+#forwardarrow,
+#backslash {
+  transition: fill .4s ease-in; }
+
+/*----------------------*/
+.my-portfolio:active #top {
+  fill: #d1bd0b; }
+
+@media (min-width: 1024px) {
+  .my-portfolio:hover #top {
+    fill: #d1bd0b; } }
+
+/*----------------------*/
+.my-portfolio:active #body {
+  fill: #d75e26; }
+
+@media (min-width: 1024px) {
+  .my-portfolio:hover #body {
+    fill: #d75e26; } }
+
+/*----------------------*/
+.my-portfolio:active #backarrow,
+.my-portfolio:active #forwardarrow,
+.my-portfolio:active #backslash {
+  fill: #edd3ca; }
+
+@media (min-width: 1024px) {
+  .my-portfolio:hover #backarrow,
+  .my-portfolio:hover #forwardarrow,
+  .my-portfolio:hover #backslash {
+    fill: #edd3ca; } }
+
+/*----------------------*/
+.contact-me:active #phone-svg {
+  animation: ring .75s ease infinite forwards; }
+
+@media (min-width: 1024px) {
+  .contact-me:hover #phone-svg {
+    animation: ring .75s ease infinite forwards; } }
+
+/*----------------------*/
+.contact-me:active #wave-1,
+.contact-me:active #wave-2,
+.contact-me:active #wave-3 {
+  fill: red; }
+
+@media (min-width: 1024px) {
+  .contact-me:hover #wave-1,
+  .contact-me:hover #wave-2,
+  .contact-me:hover #wave-3 {
+    fill: red; } }
+
+/*----------------------*/
+#git-logo {
+  transition: fill .4s ease; }
+
+.github:active #git-logo {
+  fill: black; }
+
+@media (min-width: 1024px) {
+  .github:hover #git-logo {
+    fill: black; } }
+
 /* ----- universal styles ------ */
 * {
   box-sizing: border-box;
-  hyphens: auto;
-  font-family: 'Fira Sans', sans-serif; }
+  font-family: 'Poppins', sans-serif; }
 
 main {
   scroll-behavior: smooth; }
 
 a:hover {
   text-decoration: none; }
-
-/*-----------------------------------------------------*/
-/*------------ top page overlay styles-----------------*/
-.overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(41, 41, 41, 0.94);
-  height: 100vh; }
-  .overlay h1,
-  .overlay h2,
-  .overlay h3 {
-    text-align: center;
-    position: relative;
-    color: white;
-    text-shadow: 6px 6px 16px #5cc0ee;
-    animation: fade .75s ease-in; }
-  .overlay h1 {
-    letter-spacing: .25rem;
-    font-size: 4rem;
-    margin: 2.5rem .5rem; }
-    @media (min-width: 768px) {
-      .overlay h1 {
-        font-size: 5rem; } }
-    @media (min-width: 1324px) {
-      .overlay h1 {
-        font-size: 6rem; } }
-  .overlay h2 {
-    font-size: 1.35rem; }
-    @media (min-width: 768px) {
-      .overlay h2 {
-        font-size: 1.75rem; } }
-    @media (min-width: 1324px) {
-      .overlay h2 {
-        font-size: 2.25rem; } }
-  .overlay h3 {
-    font-size: 1.1rem; }
-    @media (min-width: 768px) {
-      .overlay h3 {
-        font-size: 1.25rem; } }
-    @media (min-width: 1324px) {
-      .overlay h3 {
-        font-size: 1.75rem; } }
-  .overlay h2,
-  .overlay h3 {
-    letter-spacing: .4rem;
-    margin: 2rem 0; }
-  .overlay a {
-    position: relative;
-    top: 3.75rem;
-    text-align: center;
-    display: block;
-    width: 50px;
-    margin: 0 auto; }
-    @media (min-width: 1024px) {
-      .overlay a:hover #arrow {
-        background-color: #5cc0ee; } }
-  .overlay #arrow {
-    cursor: pointer;
-    opacity: 0;
-    animation: slide-in 1.5s ease-in .7s forwards, scale 1.5s ease 2.8s infinite;
-    border: 2px solid #5cc0ee;
-    border-radius: 1rem;
-    padding: .7rem;
-    width: 55px;
-    height: 50px;
-    transition: transform 2s ease; }
-    .overlay #arrow path {
-      fill: white; }
-    @media (min-width: 321px) {
-      .overlay #arrow {
-        top: 11.5rem; } }
-    @media (min-width: 768px) {
-      .overlay #arrow {
-        width: 70px;
-        height: 65px; } }
-
-.tile-background {
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap; }
-  .tile-background img {
-    width: 20%;
-    height: 20%; }
 
 /*----------------------------------------*/
 /*------------- PAGE STYLES --------------*/
@@ -166,14 +204,14 @@ p {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    transition: transform .1s ease;
     background-color: rgba(80, 113, 156, 0.97);
     width: 70%;
     height: 4rem;
     margin: 2.25rem auto;
     padding: .4rem 1.5rem;
     border-radius: .25rem;
-    color: white; }
+    color: white;
+    transition: transform .2s ease; }
     .nav-sect .flex-items:active {
       box-shadow: inset 0px 0px 18px white; }
     @media (min-width: 768px) {
@@ -280,7 +318,7 @@ p {
   .about-sect img {
     float: left;
     margin: .5rem 1rem .2rem 0;
-    width: 60%;
+    width: 65%;
     max-width: 300px; }
     @media (min-width: 768px) {
       .about-sect img {
@@ -289,14 +327,14 @@ p {
 /*--------- ---------------------- ----------*/
 .about-content,
 .skills-content {
-  max-width: 920px;
+  max-width: 960px;
   width: 90%;
   margin: 0 auto; }
 
 /*--------- ---------------------- ----------*/
 .skills-sect img,
 .about-sect img {
-  border-radius: 9rem;
+  border-radius: 6rem;
   transition: border-radius .3s ease, transform .4s ease-out; }
   .skills-sect img:active,
   .about-sect img:active {
@@ -309,71 +347,87 @@ p {
       transform: scale(1.03); } }
 
 /*--------- Skills section styles ----------*/
-.skills-sect {
-  background: url("../img/skills.jpg");
-  background-size: 100%;
-  box-shadow: inset 0 0 0 2000px rgba(80, 113, 156, 0.97); }
-  .skills-sect h1 {
-    text-align: center; }
+.skill-flex {
+  display: flex; }
+  .skill-flex .skills-sect {
+    width: 90%;
+    background: url("../img/skills.jpg");
+    background-size: 100%;
+    box-shadow: inset 0 0 0 2000px rgba(80, 113, 156, 0.97); }
     @media (min-width: 768px) {
-      .skills-sect h1 {
-        font-size: 3.75rem;
-        text-align: left; } }
-    @media (min-width: 1324px) {
-      .skills-sect h1 {
-        font-size: 4rem; } }
-  .skills-sect p:nth-of-type(1),
-  .skills-sect p:nth-of-type(2) {
-    font-weight: bold;
-    font-size: 1.05rem;
-    margin: 1.25rem 0; }
-    @media (min-width: 768px) {
-      .skills-sect p:nth-of-type(1),
-      .skills-sect p:nth-of-type(2) {
-        margin: 1.5rem 0;
-        font-size: 1.3rem; } }
-    @media (min-width: 1324px) {
-      .skills-sect p:nth-of-type(1),
-      .skills-sect p:nth-of-type(2) {
-        font-size: 1.5rem; } }
-  .skills-sect h1,
-  .skills-sect p {
-    color: white; }
-  .skills-sect p {
-    text-align: left; }
-  .skills-sect img {
-    width: 50%;
-    max-width: 250px;
-    display: block;
-    margin: 2rem auto 0 auto;
-    box-shadow: 0px 0px 16px white; }
-    @media (min-width: 768px) {
-      .skills-sect img {
-        margin: 0 1.75rem; } }
-  .skills-sect ul {
-    color: white;
-    font-size: .9rem; }
-    @media (min-width: 768px) {
-      .skills-sect ul {
-        padding: 0; } }
-    .skills-sect ul li {
-      margin-top: .4rem; }
-    .skills-sect ul #no-style {
+      .skill-flex .skills-sect {
+        width: 67.5%; } }
+    .skill-flex .skills-sect h1 {
+      text-align: center; }
+      @media (min-width: 768px) {
+        .skill-flex .skills-sect h1 {
+          font-size: 3.75rem;
+          text-align: left; } }
+      @media (min-width: 1324px) {
+        .skill-flex .skills-sect h1 {
+          font-size: 4rem; } }
+    .skill-flex .skills-sect p:nth-of-type(1),
+    .skill-flex .skills-sect p:nth-of-type(2) {
       font-weight: bold;
-      list-style: none; }
-  @media (min-width: 768px) {
-    .skills-sect p,
-    .skills-sect ul {
-      font-size: 1.05rem; } }
-  @media (min-width: 1324px) {
-    .skills-sect p,
-    .skills-sect ul {
-      font-size: 1.25rem; } }
-  @media (min-width: 768px) {
-    .skills-sect .flex-skills {
-      display: flex;
-      align-items: center;
-      margin-top: 1.5rem; } }
+      font-size: 1.05rem;
+      margin: 1.25rem 0; }
+      @media (min-width: 768px) {
+        .skill-flex .skills-sect p:nth-of-type(1),
+        .skill-flex .skills-sect p:nth-of-type(2) {
+          margin: 1.5rem 0;
+          font-size: 1.3rem; } }
+      @media (min-width: 1324px) {
+        .skill-flex .skills-sect p:nth-of-type(1),
+        .skill-flex .skills-sect p:nth-of-type(2) {
+          font-size: 1.5rem; } }
+    .skill-flex .skills-sect h1,
+    .skill-flex .skills-sect p {
+      color: white; }
+    .skill-flex .skills-sect p {
+      text-align: left; }
+    .skill-flex .skills-sect img {
+      width: 50%;
+      height: 350px;
+      max-width: 275px;
+      display: block;
+      margin: 2rem auto 0 auto;
+      box-shadow: 0px 0px 16px white; }
+      @media (min-width: 768px) {
+        .skill-flex .skills-sect img {
+          margin: 0 1.75rem; } }
+    .skill-flex .skills-sect ul {
+      color: white;
+      font-size: .9rem; }
+      @media (min-width: 768px) {
+        .skill-flex .skills-sect ul {
+          padding: 0; } }
+      .skill-flex .skills-sect ul li {
+        margin-top: .4rem; }
+      .skill-flex .skills-sect ul #no-style {
+        font-weight: bold;
+        list-style: none; }
+    @media (min-width: 768px) {
+      .skill-flex .skills-sect p,
+      .skill-flex .skills-sect ul {
+        font-size: 1.05rem; } }
+    @media (min-width: 1324px) {
+      .skill-flex .skills-sect p,
+      .skill-flex .skills-sect ul {
+        font-size: 1.25rem; } }
+    @media (min-width: 768px) {
+      .skill-flex .skills-sect .flex-skills {
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem; } }
+  .skill-flex .skills-image {
+    display: none;
+    background: url("../img/skills.jpg");
+    background-size: 85%;
+    border-top: solid 1px black; }
+    @media (min-width: 768px) {
+      .skill-flex .skills-image {
+        width: 32.5%;
+        display: block; } }
 
 /*-----------------------------------------------*/
 /*------ portfolio-section modal styles ---------*/
@@ -468,12 +522,13 @@ p {
     @media (min-width: 768px) {
       .port-sect .project img,
       .port-sect .project {
-        max-width: 350px;
+        max-width: 375px;
         height: 210px; } }
     @media (min-width: 1024px) {
       .port-sect .project img,
       .port-sect .project {
-        height: 240px; } }
+        max-width: 400px;
+        height: 270px; } }
   .port-sect .project {
     position: relative;
     width: 70%;
@@ -652,126 +707,90 @@ footer {
   transform: translate(0, 0rem); }
 
 /*--------- ---------------------- ----------*/
-@keyframes fade {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@keyframes slide-in {
-  0% {
-    transform: translateY(-38rem); }
-  100% {
-    transform: translateY(0);
-    opacity: 1; } }
-@keyframes ring {
-  0% {
-    transform: rotate(-20deg); }
-  50% {
-    transform: rotate(20deg); }
-  100% {
-    transform: rotate(0deg); } }
-@keyframes scale {
-  0% {
-    transform: scale(1.2);
-    border-radius: 0rem; }
-  100% {
-    transform: scale(1);
-    border-radius: 2.5rem; } }
-/* --------- ----------- -------------*/
-#globe-svg {
-  transition: transform .5s ease-in; }
+/*-----------------------------------------------------*/
+/*------------ top page overlay styles-----------------*/
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(41, 41, 41, 0.94);
+  height: 100vh; }
+  .overlay h1,
+  .overlay h2,
+  .overlay h3 {
+    text-align: center;
+    position: relative;
+    color: white;
+    text-shadow: 6px 6px 16px #5cc0ee;
+    animation: fade 1s ease-in; }
+  .overlay h1 {
+    letter-spacing: .25rem;
+    font-size: 4rem;
+    margin: 2.5rem .5rem; }
+    @media (min-width: 768px) {
+      .overlay h1 {
+        font-size: 5.25rem; } }
+    @media (min-width: 1324px) {
+      .overlay h1 {
+        font-size: 6.25rem; } }
+  .overlay h2 {
+    font-size: 1.35rem; }
+    @media (min-width: 768px) {
+      .overlay h2 {
+        font-size: 1.6rem; } }
+    @media (min-width: 1324px) {
+      .overlay h2 {
+        font-size: 2rem; } }
+  .overlay h3 {
+    font-size: 1.1rem; }
+    @media (min-width: 768px) {
+      .overlay h3 {
+        font-size: 1.4rem; } }
+    @media (min-width: 1324px) {
+      .overlay h3 {
+        font-size: 1.8rem; } }
+  .overlay h2,
+  .overlay h3 {
+    letter-spacing: .4rem;
+    margin: 2rem 0; }
+  .overlay a {
+    position: relative;
+    top: 3.75rem;
+    text-align: center;
+    display: block;
+    width: 50px;
+    margin: 0 auto; }
+    @media (min-width: 1024px) {
+      .overlay a:hover #arrow {
+        background-color: #5cc0ee; } }
+  .overlay #arrow {
+    cursor: pointer;
+    opacity: 0;
+    animation: slide-in 1.5s ease-in .7s forwards, pulse 1.5s ease-in-out 2.8s infinite;
+    border: 2px solid #5cc0ee;
+    border-radius: 1rem;
+    padding: .7rem;
+    width: 55px;
+    height: 50px;
+    transition: transform 2s ease; }
+    .overlay #arrow path {
+      fill: white; }
+    @media (min-width: 321px) {
+      .overlay #arrow {
+        top: 11.5rem; } }
+    @media (min-width: 768px) {
+      .overlay #arrow {
+        width: 70px;
+        height: 65px; } }
 
-/*----------------------*/
-.about-me:active svg {
-  transform: rotate(360deg); }
-
-@media (min-width: 1024px) {
-  .about-me:hover svg {
-    transform: rotate(360deg); } }
-
-/*----------------------*/
-.my-skills:active #line-1,
-.my-skills:active #line-2,
-.my-skills:active #line-3,
-.my-skills:active #line-4,
-.my-skills:active #line-5,
-.my-skills:active #bulb {
-  fill: yellow; }
-
-@media (min-width: 1024px) {
-  .my-skills:hover #line-1,
-  .my-skills:hover #line-2,
-  .my-skills:hover #line-3,
-  .my-skills:hover #line-4,
-  .my-skills:hover #line-5,
-  .my-skills:hover #bulb {
-    fill: yellow; } }
-
-/*----------------------*/
-#top,
-#body,
-#backarrow,
-#forwardarrow,
-#backslash {
-  transition: fill .4s ease-in; }
-
-/*----------------------*/
-.my-portfolio:active #top {
-  fill: #d1bd0b; }
-
-@media (min-width: 1024px) {
-  .my-portfolio:hover #top {
-    fill: #d1bd0b; } }
-
-/*----------------------*/
-.my-portfolio:active #body {
-  fill: #d75e26; }
-
-@media (min-width: 1024px) {
-  .my-portfolio:hover #body {
-    fill: #d75e26; } }
-
-/*----------------------*/
-.my-portfolio:active #backarrow,
-.my-portfolio:active #forwardarrow,
-.my-portfolio:active #backslash {
-  fill: #edd3ca; }
-
-@media (min-width: 1024px) {
-  .my-portfolio:hover #backarrow,
-  .my-portfolio:hover #forwardarrow,
-  .my-portfolio:hover #backslash {
-    fill: #edd3ca; } }
-
-/*----------------------*/
-.contact-me:active #phone-svg {
-  animation: ring .75s ease infinite forwards; }
-
-@media (min-width: 1024px) {
-  .contact-me:hover #phone-svg {
-    animation: ring .75s ease infinite forwards; } }
-
-/*----------------------*/
-.contact-me:active #wave-1,
-.contact-me:active #wave-2,
-.contact-me:active #wave-3 {
-  fill: red; }
-
-@media (min-width: 1024px) {
-  .contact-me:hover #wave-1,
-  .contact-me:hover #wave-2,
-  .contact-me:hover #wave-3 {
-    fill: red; } }
-
-/*----------------------*/
-#git-logo {
-  transition: fill .4s ease; }
-
-.github:active #git-logo {
-  fill: black; }
-
-@media (min-width: 1024px) {
-  .github:hover #git-logo {
-    fill: black; } }
+.tile-background {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap; }
+  .tile-background img {
+    width: 20%;
+    height: 20%; }
 
 /*# sourceMappingURL=styles.css.map */
