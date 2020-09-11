@@ -1,0 +1,63 @@
+/*--------- ---------------------- ----------*/
+/*------------- Footer styles ---------------*/
+footer {
+    color: white;
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    background-color: $secondary;
+    font-size: .9rem;
+    @media (min-width: $desktop) {
+        height: 4rem;
+        font-size: 1.1rem;
+    }
+    a {
+        color: white;
+        @media (min-width: $tablet) {
+            font-size: 1.1rem;
+        }
+    }
+}
+/*--------- ---------------------- ----------*/
+/*---------- Sticky footer styles -----------*/
+.sticky-footer {
+    display: flex;
+    align-items: center;
+    height: 2.75rem;
+    background-color: $secondary;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translate(0, 2.75rem);   
+    transition: transform .25s ease-in;
+    &:active {
+        box-shadow: inset 0px 0px 20px white;
+    }
+    /*- Intersect observer not supported on IE. this media query deactivates the sticky footer
+    function for IE users -*/
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        transform: translate(0, 0);
+    }
+    a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        color: white;
+        @media (min-width: $tablet) {
+            font-size: 1.25rem;
+            letter-spacing: .25rem;
+        }
+        &:hover {
+            @media (min-width: $desktop) {
+                color: $primary;
+            }
+        }
+    }
+}
+.slide {
+    transform: translate(0, 0rem);
+}
+/*--------- ---------------------- ----------*/

@@ -1,0 +1,218 @@
+/*- ----------Top Page-------------- -*/
+.tile-background {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        width: 20%;
+        height: 20%;       
+    }
+}
+#arrow {   
+    cursor: pointer;       
+    opacity: 0;
+    animation: slide-in 1.5s ease-in .7s forwards, pulse 1.5s ease-in-out 2.2s infinite;
+    border: 2px solid $secondary;
+    border-radius: 1rem;
+    padding: .7rem;
+    width: 55px;
+    height: 50px; 
+    transition: transform 2s ease;
+    path {
+        fill: white;
+    }
+    @media (min-width: 321px) {
+        top: 11.5rem;
+    }
+    @media (min-width: $tablet) {
+        width: 70px;
+        height: 65px;
+    }
+}
+/*- ------------Nav Images------------ -*/
+#globe-svg {
+    width: 70px; 
+    height: 40px;
+    position: relative;
+    top: .1rem;
+    left: .35rem;
+    transition: transform .5s ease-in;
+    @media (min-width: $tablet) {
+        height: 50px;
+    }
+    @media (min-width: $largeDesktop) {
+        height: 60px;
+    }
+}
+.about-me:active svg,
+.about-me:hover svg {
+    transform: rotate(360deg);
+}
+
+#bulb-svg {
+    width: 70px; 
+    height: 50px; 
+    position: relative;
+    left: .45rem;
+    bottom: .35rem;
+    @media (min-width: $tablet) {
+        height: 60px;
+    }
+    @media (min-width: $largeDesktop) {
+        height: 70px;
+    }
+} 
+.my-skills:active #bulb,
+.my-skills:hover #bulb 
+  {
+    fill: yellow;
+}
+@for $i from 1 through 5 {
+    .my-skills:active #line-#{$i},
+    .my-skills:hover #line-#{$i}  {
+        fill: yellow;
+    }
+}
+
+#port-svg {
+    width: 50px; 
+    height: 50px;
+    @media (min-width: $tablet) {
+        width: 60px;
+        height: 60px;
+    }
+    @media (min-width: $largeDesktop) {
+        width: 70px;
+        height: 70px;
+    }
+}
+#top,
+#body,
+#backarrow,
+#forwardarrow,
+#backslash {
+    transition: fill .4s ease-in;
+}
+.my-portfolio:active #top,
+.my-portfolio:hover #top {
+    fill: $darken-top;
+}
+.my-portfolio:active #body,
+.my-portfolio:hover #body  {
+    fill: $darken-body;
+}
+.my-portfolio:active #backarrow,
+.my-portfolio:active #forwardarrow,
+.my-portfolio:active #backslash,
+.my-portfolio:hover #backarrow,
+.my-portfolio:hover #forwardarrow,
+.my-portfolio:hover #backslash {
+    fill: $lighten-lines;
+}
+
+#phone-svg {
+    width: 50px; 
+    height: 40px;
+    @media (min-width: $tablet) {
+        height: 50px;
+    }
+    @media (min-width: $largeDesktop) {
+        height: 60px;
+        width: 60px;
+    }            
+}
+@for $i from 1 through 3 {
+    .contact-me:active #wave-#{$i},
+    .contact-me:hover #wave-#{$i} {
+        fill: red;
+    }
+}
+.contact-me:active #phone-svg,
+.contact-me:hover #phone-svg {
+    animation: ring .75s ease infinite forwards;
+}
+#git-svg {
+    width: 60px; 
+    height: 45px;
+    @media (min-width: $tablet) {
+        height: 55px;
+    }
+    @media (min-width: $largeDesktop) {
+        height: 65px;
+    }
+}
+#git-logo {
+    transition: fill .4s ease;
+}
+.github:active #git-logo,
+.github:hover #git-logo  {
+    fill: black;
+}
+/*- --------------------------------------------- -*/
+/*- ---------About Me Section Image-------------- -*/
+.about-sect img {
+    float: left;
+    margin: .5rem 1rem .2rem 0;
+    width: 65%;
+    max-width: 300px;
+    border-radius: 6rem;
+    transition: border-radius .3s ease, transform .4s ease-out;
+    &:active {
+        border-radius: 0;
+        transform: scale(1.04);
+    }
+    &:hover {
+        border-radius: 0;
+        transform: scale(1.03);
+    }
+    @media (min-width: $tablet) {
+        margin: .5rem 1.75rem 1.25rem 0;
+    } 
+}
+/*- --------------------------------------------------------- -*/
+/*- ----------------- Skills Section Image ------------------ -*/
+.skills-image {
+    display: none;
+    background: url('../img/skills.jpg');
+    background-size: 85%;
+    border-top: solid 1px black;
+    @media (min-width: $tablet) {
+        width: 32.5%;
+        display: block;
+    }
+}
+/*- ------------------------------------------------------------ -*/
+/*- ----------------- Portfolio Section Image ------------------ -*/
+.port-sect {
+    img {
+        display: block;
+        width: 100%;
+    }
+    .project img {
+        max-width: 355px;
+        height: 100%;
+        @media (min-width: $tablet) {
+            max-width: 340px;
+        }
+        @media (min-width: $desktop) {
+            max-width: 375px;
+        }
+        @media (min-width: $largeDesktop) {
+            max-width: 400px;
+        }
+    }
+}
+.this-site-content img {
+        margin: 0 auto;
+        border-radius: 2.4rem;
+        box-shadow: 0px 0px 20px $secondary;
+        width: 16%;
+        max-width: 250px;
+        transition: transform .1s ease;
+        &:active {
+            transform: scale(1.2);
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+}

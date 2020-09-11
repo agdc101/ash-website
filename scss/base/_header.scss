@@ -1,0 +1,134 @@
+/*-----------------------------------------------------*/
+/*------------ Top page overlay styles-----------------*/
+.overlay {
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background: rgba(41, 41, 41, 0.94); 
+    height: 100vh; 
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+        position: relative;
+        color: white;
+        text-shadow: 6px 6px 16px $secondary;
+        animation: fade 1s ease-in;
+    }
+    h1 {      
+        font-family: 'Bad Script', cursive;
+        letter-spacing: .25rem;
+        font-size: 4rem;
+        margin: 2.5rem .5rem;
+        @media (min-width: $tablet) {
+            font-size: 5.25rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 6.25rem;
+        }       
+        @media (min-width: $tablet) and  (min-height: 1023px) {
+            top: 0;
+        }
+    }
+    h2 {
+        font-size: 1.35rem;
+        @media (min-width: $tablet) {
+            font-size: 1.6rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 2rem;
+        }
+    }
+    h3 {
+        font-size: 1.1rem;
+        @media (min-width: $tablet) {
+            font-size: 1.4rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 1.8rem;
+        }
+    }
+    h2,
+    h3 {
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: .4rem;
+        margin: 2rem 0;
+    }
+    a {
+        position: relative;
+        top: 3.75rem;
+        text-align: center;
+        display: block;
+        width: 50px;
+        margin: 0 auto;
+        &:hover #arrow {
+            background-color: $secondary;
+        }
+   
+    }
+}  
+/*--------- ---------------------- -------------*/
+/*--------- Navigation section styles ----------*/
+.nav-sect {
+    padding: 1.25rem 0;
+    margin: 0 auto;
+    max-width: 590px;
+    @media (min-width: $tablet) {
+        padding: 2.5rem 0;
+    }
+    h3 {
+        font-family: 'Bad Script', cursive;
+        text-align: center;
+        font-size: 1.75rem;
+        @media (min-width: $tablet) {
+            font-size: 2.5rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 3rem;
+        }
+    }
+    .flex-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background-color: rgba(80, 113, 156, 0.97);
+        width: 70%;
+        height: 4rem;
+        margin: 2.25rem auto;
+        padding: .4rem 1.5rem;
+        border-radius: .25rem;
+        color: white;
+        transition: transform .2s ease;
+        &:active {
+            box-shadow: inset 0px 0px 18px white;
+        }
+        @media (min-width: $tablet) {
+            width: 75%;
+            margin: 1.3rem auto;
+            height: 4.75rem;
+        }
+        @media (min-width: $desktop) {
+            &:hover {
+                transform: scale(1.025);
+            }
+        }
+        @media (min-width: $largeDesktop) {
+            height: 5.25rem;
+        }
+        span {
+            font-family: 'Bad Script', cursive;
+            font-size: 1.3rem;
+            @media (min-width: $tablet) {
+                font-size: 1.75rem;
+            }
+            @media (min-width: $largeDesktop) {
+                font-size: 2.1rem;
+            }
+        }
+        
+           
+    }
+}

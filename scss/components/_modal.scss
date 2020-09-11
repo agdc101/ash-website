@@ -1,0 +1,61 @@
+/*------ portfolio-section modal styles ---------*/
+#exampleModal {
+    padding: 0 !important;
+    .modal-dialog {
+        @media (min-width: $desktop) {
+            max-width: 800px;
+        }
+    }
+    .modal-header {
+        background-color: $primary;
+        span {
+            color: white;
+            font-weight: bold;
+        }
+    }
+    .modal-body {
+        padding-bottom: 0 !important;
+        @media (min-width: $desktop) {
+            display: flex;
+        }
+        span {
+            font-size: .9rem;
+        }
+        p, 
+        span {
+            margin: .75rem auto;
+            max-width: 320px; 
+            @media (min-width: $tablet) {
+                font-size: .95rem;
+            }
+            @media (min-width: $desktop) {
+                font-size: 1.05rem;
+            }
+        }
+    }
+    p,
+    span,
+    #modal-pic {
+        display: block;
+    }
+
+    #modal-pic {
+        margin: 0 auto 1rem auto;
+        width: 100%;
+        max-width: 345px;
+        max-height: 290px;
+        @media (min-width: $desktop) {
+            margin: 0 1.5rem 1rem 0;
+            max-width: 420px;
+            max-height: 335px;
+        }
+    }
+    .modal-footer {
+        display: flex;
+        justify-content: space-around;
+        a {
+            display: flex;
+            justify-content: center;
+        }       
+    }
+}

@@ -1,4 +1,54 @@
-@import '_variables.scss';
-@import '_animations.scss';
-@import '_typography.scss'
-
+/*- ----- universal styles ------ -*/
+* {
+    box-sizing: border-box;
+    // hyphens: auto;
+    font-family: 'Poppins', sans-serif;
+}
+a:hover {
+    text-decoration: none;
+}
+h2 {
+    font-family: 'Bad Script', cursive;
+}
+p {
+    font-size: .9rem;
+}
+/*----------------------------------------*/
+/*------------- BASE STYLES --------------*/
+.nav-sect,
+.about-sect,
+.skills-sect,
+.overlay {
+    // This media query centers content for portrait screen sizes.
+    @media (min-width: $tablet) and  (min-height: 1023px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.nav-sect,
+.about-sect,
+.skills-sect,
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (min-width: $tablet) {
+        height: 100vh;
+    }
+}
+.skills-sect,
+.port-sect,
+.contact-sect {
+    padding: 1rem .5rem;
+    border-top: 1px solid black; 
+    @media (min-width:$tablet) {
+        padding: 2rem .75rem;
+    }
+}
+.about-content,
+.skills-content {
+    max-width: 910px;
+    width: 90%;
+    margin: 0 auto;
+}

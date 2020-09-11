@@ -1,0 +1,265 @@
+/*--------- ---------------------- ----------*/
+/*--------- About Me section styles ----------*/
+.about-sect { 
+    padding: 1.75rem 0;
+    border-top: solid 1px black;  
+    background-color: rgb(236, 246, 255);
+    h2 {
+        font-size: 2.2rem;
+        @media (min-width: $tablet) {
+            font-size: 3rem;
+            margin-bottom: 1.75rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 3.5rem;
+        }
+    }
+    p {
+        margin-bottom: .5rem;
+        @media (min-width: $tablet) {
+            font-size: 1.1rem;
+        }
+        @media (min-width: $desktop) {
+            margin-bottom: 1.75rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 1.2rem;
+        }
+    }    
+}
+/*--------- ---------------------- ----------*/
+/*--------- Skills section styles ----------*/
+.skill-flex {
+    display: flex;
+    .skills-sect {
+        width: 100%;
+        background:url('../img/skills.jpg');
+        background-size: 85%;
+        box-shadow:inset 0 0 0 2000px rgba(80, 113, 156, 0.97);
+        @media (min-width: $tablet) {
+            width: 67.5%;
+        }
+        h2 {
+            text-align: center;
+            @media (min-width: $tablet) {
+                font-size: 3.75rem;
+                text-align: left;
+            }
+            @media (min-width: $largeDesktop) {
+                font-size: 4rem;
+            }
+        }
+        p:nth-of-type(1),
+        p:nth-of-type(2) {
+            font-weight: bold;
+            font-size: 1.05rem;
+            margin: 1.25rem 0;
+            @media (min-width: $tablet) {
+                margin: 1.5rem 0;
+                font-size: 1.35rem;
+            }
+            @media (min-width: $largeDesktop) {
+                font-size: 1.5rem;
+            }
+        }
+        h2,
+        p {
+            color: white;
+        }
+        p {
+            text-align: left;
+        }
+        ul {
+            color: white;
+            font-size: .9rem;
+            @media (min-width: $tablet) {
+                padding: 0;
+            }
+            li {
+                margin-top: .4rem;
+            }
+        }
+        ul {
+            @media (min-width: $tablet) {
+                font-size: 1.1rem;
+            }
+            @media (min-width: $largeDesktop) {
+                font-size: 1.25rem;
+            }
+        }
+        .flex-skills {
+            @media (min-width: $tablet) {
+                display: flex;
+                align-items: center;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
+/*--------- ---------------------- ----------*/
+/*--------- Portfolio section styles ----------*/
+.port-sect {
+    border-top: 2px solid black;
+    .flex-projects {
+        max-width: 1400px;
+        margin: 0 auto;
+        @media (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    h2,
+    h3 {
+        text-align: center;
+    }
+    h2 {
+        margin-top: 1.25rem;
+        @media (min-width: $tablet) {
+            font-size: 3.5rem;
+            margin: 3rem 0 2.5rem 0;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 4rem;
+        }
+    }
+    h3 {
+        margin: 2rem 0 1rem 0;
+        font-size: 1.05rem;
+        @media (min-width: $tablet) {
+            margin: 2.5rem 0 2rem 0;
+            font-size: 1.15rem;
+        }
+        @media (min-width: $largeDesktop) {
+            font-size: 1.25rem;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+    .project {
+        position: relative;
+        width: 80%;
+        height: 70%;
+        max-width: 320px;
+        box-shadow: 0px 0px 18px $secondary;
+        transition: transform .4s ease;
+        margin: 1rem auto;
+        cursor: pointer;
+        @media (min-width: $tablet) {
+            max-width: 500px;
+        }
+    }
+    .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(73, 164, 224, 0.91);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        opacity: 0;
+        transition: opacity .3s ease-in;
+        p {
+            margin: 1rem 0 2rem 0;
+            font-size: 1rem;
+            @media (min-width: $desktop) {
+                font-size: 1.1rem;
+            }
+        }
+        button {
+            @media (min-width: $tablet) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .project:active,
+    .project:hover  {
+        transform: translateY(8px);
+    }
+    .project:active .project-overlay,
+    .project:hover .project-overlay {
+        opacity: 1;
+    }
+}
+.site-underlay {
+    color: white;
+    background:url('../img/mac.jpeg');
+    background-size: 400px;
+    box-shadow:inset 0 0 0 2000px rgba(80, 113, 156, 0.94);
+    border-top: 1px solid black;
+    padding: 1rem 0;
+    .this-site {   
+        padding: 1.5rem 0;
+        @media (min-width: $tablet) {
+            padding: 1.5rem 0;
+        }
+        .this-site-content {
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 475px;
+            a {
+                display: inline;
+            }
+            p {
+                @media (min-width: $tablet) {
+                    font-size: 1.1rem;
+                    margin: 2.5rem 0;
+                }
+            }
+            h2 {
+                font-family: 'Bad Script', cursive;
+                font-size: 1.5rem;
+                @media (min-width: $tablet) {
+                    font-size: 2.4rem;
+                }
+            }
+        }       
+    }
+}   
+
+/*--------- ---------------------- ----------*/
+/*--------- Contact section styles ----------*/
+.contact-sect {
+    h2 {       
+        text-align: center;
+        @media (min-width: $tablet) {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+    }
+    p {
+        font-size: 1rem;
+        display: block;
+        text-align: center;
+        @media (min-width: $tablet) {
+            font-size: 1.2rem;
+        }
+    }
+    form {
+        display: block;
+        max-width: 500px;
+        margin: 2rem auto;
+        button {
+            padding: .35rem .75rem;
+            background-color: white;
+            border: 2px solid $primary;
+            border-radius: .5rem;
+            display: block;
+            margin: 0 auto;
+            color: black;
+            @media (min-width: $tablet) {
+                font-size: 1.1rem;
+            }
+        }
+    }
+    a {
+        display: block;
+        text-align: center;
+        margin: 2.25rem 0;
+    }
+}

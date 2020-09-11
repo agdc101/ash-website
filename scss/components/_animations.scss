@@ -1,0 +1,57 @@
+main {
+    scroll-behavior: smooth;
+}
+/*- ----------------------------- -*/
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slide-in {
+    0% {
+        transform: translateY(-38rem);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes ring {
+    0% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        border-radius: .25rem;
+    }
+    50% {
+        transform: scale(1.3);
+        border-radius: 3.75rem;
+    }
+    100% {
+        transform: scale(0.9);
+        border-radius: .25rem;
+    }
+}
+/* --------- ----------- -------------*/
+
+.listener {
+    transition: transform .5s ease, opacity .4s ease-in;
+    transform: translateX(-40%);
+    opacity: 0;
+}
+.slide-back {
+    transform: translateX(0);
+    opacity: 1;
+}
