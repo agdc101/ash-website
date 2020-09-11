@@ -475,8 +475,6 @@ main {
   100% {
     opacity: 1; } }
 @keyframes slide-in {
-  0% {
-    transform: translateY(-38rem); }
   100% {
     transform: translateY(0);
     opacity: 1; } }
@@ -519,13 +517,14 @@ main {
 #arrow {
   cursor: pointer;
   opacity: 0;
-  animation: slide-in 1.5s ease-in .2s forwards, pulse 1.5s ease-in-out 2s infinite;
+  animation: slide-in 1.5s ease-in 1s forwards, pulse 1.5s ease-in-out 2s infinite;
   border: 2px solid #5cc0ee;
   border-radius: 1rem;
   padding: .7rem;
   width: 55px;
   height: 50px;
-  transition: transform 2s ease; }
+  transition: transform 2s ease;
+  transform: translateY(-30rem); }
   #arrow path {
     fill: white; }
   @media (min-width: 321px) {

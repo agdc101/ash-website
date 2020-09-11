@@ -11,13 +11,14 @@
 #arrow {   
     cursor: pointer;       
     opacity: 0;
-    animation: slide-in 1.5s ease-in .2s forwards, pulse 1.5s ease-in-out 2s infinite;
+    animation: slide-in 1.5s ease-in 1s forwards, pulse 1.5s ease-in-out 2s infinite;
     border: 2px solid $secondary;
     border-radius: 1rem;
     padding: .7rem;
     width: 55px;
     height: 50px; 
     transition: transform 2s ease;
+    transform: translateY(-30rem);
     path {
         fill: white;
     }
