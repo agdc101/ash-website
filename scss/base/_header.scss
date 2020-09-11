@@ -6,16 +6,17 @@
     right:0;
     top:0;
     bottom:0;
-    background: rgba(41, 41, 41, 0.94); 
+    background: rgba(41, 41, 41, 0.95); 
     height: 100vh; 
     h1,
     h2,
     h3 {
+        opacity: 0;
         text-align: center;
         position: relative;
         color: white;
         text-shadow: 6px 6px 16px $secondary;
-        animation: fade 1s ease-in;
+        animation: fade 1s ease-in 2s forwards;
     }
     h1 {      
         font-family: 'Bad Script', cursive;

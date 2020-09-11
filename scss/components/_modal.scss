@@ -38,7 +38,6 @@
     #modal-pic {
         display: block;
     }
-
     #modal-pic {
         margin: 0 auto 1rem auto;
         width: 100%;
@@ -47,7 +46,7 @@
         @media (min-width: $desktop) {
             margin: 0 1.5rem 1rem 0;
             max-width: 420px;
-            max-height: 335px;
+            max-height: 410px;
         }
     }
     .modal-footer {

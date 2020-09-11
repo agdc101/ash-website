@@ -64,16 +64,17 @@ p {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(41, 41, 41, 0.94);
+  background: rgba(41, 41, 41, 0.95);
   height: 100vh; }
   .overlay h1,
   .overlay h2,
   .overlay h3 {
+    opacity: 0;
     text-align: center;
     position: relative;
     color: white;
     text-shadow: 6px 6px 16px #5cc0ee;
-    animation: fade 1s ease-in; }
+    animation: fade 1s ease-in 2s forwards; }
   .overlay h1 {
     font-family: 'Bad Script', cursive;
     letter-spacing: .25rem;
@@ -321,7 +322,7 @@ p {
     flex-direction: column;
     padding: 1.5rem 1rem;
     opacity: 0;
-    transition: opacity .3s ease-in; }
+    transition: opacity .2s ease-in, border-radius .5s ease; }
     .port-sect .project-overlay p {
       margin: 1rem 0 2rem 0;
       font-size: 1rem; }
@@ -337,6 +338,11 @@ p {
   .port-sect .project:active .project-overlay,
   .port-sect .project:hover .project-overlay {
     opacity: 1; }
+  .port-sect .project:active .project-overlay,
+  .port-sect .project:hover .project-overlay,
+  .port-sect .project:active,
+  .port-sect .project:hover {
+    border-radius: 2rem; }
 
 .site-underlay {
   color: white;
@@ -466,8 +472,6 @@ main {
 
 /*- ----------------------------- -*/
 @keyframes fade {
-  0% {
-    opacity: 0; }
   100% {
     opacity: 1; } }
 @keyframes slide-in {
@@ -515,7 +519,7 @@ main {
 #arrow {
   cursor: pointer;
   opacity: 0;
-  animation: slide-in 1.5s ease-in .7s forwards, pulse 1.5s ease-in-out 2.2s infinite;
+  animation: slide-in 1.5s ease-in .2s forwards, pulse 1.5s ease-in-out 2s infinite;
   border: 2px solid #5cc0ee;
   border-radius: 1rem;
   padding: .7rem;
@@ -674,8 +678,9 @@ main {
   margin: .5rem 1rem .2rem 0;
   width: 65%;
   max-width: 300px;
-  border-radius: 6rem;
-  transition: border-radius .3s ease, transform .4s ease-out; }
+  border-radius: 5rem;
+  transition: border-radius .3s ease, transform .4s ease-out;
+  box-shadow: 0 6px 10px black; }
   .about-sect img:active {
     border-radius: 0;
     transform: scale(1.04); }
@@ -705,7 +710,8 @@ main {
   width: 100%; }
 .port-sect .project img {
   max-width: 355px;
-  height: 100%; }
+  height: 100%;
+  transition: border-radius .3s ease; }
   @media (min-width: 768px) {
     .port-sect .project img {
       max-width: 340px; } }
@@ -715,6 +721,8 @@ main {
   @media (min-width: 1324px) {
     .port-sect .project img {
       max-width: 400px; } }
+.port-sect .project:hover img {
+  border-radius: 2rem; }
 
 .this-site-content img {
   margin: 0 auto;
@@ -771,7 +779,7 @@ main {
       #exampleModal #modal-pic {
         margin: 0 1.5rem 1rem 0;
         max-width: 420px;
-        max-height: 335px; } }
+        max-height: 410px; } }
   #exampleModal .modal-footer {
     display: flex;
     justify-content: space-around; }
