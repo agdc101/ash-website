@@ -215,7 +215,8 @@ p {
       .skill-flex .skills-sect {
         width: 67.5%; } }
     .skill-flex .skills-sect h2 {
-      text-align: center; }
+      text-align: center;
+      font-size: 2.5rem; }
       @media (min-width: 768px) {
         .skill-flex .skills-sect h2 {
           font-size: 3.75rem;
@@ -377,7 +378,8 @@ p {
 /*--------- ---------------------- ----------*/
 /*--------- Contact section styles ----------*/
 .contact-sect h2 {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2rem; }
   @media (min-width: 768px) {
     .contact-sect h2 {
       font-size: 3rem;
@@ -474,10 +476,6 @@ main {
 @keyframes fade {
   100% {
     opacity: 1; } }
-@keyframes slide-in {
-  100% {
-    transform: translateY(0);
-    opacity: 1; } }
 @keyframes ring {
   0% {
     transform: rotate(-20deg); }
@@ -517,14 +515,13 @@ main {
 #arrow {
   cursor: pointer;
   opacity: 0;
-  animation: slide-in 1.5s ease-in 1s forwards, pulse 1.5s ease-in-out 2s infinite;
+  animation: fade .75s ease-in 1s forwards, pulse 1.5s ease-in-out 2s infinite;
   border: 2px solid #5cc0ee;
   border-radius: 1rem;
   padding: .7rem;
   width: 55px;
   height: 50px;
-  transition: transform 2s ease;
-  transform: translateY(-30rem); }
+  transition: transform 2s ease; }
   #arrow path {
     fill: white; }
   @media (min-width: 321px) {
