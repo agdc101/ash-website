@@ -511,8 +511,8 @@ main {
   display: flex;
   flex-wrap: wrap; }
   .tile-background img {
-    width: 20%;
-    height: 20%; }
+    width: 100%;
+    height: 100%; }
 
 #arrow {
   cursor: pointer;
