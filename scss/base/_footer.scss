@@ -30,8 +30,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
-    transform: translate(0, 2.75rem);   
+    right: 0;  
     transition: transform .25s ease-in;
     &:active {
         box-shadow: inset 0px 0px 20px white;
@@ -58,6 +57,6 @@ footer {
     }
 }
 .slide {
-    transform: translate(0, 0rem);
+    transform: translate(0, 2.75rem);
 }
 /*--------- ---------------------- ----------*/

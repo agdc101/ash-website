@@ -443,7 +443,6 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  transform: translate(0, 2.75rem);
   transition: transform .25s ease-in;
   /*- Intersect observer not supported on IE. this media query deactivates the sticky footer
   function for IE users -*/ }
@@ -466,7 +465,7 @@ footer {
         color: #50719c; } }
 
 .slide {
-  transform: translate(0, 0rem); }
+  transform: translate(0, 2.75rem); }
 
 /*--------- ---------------------- ----------*/
 main {
