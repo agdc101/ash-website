@@ -112,28 +112,10 @@ window.onbeforeunload = () => {
     window.scrollTo(0, 0);   
 };
 /*-------------- sticky footer functionality --------------*/
-// const appearOptions = {
-//     rootMargin: '-200px 0px 0px 0px'
-// };
-// const appearFooter = new IntersectionObserver((entries) => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             console.log('engage');
-//             stickyFooter.classList.toggle('slide');
-           
-//         } else {
-//             console.log('disengage');
-//             stickyFooter.classList.toggle('slide');
-//         }
-//     });
-// }, appearOptions)
-// hideStickySects.forEach(section =>{
-//     appearFooter.observe(section);
-// });
-
 const main = document.querySelector('main');
 const appearOptions = {
     threshold: .2,
+    rootMargin: '100px 0px 0px 0px'
 }
 const appearFooter = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -154,10 +136,11 @@ appearFooter.observe(main);
 // this opens the live project if the user clicks anywhere in the project divs.
 for (let j = 0; j < portfolioProjects.length; j += 1) {
         portfolioProjects[j].addEventListener('click', (e) => {
-            if(e.target.tagName != 'BUTTON')
+            if(e.target.tagName != 'BUTTON' && window.screen.width >= 1024)
                 window.open(projects[j].siteLink);
     });
 }
+/*--------------- --------------- ---------------*/
 /*-------------- projects slide in --------------*/
 const slideOptions = {
     threshold: 0.4,
@@ -167,7 +150,7 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('slide-back');
-            // appearOnScroll.unobserve(entry.target)
+            appearOnScroll.unobserve(entry.target)
            
         } else {
             return;
@@ -178,4 +161,4 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
 portfolioProjects.forEach(project => {
     appearOnScroll.observe(project)
 });
-
+console.log(window.screen.width);

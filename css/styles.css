@@ -167,7 +167,7 @@ p {
         height: 5.25rem; } }
     .nav-sect .flex-items span {
       font-family: 'Bad Script', cursive;
-      font-size: 1.3rem; }
+      font-size: 1.4rem; }
       @media (min-width: 768px) {
         .nav-sect .flex-items span {
           font-size: 1.75rem; } }
@@ -323,7 +323,7 @@ p {
     flex-direction: column;
     padding: 1.5rem 1rem;
     opacity: 0;
-    transition: opacity .2s ease-in, border-radius .5s ease; }
+    transition: opacity .3s ease-in, border-radius .3s ease; }
     .port-sect .project-overlay p {
       margin: 1rem 0 2rem 0;
       font-size: 1rem; }
@@ -369,8 +369,9 @@ p {
           font-size: 1.1rem;
           margin: 2.5rem 0; } }
       .site-underlay .this-site .this-site-content h2 {
+        margin-bottom: 1rem;
         font-family: 'Bad Script', cursive;
-        font-size: 1.5rem; }
+        font-size: 1.7rem; }
         @media (min-width: 768px) {
           .site-underlay .this-site .this-site-content h2 {
             font-size: 2.4rem; } }
