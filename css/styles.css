@@ -74,7 +74,7 @@ p {
     position: relative;
     color: white;
     text-shadow: 6px 6px 16px #5cc0ee;
-    animation: fade 1s ease-in 2s forwards; }
+    animation: fade 1s ease-in 1.5s forwards; }
   .overlay h1 {
     font-family: 'Bad Script', cursive;
     letter-spacing: .25rem;
@@ -444,6 +444,8 @@ footer {
   left: 0;
   right: 0;
   transition: transform .25s ease-in;
+  transform: translate(0, 0);
+  opacity: 0;
   /*- Intersect observer not supported on IE. this media query deactivates the sticky footer
   function for IE users -*/ }
   .sticky-footer:active {
@@ -465,7 +467,7 @@ footer {
         color: #50719c; } }
 
 .slide {
-  transform: translate(0, 2.75rem); }
+  transform: translate(0, 2.7rem); }
 
 /*--------- ---------------------- ----------*/
 main {
@@ -514,7 +516,7 @@ main {
 #arrow {
   cursor: pointer;
   opacity: 0;
-  animation: fade .75s ease-in 1s forwards, pulse 1.5s ease-in-out 2s infinite;
+  animation: fade .75s ease-in .5s forwards, pulse 1.5s ease-in-out 1.5s infinite;
   border: 2px solid #5cc0ee;
   border-radius: 1rem;
   padding: .7rem;

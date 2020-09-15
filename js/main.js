@@ -118,9 +118,11 @@ window.onbeforeunload = () => {
 // const appearFooter = new IntersectionObserver((entries) => {
 //     entries.forEach(entry => {
 //         if (entry.isIntersecting) {
+//             console.log('engage');
 //             stickyFooter.classList.toggle('slide');
            
 //         } else {
+//             console.log('disengage');
 //             stickyFooter.classList.toggle('slide');
 //         }
 //     });
@@ -132,12 +134,12 @@ window.onbeforeunload = () => {
 const main = document.querySelector('main');
 const appearOptions = {
     threshold: .2,
-    rootMargin: '200px 0px 0px 0px'
 }
 const appearFooter = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             stickyFooter.classList.toggle('slide');
+            stickyFooter.style.opacity = '1';
            
         } else {
             stickyFooter.classList.toggle('slide');

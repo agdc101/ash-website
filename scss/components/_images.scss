@@ -11,7 +11,7 @@
 #arrow {   
     cursor: pointer;       
     opacity: 0;
-    animation: fade .75s ease-in 1s forwards, pulse 1.5s ease-in-out 2s infinite;
+    animation: fade .75s ease-in .5s forwards, pulse 1.5s ease-in-out 1.5s infinite;
     border: 2px solid $secondary;
     border-radius: 1rem;
     padding: .7rem;
