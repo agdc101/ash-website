@@ -112,9 +112,28 @@ window.onbeforeunload = () => {
     window.scrollTo(0, 0);   
 };
 /*-------------- sticky footer functionality --------------*/
+// const appearOptions = {
+//     rootMargin: '-200px 0px 0px 0px'
+// };
+// const appearFooter = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             stickyFooter.classList.toggle('slide');
+           
+//         } else {
+//             stickyFooter.classList.toggle('slide');
+//         }
+//     });
+// }, appearOptions)
+// hideStickySects.forEach(section =>{
+//     appearFooter.observe(section);
+// });
+
+const main = document.querySelector('main');
 const appearOptions = {
-    rootMargin: '-200px 0px 0px 0px'
-};
+    threshold: .2,
+    rootMargin: '200px 0px 0px 0px'
+}
 const appearFooter = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -124,10 +143,10 @@ const appearFooter = new IntersectionObserver((entries) => {
             stickyFooter.classList.toggle('slide');
         }
     });
-}, appearOptions)
-hideStickySects.forEach(section =>{
-    appearFooter.observe(section);
-});
+},appearOptions);
+
+appearFooter.observe(main);
+
 /*--------------- --------------- ---------------*/
 /*-------------- Open live project --------------*/
 // this opens the live project if the user clicks anywhere in the project divs.
@@ -157,3 +176,4 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
 portfolioProjects.forEach(project => {
     appearOnScroll.observe(project)
 });
+
