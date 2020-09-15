@@ -325,14 +325,17 @@ p {
     opacity: 0;
     transition: opacity .3s ease-in, border-radius .3s ease; }
     .port-sect .project-overlay p {
+      text-align: center;
       margin: 1rem 0 2rem 0;
-      font-size: 1rem; }
+      font-size: 1.2rem; }
       @media (min-width: 1024px) {
         .port-sect .project-overlay p {
-          font-size: 1.1rem; } }
-    @media (min-width: 768px) {
-      .port-sect .project-overlay button {
-        font-size: 1.2rem; } }
+          font-size: 1.3rem; } }
+    .port-sect .project-overlay button {
+      font-size: 1.2rem; }
+      @media (min-width: 768px) {
+        .port-sect .project-overlay button {
+          font-size: 1.3rem; } }
   .port-sect .project:active,
   .port-sect .project:hover {
     transform: translateY(8px); }
@@ -407,6 +410,11 @@ p {
     @media (min-width: 768px) {
       .contact-sect form button {
         font-size: 1.1rem; } }
+  .contact-sect form .talk-btn {
+    display: none; }
+    @media (min-width: 1024px) {
+      .contact-sect form .talk-btn {
+        display: block; } }
 .contact-sect a {
   display: block;
   text-align: center;
@@ -673,18 +681,15 @@ main {
 /*- ---------About Me Section Image-------------- -*/
 .about-sect img {
   float: left;
-  margin: .5rem 1rem .2rem 0;
+  margin: .5rem 1rem .5rem 0;
   width: 65%;
   max-width: 300px;
-  border-radius: 5rem;
+  border-radius: 3rem;
   transition: border-radius .3s ease, transform .4s ease-out;
   box-shadow: 0 6px 10px black; }
-  .about-sect img:active {
+  .about-sect img:active, .about-sect img:hover {
     border-radius: 0;
     transform: scale(1.04); }
-  .about-sect img:hover {
-    border-radius: 0;
-    transform: scale(1.03); }
   @media (min-width: 768px) {
     .about-sect img {
       margin: .5rem 1.75rem 1.25rem 0; } }
