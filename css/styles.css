@@ -64,7 +64,7 @@ p {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(41, 41, 41, 0.95);
+  background: rgba(41, 41, 41, 0.97);
   height: 100vh; }
   .overlay h1,
   .overlay h2,
@@ -167,7 +167,7 @@ p {
         height: 5.25rem; } }
     .nav-sect .flex-items span {
       font-family: 'Bad Script', cursive;
-      font-size: 1.4rem; }
+      font-size: 1.5rem; }
       @media (min-width: 768px) {
         .nav-sect .flex-items span {
           font-size: 1.75rem; } }
@@ -364,13 +364,16 @@ p {
       text-align: center;
       width: 80%;
       margin: 0 auto;
-      max-width: 475px; }
+      max-width: 675px; }
       .site-underlay .this-site .this-site-content a {
         display: inline; }
       @media (min-width: 768px) {
         .site-underlay .this-site .this-site-content p {
           font-size: 1.1rem;
           margin: 2.5rem 0; } }
+      @media (min-width: 1024px) {
+        .site-underlay .this-site .this-site-content p {
+          font-size: 1.25rem; } }
       .site-underlay .this-site .this-site-content h2 {
         margin-bottom: 1rem;
         font-family: 'Bad Script', cursive;
@@ -381,44 +384,58 @@ p {
 
 /*--------- ---------------------- ----------*/
 /*--------- Contact section styles ----------*/
-.contact-sect h2 {
-  text-align: center;
-  margin-bottom: 2rem; }
+.contact-sect {
+  background-color: #ecf6ff; }
   @media (min-width: 768px) {
-    .contact-sect h2 {
-      font-size: 3rem;
-      margin-bottom: 3rem; } }
-.contact-sect p {
-  font-size: 1rem;
-  display: block;
-  text-align: center; }
-  @media (min-width: 768px) {
-    .contact-sect p {
-      font-size: 1.2rem; } }
-.contact-sect form {
-  display: block;
-  max-width: 500px;
-  margin: 2rem auto; }
-  .contact-sect form button {
-    padding: .35rem .75rem;
-    background-color: white;
-    border: 2px solid #50719c;
-    border-radius: .5rem;
-    display: block;
-    margin: 0 auto;
-    color: black; }
+    .contact-sect .contact-flex {
+      display: flex;
+      justify-content: space-evenly;
+      max-width: 1250px;
+      margin: 0 auto; } }
+  .contact-sect h2 {
+    text-align: center;
+    margin-bottom: 2rem; }
     @media (min-width: 768px) {
-      .contact-sect form button {
-        font-size: 1.1rem; } }
-  .contact-sect form .talk-btn {
-    display: none; }
-    @media (min-width: 1024px) {
-      .contact-sect form .talk-btn {
-        display: block; } }
-.contact-sect a {
-  display: block;
-  text-align: center;
-  margin: 2.25rem 0; }
+      .contact-sect h2 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        letter-spacing: .25rem; } }
+  .contact-sect p {
+    font-size: 1rem;
+    display: block;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .contact-sect p {
+        font-size: 1.2rem; } }
+  .contact-sect p,
+  .contact-sect span {
+    line-height: 2rem; }
+  .contact-sect form {
+    display: block;
+    max-width: 500px; }
+    .contact-sect form .resume-btn {
+      padding: .35rem .75rem;
+      border-radius: .5rem;
+      display: block;
+      margin: 0 auto; }
+      @media (min-width: 768px) {
+        .contact-sect form .resume-btn {
+          font-size: 1.1rem; } }
+    .contact-sect form .talk-btn {
+      padding: 2rem;
+      border-radius: 2rem;
+      display: none;
+      font-size: 1.25rem; }
+      @media (min-width: 768px) {
+        .contact-sect form .talk-btn {
+          display: block; } }
+  .contact-sect a {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media (min-width: 768px) {
+      .contact-sect a {
+        font-size: 1.15rem; } }
 
 /*--------- ---------------------- ----------*/
 /*------------- Footer styles ---------------*/
@@ -731,13 +748,21 @@ main {
   margin: 0 auto;
   border-radius: 2.4rem;
   box-shadow: 0px 0px 20px #5cc0ee;
-  width: 16%;
-  max-width: 250px;
-  transition: transform .1s ease; }
+  width: 10%;
+  transition: transform .15s ease; }
   .this-site-content img:active {
     transform: scale(1.2); }
   .this-site-content img:hover {
     transform: scale(1.2); }
+
+/*- ------------------------------------------------------------ -*/
+/*- ----------------- Contact Section Image ------------------ -*/
+#git-contact-svg {
+  width: 25px;
+  height: 30px;
+  margin: 0 .75rem; }
+  #git-contact-svg #git-contact-logo {
+    fill: black; }
 
 /*------ portfolio-section modal styles ---------*/
 #exampleModal {

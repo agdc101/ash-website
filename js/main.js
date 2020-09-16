@@ -71,6 +71,7 @@ const projects = [
 ]
 /*-------------- --------------------------- --------------*/
 /*-------------- portfolio modal functionality --------------*/
+/* iterating through the 'projects' array of objects to fill the modal! */
 portfolioDiv.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON') {
         let index = e.target.getAttribute('data-index');
@@ -108,10 +109,13 @@ for (let j = 0; j < navButtons.length; j += 1) {
     });
 }
 /*-------------- --------------------------- --------------*/
+/* if the page is refreshed the user is taken back to the top of the page, so that the 
+ sticky footer intersect does not break! */
 window.onbeforeunload = () => {  
     window.scrollTo(0, 0);   
 };
 /*-------------- sticky footer functionality --------------*/
+/* if the main content of the page is visible = hide the footer! */
 const main = document.querySelector('main');
 const appearOptions = {
     threshold: .2,
@@ -140,11 +144,10 @@ for (let j = 0; j < portfolioProjects.length; j += 1) {
                 window.open(projects[j].siteLink);
     });
 }
-/*--------------- --------------- ---------------*/
-/*-------------- projects slide in --------------*/
+/*------------------- --------------------- --------------------*/
+/*-------------- project images slide in function --------------*/
 const slideOptions = {
-    threshold: 0.4,
-    rootMargin: '0px 0px 0px 0px'
+    threshold: 0.4
 };
 const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     entries.forEach(entry => {
@@ -161,4 +164,3 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
 portfolioProjects.forEach(project => {
     appearOnScroll.observe(project)
 });
-console.log(window.screen.width);
