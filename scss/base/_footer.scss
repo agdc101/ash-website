@@ -38,7 +38,7 @@ footer {
         box-shadow: inset 0px 0px 20px white;
     }
     /*- Intersect observer not supported on IE. this media query deactivates the sticky footer
-    function for IE users -*/
+    function for IE users so the footer will not display.-*/
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         transform: translate(0, 0);
     }

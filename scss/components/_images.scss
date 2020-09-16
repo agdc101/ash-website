@@ -31,8 +31,8 @@
 }
 /*- ------------Nav Images------------ -*/
 #globe-svg {
-    width: 70px; 
-    height: 40px;
+    width: 65px; 
+    height: 42px;
     position: relative;
     top: .1rem;
     left: .35rem;
@@ -50,11 +50,11 @@
 }
 
 #bulb-svg {
-    width: 70px; 
-    height: 50px; 
+    width: 68px; 
+    height: 53px; 
     position: relative;
     left: .45rem;
-    bottom: .35rem;
+    bottom: .25rem;
     @media (min-width: $tablet) {
         height: 60px;
     }

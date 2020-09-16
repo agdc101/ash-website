@@ -473,7 +473,7 @@ footer {
   transform: translate(0, 0);
   opacity: 0;
   /*- Intersect observer not supported on IE. this media query deactivates the sticky footer
-  function for IE users -*/ }
+  function for IE users so the footer will not display.-*/ }
   .sticky-footer:active {
     box-shadow: inset 0px 0px 20px white; }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -561,8 +561,8 @@ main {
 
 /*- ------------Nav Images------------ -*/
 #globe-svg {
-  width: 70px;
-  height: 40px;
+  width: 65px;
+  height: 42px;
   position: relative;
   top: .1rem;
   left: .35rem;
@@ -579,11 +579,11 @@ main {
   transform: rotate(360deg); }
 
 #bulb-svg {
-  width: 70px;
-  height: 50px;
+  width: 68px;
+  height: 53px;
   position: relative;
   left: .45rem;
-  bottom: .35rem; }
+  bottom: .25rem; }
   @media (min-width: 768px) {
     #bulb-svg {
       height: 60px; } }
