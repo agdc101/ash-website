@@ -75,7 +75,7 @@
 .nav-sect {
     padding: 1.25rem 0;
     margin: 0 auto;
-    max-width: 590px;
+    max-width: 575px;
     @media (min-width: $tablet) {
         padding: 2.5rem 0;
     }
@@ -106,15 +106,13 @@
         &:active {
             box-shadow: inset 0px 0px 18px white;
         }
+        &:hover {
+            transform: scale(1.025);
+        }
         @media (min-width: $tablet) {
             width: 75%;
             margin: 1.3rem auto;
             height: 4.75rem;
-        }
-        @media (min-width: $desktop) {
-            &:hover {
-                transform: scale(1.025);
-            }
         }
         @media (min-width: $largeDesktop) {
             height: 5.25rem;

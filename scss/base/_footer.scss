@@ -48,8 +48,7 @@ footer {
         width: 100%;
         color: white;
         @media (min-width: $tablet) {
-            font-size: 1.25rem;
-            letter-spacing: .25rem;
+            font-size: 1.2rem;
         }
         &:hover {
             @media (min-width: $desktop) {
