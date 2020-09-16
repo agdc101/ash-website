@@ -392,7 +392,7 @@ p {
     .contact-sect .contact-flex {
       display: flex;
       justify-content: space-evenly;
-      max-width: 1250px;
+      max-width: 1050px;
       margin: 0 auto; } }
   .contact-sect h2 {
     text-align: center;
