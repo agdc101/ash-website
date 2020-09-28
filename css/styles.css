@@ -400,6 +400,7 @@ p {
     @media (min-width: 768px) {
       .contact-sect h2 {
         font-size: 3.5rem;
+        letter-spacing: .25rem;
         margin-bottom: 5rem; } }
   .contact-sect p {
     font-size: 1rem;

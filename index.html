@@ -233,11 +233,8 @@
                             UK.<br>
                         </p>
                     </div>
-                    <form action="mailto:agdc101@gmail.com" method="post">
-                        <button type="submit" value='send' class="talk-btn btn btn-success btn-lg">Let's Talk!</button>
-                    </form>
                     <div class='contact-info'>
-                        <p class='mb-0'>agdc101@gmail.com</p>
+                        <p class='mb-0'>ashley@campbellwebdev.com</p>
                         <a href="https://github.com/agdc101">
                             <svg id='git-contact-svg' viewBox="0 0 175 176" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path id='git-contact-logo' d="M87.4891 1.83185C39.1781 1.83185 0 41.3878 0 90.1838C0 129.212 25.0688 162.322 59.85 174.015C64.225 174.829 65.8219 172.101 65.8219 169.758C65.8219 167.657 65.7453 162.102 65.7016 154.732C41.3656 160.067 36.225 142.885 36.225 142.885C32.2547 132.677 26.5125 129.96 26.5125 129.96C18.5609 124.482 27.1031 124.592 27.1031 124.592C35.8859 125.219 40.5016 133.7 40.5016 133.7C48.3109 147.197 60.9875 143.303 65.975 141.037C66.7625 135.328 69.0266 131.434 71.5312 129.223C52.1062 126.99 31.675 119.411 31.675 85.5638C31.675 75.9168 35.0875 68.0299 40.6875 61.8479C39.7797 59.6149 36.7828 50.6278 41.5406 38.4728C41.5406 38.4728 48.8906 36.0969 65.6031 47.5259C72.5813 45.5679 80.0625 44.5888 87.5109 44.5558C94.9375 44.5998 102.43 45.5679 109.419 47.5369C126.12 36.1079 133.459 38.4838 133.459 38.4838C138.228 50.6498 135.231 59.6259 134.334 61.8589C139.945 68.0409 143.325 75.9279 143.325 85.5749C143.325 119.51 122.872 126.979 103.381 129.168C106.52 131.896 109.32 137.286 109.32 145.525C109.32 157.339 109.211 166.865 109.211 169.758C109.211 172.123 110.786 174.873 115.227 174.004C149.953 162.3 175 129.201 175 90.1838C175 41.3878 135.822 1.83185 87.4891 1.83185Z" fill="white"/>
@@ -245,10 +242,20 @@
                             <span>github.com/agdc101</span>
                         </a>
                     </div>
+                    <form action="mailto:ashley@campbellwebdev.com" method="post">
+                        <button type="submit" value='send' class="talk-btn btn btn-success btn-lg">Let's Talk!</button>
+                    </form>
+                    <form action='contactform.php' method='post'>
+                        <input type="text" name='name' placeholder='full name'>
+                        <input type="text" name='mail' placeholder='email'>
+                        <input type="text" name='subject' placeholder='subject'>
+                        <textarea name="message" id="message" placeholder='message'></textarea>
+                        <button type='' name='submit'>Send Email</button>
+                    </form>
                 </div>
             </section>     
             <footer>
-                <span><em>domainName &copy;</em></span>
+                <span><em>campbellwebdev.com &copy;</em></span>
                 <a href="#nav">Back To Menu</a>
             </footer>
             <!-- sticky footer -->
