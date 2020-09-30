@@ -153,8 +153,8 @@
 .about-sect img {
     float: left;
     margin: .5rem 1rem .5rem 0;
-    width: 65%;
-    max-width: 300px;
+    width: 45%;
+    max-width: 260px;
     border-radius: 3rem;
     transition: border-radius .3s ease, transform .4s ease-out;
     box-shadow: 0 6px 10px black;
@@ -164,7 +164,7 @@
         transform: scale(1.04);
     }
     @media (min-width: $tablet) {
-        margin: .5rem 1.75rem 1.25rem 0;
+        margin: .5rem 3.25rem 1.25rem 0;
     } 
 }
 /*- --------------------------------------------------------- -*/

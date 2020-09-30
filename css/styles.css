@@ -388,12 +388,6 @@ p {
   @media (min-width: 768px) {
     .contact-sect {
       padding: 5rem 1rem; } }
-  @media (min-width: 768px) {
-    .contact-sect .contact-flex {
-      display: flex;
-      justify-content: space-evenly;
-      max-width: 1050px;
-      margin: 0 auto; } }
   .contact-sect h2 {
     text-align: center;
     margin-bottom: 2rem; }
@@ -401,7 +395,7 @@ p {
       .contact-sect h2 {
         font-size: 3.5rem;
         letter-spacing: .25rem;
-        margin-bottom: 5rem; } }
+        margin-bottom: 3.5rem; } }
   .contact-sect p {
     font-size: 1rem;
     display: block;
@@ -412,25 +406,20 @@ p {
   .contact-sect p,
   .contact-sect span {
     line-height: 2rem; }
+  .contact-sect h3 {
+    text-align: center;
+    font-family: 'Bad Script', cursive !important;
+    margin: 1.5rem 0; }
+    @media (min-width: 768px) {
+      .contact-sect h3 {
+        text-align: left;
+        font-size: 2.5rem;
+        margin: 2.5rem 0; } }
   .contact-sect form {
-    display: block;
-    max-width: 500px; }
-    .contact-sect form .resume-btn {
-      padding: .35rem .75rem;
-      border-radius: .5rem;
-      display: block;
-      margin: 0 auto; }
-      @media (min-width: 768px) {
-        .contact-sect form .resume-btn {
-          font-size: 1.1rem; } }
-    .contact-sect form .talk-btn {
-      padding: 2rem;
-      border-radius: 2rem;
-      display: none;
-      font-size: 1.25rem; }
-      @media (min-width: 768px) {
-        .contact-sect form .talk-btn {
-          display: block; } }
+    margin: 0 auto;
+    max-width: 670px; }
+    .contact-sect form textarea {
+      height: 180px; }
   .contact-sect a {
     display: flex;
     align-items: center;
@@ -700,8 +689,8 @@ main {
 .about-sect img {
   float: left;
   margin: .5rem 1rem .5rem 0;
-  width: 65%;
-  max-width: 300px;
+  width: 45%;
+  max-width: 260px;
   border-radius: 3rem;
   transition: border-radius .3s ease, transform .4s ease-out;
   box-shadow: 0 6px 10px black; }
@@ -710,7 +699,7 @@ main {
     transform: scale(1.04); }
   @media (min-width: 768px) {
     .about-sect img {
-      margin: .5rem 1.75rem 1.25rem 0; } }
+      margin: .5rem 3.25rem 1.25rem 0; } }
 
 /*- --------------------------------------------------------- -*/
 /*- ----------------- Skills Section Image ------------------ -*/
@@ -815,5 +804,20 @@ main {
     #exampleModal .modal-footer a {
       display: flex;
       justify-content: center; }
+
+.phpDiv {
+  margin: 3rem;
+  text-align: center; }
+  .phpDiv p {
+    font-size: 2.75rem;
+    font-family: Arial, Helvetica, sans-serif; }
+  .phpDiv a {
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: lightgreen;
+    color: black;
+    font-size: 1.25rem; }
 
 /*# sourceMappingURL=styles.css.map */
