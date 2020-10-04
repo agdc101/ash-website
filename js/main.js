@@ -111,9 +111,9 @@ for (let j = 0; j < navButtons.length; j += 1) {
 /*-------------- --------------------------- --------------*/
 /* if the page is refreshed the user is taken back to the top of the page, so that the 
  sticky footer intersect does not break! */
-window.onbeforeunload = () => {  
-    window.scrollTo(0, 0);   
-};
+// window.onbeforeunload = () => {  
+//     window.scrollTo(0, 0);   
+// };
 /*-------------- sticky footer functionality --------------*/
 /* if the main content of the page is visible = hide the footer! */
 const main = document.querySelector('main');

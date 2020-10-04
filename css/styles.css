@@ -387,25 +387,34 @@ p {
   padding: 2.5rem 1rem; }
   @media (min-width: 768px) {
     .contact-sect {
-      padding: 5rem 1rem; } }
+      padding: 4rem 1rem; }
+      .contact-sect .contact-info-flex {
+        display: flex; } }
   .contact-sect h2 {
+    border-bottom: 1px solid lightgray;
     text-align: center;
     margin-bottom: 2rem; }
     @media (min-width: 768px) {
       .contact-sect h2 {
         font-size: 3.5rem;
         letter-spacing: .25rem;
-        margin-bottom: 3.5rem; } }
+        border-bottom: none; } }
   .contact-sect p {
     font-size: 1rem;
     display: block;
     text-align: center; }
     @media (min-width: 768px) {
       .contact-sect p {
-        font-size: 1.2rem; } }
-  .contact-sect p,
-  .contact-sect span {
-    line-height: 2rem; }
+        font-size: 1.1rem; } }
+  .contact-sect .contact-info {
+    margin: 3rem auto 1rem auto; }
+    .contact-sect .contact-info p,
+    .contact-sect .contact-info span {
+      line-height: 2rem; }
+      @media (min-width: 768px) {
+        .contact-sect .contact-info p,
+        .contact-sect .contact-info span {
+          line-height: 3rem; } }
   .contact-sect h3 {
     text-align: center;
     font-family: 'Bad Script', cursive !important;
@@ -413,11 +422,16 @@ p {
     @media (min-width: 768px) {
       .contact-sect h3 {
         text-align: left;
-        font-size: 2.5rem;
+        font-size: 2.25rem;
         margin: 2.5rem 0; } }
   .contact-sect form {
     margin: 0 auto;
-    max-width: 670px; }
+    max-width: 480px; }
+    @media (min-width: 768px) {
+      .contact-sect form {
+        border-right: 1px solid lightgray;
+        padding-right: 1.5rem;
+        margin: 0 0 0 auto; } }
     .contact-sect form textarea {
       height: 180px; }
   .contact-sect a {
@@ -753,6 +767,11 @@ main {
   margin: 0 .75rem; }
   #git-contact-svg #git-contact-logo {
     fill: black; }
+
+.linked-pic {
+  width: 25px;
+  height: 25px;
+  margin: 0 .75rem; }
 
 /*------ portfolio-section modal styles ---------*/
 #exampleModal {
