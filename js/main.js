@@ -67,6 +67,17 @@ const projects = [
         responsive: `&#x2714`,
         siteLink: 'https://agdc101.github.io/employee-directory/',
         githubLink: 'https://github.com/agdc101/employee-directory'
+    },
+    {
+        title: 'Javascript Form Validation',
+        imageLink: 'img/screenshots/modal-form-screenshot.png',
+        imageAlt: 'javascript is a very useful language for validating forms.',
+        description: 'An example project of how javascipt can be used to effectively validate all types of form entries, which is especially important for people with accessibility issues.',
+        technologies: 'HTML, CSS, Javascript.',
+        skills: 'HTML forms, Javascript Regular Expressions.',
+        responsive: `&#x2714`,
+        siteLink: 'https://agdc101.github.io/interactive_form/ ',
+        githubLink: 'https://github.com/agdc101/interactive_form'
     }
 ]
 /*-------------- --------------------------- --------------*/
