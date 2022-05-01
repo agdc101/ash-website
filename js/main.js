@@ -10,6 +10,14 @@ const navButtons = document.querySelectorAll('.nav-button');
 const navLinks = document.querySelectorAll('.navigate');
 const portfolioProjects = document.querySelectorAll('.listener');
 /*-------------- Projects array ---------------*/
+//-- burger menu functionality
+const burger = document.querySelector('.hamburger');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('is-active');
+    document.querySelector('nav').style.position = 'none';
+    document.querySelector('#nav_overlay').classList.toggle('slide');
+})
 // For the portfolio modal feature.
 const projects = [
     {

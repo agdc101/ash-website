@@ -11,15 +11,13 @@
 #arrow {   
     cursor: pointer;       
     opacity: 0;
-    animation: fade .75s ease-in .5s forwards, pulse 1.5s ease-in-out 1.5s infinite;
-    border: 2px solid $secondary;
-    border-radius: 1rem;
+    animation: fade .75s ease-in .5s forwards, bounce 1.5s ease-in-out 1.5s infinite;
     padding: .7rem;
-    width: 55px;
-    height: 50px; 
+    width: 40px;
+    height: 40px; 
     transition: transform 2s ease;
     path {
-        fill: white;
+        fill: black;
     }
     @media (min-width: 321px) {
         top: 11.5rem;
@@ -171,7 +169,7 @@
 /*- ----------------- Skills Section Image ------------------ -*/
 .skills-image {
     display: none;
-    background: url('../img/skills.jpg');
+    background: url('/img/skills.jpg');
     background-size: 85%;
     border-top: solid 1px black;
     @media (min-width: $tablet) {
