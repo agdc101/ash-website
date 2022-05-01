@@ -24,15 +24,15 @@ const projects = [
         githubLink: 'https://github.com/agdc101/sass-webpage-layout'
     },
     {
-        title: 'Guess The Movie Game',
+        title: 'Phrase Hunter',
         imageLink: 'img/screenshots/modal-game-screenshot.png',
         imageAlt: 'you can make really cool games with javascript',
-        description: 'A javascript driven movie guessing game. The game features some cool effects and allows the user 5 lives to guess the correct title. The game also allows the user to restart the game and features a losing and winning end-screen. Give it a try!',
+        description: 'A javascript driven movie guessing game. The game allows the user 5 lives to guess the correct title. The game also allows the user to restart the game and features a losing and winning end-screen. Give it a try!',
         technologies: 'HTML, CSS, Javascript.',
-        skills: 'Javascript Math methods, Array iteration, functions, loops and other JS methods.',
+        skills: 'Javasript Classes, Javascript Math methods, Array iteration, functions, loops and other JS methods.',
         responsive: `&#x2718`,
-        siteLink: 'https://agdc101.github.io/wheel-of-success-game/',
-        githubLink: 'https://github.com/agdc101/wheel-of-success-game'
+        siteLink: 'https://agdc101.github.io/phrase_hunter/',
+        githubLink: 'https://github.com/agdc101/phrase_hunter'
     },
     {
         title: 'Interactive Photo Gallery',
