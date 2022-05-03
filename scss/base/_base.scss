@@ -4,11 +4,16 @@
     // hyphens: auto;
     font-family: 'Poppins', sans-serif;
 }
+strong {
+    font-family:unset;
+}
 a:hover {
     text-decoration: none;
 }
-h2 {
-    font-family: 'Bad Script', cursive;
+h4 {
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    margin-bottom: 1.25rem;
 }
 p {
     font-size: .9rem;
@@ -39,7 +44,7 @@ p {
 }
 .skills-sect,
 .port-sect {
-    padding: 1rem .5rem;
+    padding: 4.5rem 0;
     border-top: 1px solid black; 
     @media (min-width:$tablet) {
         padding: 2rem .75rem;

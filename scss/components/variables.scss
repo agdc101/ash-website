@@ -1,0 +1,18 @@
+//-- VARIABLES
+$primary : rgb(6, 33, 49);
+
+//-- sass map outputs all the overlay background colours for each project section.
+$overlay_colours: (
+    'pink': linear-gradient(rgba(150, 34, 105, 0.4), rgb(37, 37, 37)),
+    'blue': linear-gradient(rgba(13, 81, 158, 0.4), rgb(37, 37, 37)),
+    'orange': linear-gradient(rgba(156, 104, 25, 0.4), rgb(37, 37, 37)),
+    'yellow': linear-gradient(rgba(151, 139, 29, 0.4), rgb(37, 37, 37)),
+    'purple': linear-gradient(rgba(98, 18, 134, 0.4), rgb(37, 37, 37)),
+    'gray': linear-gradient(rgba(105, 105, 105, 0.4), rgb(37, 37, 37)),
+    'darkblue': linear-gradient(rgba(13, 66, 88, 0.4), rgb(37, 37, 37)),
+    'red': linear-gradient(rgba(141, 19, 19, 0.4), rgb(37, 37, 37))
+);
+// background-image: linear-gradient(rgba(150, 34, 105, 0.75), rgba(150, 34, 105, 0.4));
+//-- breakpoints
+$tablet: 768px;
+$desktop: 1280px;

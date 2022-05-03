@@ -7,12 +7,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
+strong {
+  font-family: unset;
+}
+
 a:hover {
   text-decoration: none;
 }
 
-h2 {
-  font-family: 'Bad Script', cursive;
+h4 {
+  font-size: .8rem;
+  letter-spacing: .2rem;
+  margin-bottom: 1.25rem;
 }
 
 p {
@@ -66,7 +72,7 @@ p {
 
 .skills-sect,
 .port-sect {
-  padding: 1rem .5rem;
+  padding: 4.5rem 0;
   border-top: 1px solid black;
 }
 
@@ -314,57 +320,42 @@ nav span {
   background-color: #062131;
 }
 
-.about_me h4 {
-  margin-bottom: 1rem;
+.about_me h3 {
+  margin-bottom: 1.5rem;
 }
 
-.about-sect {
-  padding: 1.75rem 0;
-  border-top: solid 1px black;
-  background-color: #ecf6ff;
-}
-
-.about-sect h2 {
-  font-size: 2.2rem;
-}
-
-@media (min-width: 768px) {
-  .about-sect h2 {
-    font-size: 3rem;
-    margin-bottom: 1.75rem;
-  }
-}
-
-@media (min-width: 1324px) {
-  .about-sect h2 {
-    font-size: 3.5rem;
-  }
-}
-
-.about-sect p {
-  margin-bottom: .5rem;
-}
-
-@media (min-width: 768px) {
-  .about-sect p {
-    font-size: 1.1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .about-sect p {
-    margin-bottom: 1.75rem;
-  }
-}
-
-@media (min-width: 1324px) {
-  .about-sect p {
-    font-size: 1.2rem;
-  }
+.about_me .portfolio-link a {
+  color: lightgray;
+  padding: .25rem;
+  margin-top: 2rem;
 }
 
 /*--------- ---------------------- ----------*/
 /*--------- Skills section styles ----------*/
+.technologies {
+  background: black;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #c6c6c6;
+}
+
+.technologies .tech_sub_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.technologies .tech_sub_div img {
+  width: 37px;
+  height: 37px;
+}
+
+.technologies .tech_icons {
+  margin-top: 2rem;
+}
+
 .skill-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -375,14 +366,31 @@ nav span {
   width: 100%;
   background: url("/img/skills.jpg");
   background-size: 85%;
-  -webkit-box-shadow: inset 0 0 0 2000px rgba(80, 113, 156, 0.97);
-          box-shadow: inset 0 0 0 2000px rgba(80, 113, 156, 0.97);
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.97);
+          box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.97);
 }
 
 @media (min-width: 768px) {
   .skill-flex .skills-sect {
     width: 67.5%;
   }
+}
+
+.skill-flex .skills-sect .skills-content {
+  text-align: center;
+  color: white;
+}
+
+.skill-flex .skills-sect .skills-content ul {
+  text-align: left;
+}
+
+.skill-flex .skills-sect .skills-content li {
+  margin-bottom: .75rem;
+}
+
+.skill-flex .skills-sect .skills-content p, .skill-flex .skills-sect .skills-content h4, .skill-flex .skills-sect .skills-content ul li {
+  font-family: sans-serif;
 }
 
 .skill-flex .skills-sect h2 {
@@ -407,7 +415,7 @@ nav span {
 .skill-flex .skills-sect p:nth-of-type(1),
 .skill-flex .skills-sect p:nth-of-type(2) {
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: .9rem;
   margin: 1.25rem 0;
 }
 
@@ -426,17 +434,8 @@ nav span {
   }
 }
 
-.skill-flex .skills-sect h2,
-.skill-flex .skills-sect p {
-  color: white;
-}
-
-.skill-flex .skills-sect p {
-  text-align: left;
-}
-
 .skill-flex .skills-sect ul {
-  color: white;
+  list-style: circle;
   font-size: .9rem;
 }
 
@@ -544,16 +543,14 @@ nav span {
 
 .port-sect .project {
   position: relative;
-  width: 80%;
-  height: 70%;
-  max-width: 320px;
+  max-width: 620px;
   -webkit-box-shadow: 0px 0px 18px #5cc0ee;
           box-shadow: 0px 0px 18px #5cc0ee;
   -webkit-transition: -webkit-transform .4s ease;
   transition: -webkit-transform .4s ease;
   transition: transform .4s ease;
   transition: transform .4s ease, -webkit-transform .4s ease;
-  margin: 1rem auto;
+  margin: 0 auto;
   cursor: pointer;
 }
 
@@ -579,7 +576,6 @@ nav span {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1.5rem 1rem;
-  opacity: 0;
   -webkit-transition: opacity .3s ease-in, border-radius .3s ease;
   transition: opacity .3s ease-in, border-radius .3s ease;
 }
@@ -610,18 +606,6 @@ nav span {
 .port-sect .project:hover {
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
-}
-
-.port-sect .project:active .project-overlay,
-.port-sect .project:hover .project-overlay {
-  opacity: 1;
-}
-
-.port-sect .project:active .project-overlay,
-.port-sect .project:hover .project-overlay,
-.port-sect .project:active,
-.port-sect .project:hover {
-  border-radius: 2rem;
 }
 
 .site-underlay {
