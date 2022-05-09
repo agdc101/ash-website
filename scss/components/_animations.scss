@@ -20,13 +20,13 @@ main {
 }
 @keyframes bounce {
     0% {
-        transform: translateY(90%);
+        transform: translateY(50%);
     }
     50% {
         transform: translateY(0%);
     }
     100% {
-        transform: translateY(90%);
+        transform: translateY(50%);
     }
 }
 /* --------- ----------- -------------*/

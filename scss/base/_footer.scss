@@ -6,15 +6,16 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3rem;
-    background-color: $secondary;
+    height: 5rem;
+    background-color: $primary;
     font-size: .9rem;
     @media (min-width: $desktop) {
         height: 4rem;
         font-size: 1.1rem;
     }
-    a {
-        color: white;
+    span {
+        color: lightgray;
+        font-size: .7rem;
         @media (min-width: $tablet) {
             font-size: 1.1rem;
         }
@@ -26,7 +27,7 @@ footer {
     display: flex;
     align-items: center;
     height: 2.75rem;
-    background-color: $secondary; 
+    background-color: $primary; 
     position: fixed;
     bottom: 0;
     left: 0;

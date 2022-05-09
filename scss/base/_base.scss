@@ -14,6 +14,9 @@ h4 {
     font-size: .8rem;
     letter-spacing: .2rem;
     margin-bottom: 1.25rem;
+    @media (min-width: $tablet) {
+        font-size: 1rem;
+    }
 }
 p {
     font-size: .9rem;
@@ -33,7 +36,6 @@ p {
 }
 .nav-sect,
 .about-sect,
-.skills-sect,
 .overlay {
     display: flex;
     flex-direction: column;
@@ -47,7 +49,7 @@ p {
     padding: 4.5rem 0;
     border-top: 1px solid black; 
     @media (min-width:$tablet) {
-        padding: 2rem .75rem;
+        padding: 6.5rem .75rem;
     }
 }
 .about-content,
