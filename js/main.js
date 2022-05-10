@@ -137,8 +137,8 @@ window.onbeforeunload = () => {
 /* if the main content of the page is visible = hide the footer! */
 const main = document.querySelector('main');
 const appearOptions = {
-    threshold: .2,
-    rootMargin: '200px 0px 0px 0px'
+    threshold: 0.8,
+    rootMargin: '50px 0px 0px 0px'
 }
 const appearFooter = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

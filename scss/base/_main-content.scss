@@ -5,13 +5,23 @@
     font-size: 1rem;
     padding: 3rem 1rem;
     text-align: center;
-    background-color: #062131;
+    background-color: #18262f;
+    @media (min-width: $desktop) {
+        padding: 5rem 1rem;
+    }
     .main_intro {
         margin: 0 auto;
         max-width: 550px;
+        @media (min-width: $desktop) {
+            max-width: 800px;
+        }
     }
     h3 {
         margin-bottom:1.5rem;
+        @media (min-width: $tablet) {
+            margin-bottom:2.5rem;
+            font-size:2.5rem;
+        }
     }
     .portfolio-link a {
         color:lightgray;
@@ -28,22 +38,22 @@
     background-size: 85%;
     text-align: center;
     color: white;
-    box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.98);
+    box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.99);
     @media (min-width: $tablet) {
         padding: 8rem 1rem;
+        background-size: 65%;
     }
     p {
         @media (min-width: $tablet) {
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
+    }
+    h4 {
+        font-family:sans-serif;
     }
     .tech_sub_div {
         display: flex;
         justify-content: space-around;
-        img {
-            width:37px;
-            height:37px;
-        }
     }
     .tech_icons {
         max-width: 700px;
@@ -58,17 +68,18 @@
     display: flex;
     .skills-sect {
         width: 100%;
-        background:url('/img/skills.jpg');
+        background: url(/img/skills.jpg);
         background-size: 85%;
-        box-shadow:inset 0 0 0 2000px rgba(6, 33, 49 , 0.98);
+        box-shadow:inset 0 0 0 2000px rgba(6, 33, 49 , 0.99);
         .skills-content {
             text-align: center;
             color: white;
-            ul {
-                text-align:left;
-            }
             li {
                 margin-bottom: .75rem;
+                list-style: none;
+                @media (min-width: $desktop) {
+                    font-size: 1.1rem;
+                }
             }
             p, h4, ul li {
                 font-family:sans-serif;
@@ -99,44 +110,46 @@
                 font-size: 1.5rem;
             }
         }
-        ul {
-            list-style: circle;
-            font-size: .9rem;
-            @media (min-width: $tablet) {
-                padding: 0;
-            }
-            li {
-                margin-top: .4rem;
-            }
-        }
-        ul {
-            @media (min-width: $tablet) {
-                font-size: 1.1rem;
-            }
-            @media (min-width: $largeDesktop) {
-                font-size: 1.25rem;
-            }
-        }
         .flex-skills {
             @media (min-width: $tablet) {
-                display: flex;
-                align-items: center;
                 margin-top: 1.5rem;
             }
+        }
+        .skills-icns {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 70%;
+            margin: 3.5rem auto 0 auto;
         }
     }
 }
 /*--------- ---------------------- ----------*/
 /*--------- Portfolio section styles ----------*/
+#portfolio {
+    background: #f2f2f2;
+}
 .port-sect {
     border-top: 2px solid black;
+    @media (min-width: $desktop) {
+        padding: 7rem 0 5rem 0;
+    }
     .flex-projects {
         max-width: 95%;
         margin: 0 auto;
         @media (min-width: $tablet) {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: center; 
+            max-width:100%;
+        }
+    }
+    .proj-wrap {
+        @media (min-width: $tablet) {
+            width:50%;
+        }
+        @media (min-width: $desktop) {
+            width:25%;
         }
     }
     h2,
@@ -147,12 +160,10 @@
         font-family: 'Montserrat Subrayada', sans-serif;
         font-size: 1.75rem;
         margin-bottom: 2rem;
+        color:$primary;
         @media (min-width: $tablet) {
-            font-size: 3.5rem;
-            margin: 3rem 0 2.5rem 0;
-        }
-        @media (min-width: $largeDesktop) {
-            font-size: 4rem;
+            font-size: 2.5rem;
+            margin: 0 0 5rem 0;
         }
     }
     h3 {
@@ -161,20 +172,23 @@
         margin:0;
         @media (min-width: $tablet) {
             margin: 2.5rem 0 2rem 0;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
         }
-        @media (min-width: $largeDesktop) {
-            font-size: 1.25rem;
+        @media (min-width: $desktop) {
+            font-size: 1.3rem;
         }
     }
     .project {
         position: relative;
-        max-width: 620px;
         transition: transform .4s ease;
         margin: .25rem auto;
         cursor: pointer;
         @media (min-width: $tablet) {
-            max-width: 500px;
+            margin:0;
+            height:100%;
+        }
+        @media (min-width: $desktop) {
+            max-width:none;
         }
     }
     .project-overlay {
@@ -198,6 +212,9 @@
             p {
                 font-size:1rem;
                 margin: 2rem 0;
+                @media (min-width: $tablet) {
+                   margin: 0 0 2rem 0;
+                }
             }
         }
         &:hover .hidden-content {
@@ -210,7 +227,7 @@
         }
         button {
             @media (min-width: $tablet) {
-                font-size: 1.3rem;
+                font-size: .95rem;
             }
         }
     }   
@@ -221,9 +238,12 @@
 .contact-sect {
     padding: 0.5rem 1rem 3rem 1rem;
     @media (min-width: $tablet) {
-        padding: 4rem 1rem;
+        padding: 1rem 1rem 5.5rem 1rem;
         .contact-info-flex {
             display: flex;
+        }
+        @media (min-width: $desktop) {
+            padding: 8rem 1rem 8rem 1rem;
         }
     }
     h2 {       
@@ -232,17 +252,24 @@
         margin-bottom: 2rem;
         font-size: 1.75rem;
         @media (min-width: $tablet) {
-            font-size: 3.5rem;
-            letter-spacing: .25rem;
+            font-size: 1.5rem;
             border-bottom: none;
+        }
+        @media (min-width: $desktop) {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
         }
     }
     p {
         font-size: 1rem;
+        color: $primary;
         display: block;
+        font-weight: bolder;
         text-align: center;
+        margin: 2rem 0;
         @media (min-width: $tablet) {
-            font-size: 1.1rem;
+            max-width: 620px;
+            margin: 2.5rem auto;
         }
     }
     h3 {
@@ -258,13 +285,14 @@
     form {
         margin: 0 auto;
         max-width: 480px;
-        @media (min-width: $tablet) {
-            border-right: 1px solid lightgray;
-            padding-right: 1.5rem;
-            margin: 0 0 0 auto;
+        @media (min-width: $desktop) {
+            max-width:580px;
         }
         textarea {
             height: 180px;
+        }
+        .form-control {
+            border: 2px solid #ced4da;
         }
     }
         
@@ -281,6 +309,9 @@
         justify-content: space-between;
         button {
             width: 49%;
+            @media (min-width: $desktop) {
+                width: 40%;
+            }
         }
     }
 }

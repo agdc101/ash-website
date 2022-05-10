@@ -125,54 +125,10 @@ main {
 }
 
 /*- ------------Nav Images------------ -*/
-#globe-svg {
-  width: 65px;
-  height: 42px;
-  position: relative;
-  top: .1rem;
-  left: .35rem;
-  -webkit-transition: -webkit-transform .5s ease-in;
-  transition: -webkit-transform .5s ease-in;
-  transition: transform .5s ease-in;
-  transition: transform .5s ease-in, -webkit-transform .5s ease-in;
-}
-
-@media (min-width: 768px) {
-  #globe-svg {
-    height: 50px;
-  }
-}
-
-@media (min-width: 1324px) {
-  #globe-svg {
-    height: 60px;
-  }
-}
-
 .about-me:active svg,
 .about-me:hover svg {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-}
-
-#bulb-svg {
-  width: 68px;
-  height: 53px;
-  position: relative;
-  left: .45rem;
-  bottom: .25rem;
-}
-
-@media (min-width: 768px) {
-  #bulb-svg {
-    height: 60px;
-  }
-}
-
-@media (min-width: 1324px) {
-  #bulb-svg {
-    height: 70px;
-  }
 }
 
 .my-skills:active #bulb,
@@ -273,24 +229,6 @@ main {
   transition: fill .4s ease-in;
 }
 
-#phone-svg {
-  width: 50px;
-  height: 40px;
-}
-
-@media (min-width: 768px) {
-  #phone-svg {
-    height: 50px;
-  }
-}
-
-@media (min-width: 1324px) {
-  #phone-svg {
-    height: 60px;
-    width: 60px;
-  }
-}
-
 .contact-me:active #wave-1,
 .contact-me:hover #wave-1 {
   fill: red;
@@ -310,23 +248,6 @@ main {
 .contact-me:hover #phone-svg {
   -webkit-animation: ring .75s ease infinite forwards;
           animation: ring .75s ease infinite forwards;
-}
-
-#git-svg {
-  width: 60px;
-  height: 45px;
-}
-
-@media (min-width: 768px) {
-  #git-svg {
-    height: 55px;
-  }
-}
-
-@media (min-width: 1324px) {
-  #git-svg {
-    height: 65px;
-  }
 }
 
 #git-logo {
@@ -383,6 +304,42 @@ main {
   }
 }
 
+.tech_sub_div img {
+  width: 35px;
+  height: 35px;
+}
+
+@media (min-width: 1280px) {
+  .tech_sub_div img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.skills-icns img {
+  width: 37px;
+  height: 35px;
+}
+
+@media (min-width: 1280px) {
+  .skills-icns img {
+    width: 42px;
+    height: 40px;
+  }
+}
+
+img[alt="shopify icon"] {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 1280px) {
+  img[alt="shopify icon"] {
+    width: 55px;
+    height: 55px;
+  }
+}
+
 /*- ------------------------------------------------------------ -*/
 /*- ----------------- Portfolio Section Image ------------------ -*/
 .port-sect img {
@@ -398,19 +355,7 @@ main {
 
 @media (min-width: 768px) {
   .port-sect .project img {
-    max-width: 340px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .port-sect .project img {
-    max-width: 375px;
-  }
-}
-
-@media (min-width: 1324px) {
-  .port-sect .project img {
-    max-width: 400px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -587,16 +532,24 @@ h4 {
   font-size: .8rem;
   letter-spacing: .2rem;
   margin-bottom: 1.25rem;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
   h4 {
-    font-size: 1rem;
+    font-size: .9rem;
+    margin-bottom: 2.5rem;
   }
 }
 
 p {
   font-size: .9rem;
+}
+
+@media (min-width: 1280px) {
+  p {
+    font-size: 1.1rem;
+  }
 }
 
 /*----------------------------------------*/
@@ -718,13 +671,13 @@ nav span {
 
 @media (min-width: 768px) {
   .top h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 
 @media (min-width: 1324px) {
   .top h1 {
-    font-size: 6.25rem;
+    font-size: 4rem;
   }
 }
 
@@ -741,13 +694,13 @@ nav span {
 
 @media (min-width: 768px) {
   .top h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1324px) {
   .top h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -788,6 +741,12 @@ nav span {
 @media (min-width: 768px) {
   .top a {
     top: 10rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .top a {
+    top: 8rem;
   }
 }
 
@@ -895,7 +854,13 @@ nav span {
   font-size: 1rem;
   padding: 3rem 1rem;
   text-align: center;
-  background-color: #062131;
+  background-color: #18262f;
+}
+
+@media (min-width: 1280px) {
+  .about_me {
+    padding: 5rem 1rem;
+  }
 }
 
 .about_me .main_intro {
@@ -903,8 +868,21 @@ nav span {
   max-width: 550px;
 }
 
+@media (min-width: 1280px) {
+  .about_me .main_intro {
+    max-width: 800px;
+  }
+}
+
 .about_me h3 {
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .about_me h3 {
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+  }
 }
 
 .about_me .portfolio-link a {
@@ -921,20 +899,25 @@ nav span {
   background-size: 85%;
   text-align: center;
   color: white;
-  -webkit-box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.98);
-          box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.98);
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.99);
+          box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.99);
 }
 
 @media (min-width: 768px) {
   .technologies {
     padding: 8rem 1rem;
+    background-size: 65%;
   }
 }
 
 @media (min-width: 768px) {
   .technologies p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
+}
+
+.technologies h4 {
+  font-family: sans-serif;
 }
 
 .technologies .tech_sub_div {
@@ -943,11 +926,6 @@ nav span {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.technologies .tech_sub_div img {
-  width: 37px;
-  height: 37px;
 }
 
 .technologies .tech_icons {
@@ -969,10 +947,10 @@ nav span {
 
 .skill-flex .skills-sect {
   width: 100%;
-  background: url("/img/skills.jpg");
+  background: url(/img/skills.jpg);
   background-size: 85%;
-  -webkit-box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.98);
-          box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.98);
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.99);
+          box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.99);
 }
 
 .skill-flex .skills-sect .skills-content {
@@ -980,12 +958,15 @@ nav span {
   color: white;
 }
 
-.skill-flex .skills-sect .skills-content ul {
-  text-align: left;
-}
-
 .skill-flex .skills-sect .skills-content li {
   margin-bottom: .75rem;
+  list-style: none;
+}
+
+@media (min-width: 1280px) {
+  .skill-flex .skills-sect .skills-content li {
+    font-size: 1.1rem;
+  }
 }
 
 .skill-flex .skills-sect .skills-content p, .skill-flex .skills-sect .skills-content h4, .skill-flex .skills-sect .skills-content ul li {
@@ -1033,49 +1014,40 @@ nav span {
   }
 }
 
-.skill-flex .skills-sect ul {
-  list-style: circle;
-  font-size: .9rem;
-}
-
-@media (min-width: 768px) {
-  .skill-flex .skills-sect ul {
-    padding: 0;
-  }
-}
-
-.skill-flex .skills-sect ul li {
-  margin-top: .4rem;
-}
-
-@media (min-width: 768px) {
-  .skill-flex .skills-sect ul {
-    font-size: 1.1rem;
-  }
-}
-
-@media (min-width: 1324px) {
-  .skill-flex .skills-sect ul {
-    font-size: 1.25rem;
-  }
-}
-
 @media (min-width: 768px) {
   .skill-flex .skills-sect .flex-skills {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-top: 1.5rem;
   }
 }
 
+.skill-flex .skills-sect .skills-icns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 70%;
+  margin: 3.5rem auto 0 auto;
+}
+
 /*--------- ---------------------- ----------*/
 /*--------- Portfolio section styles ----------*/
+#portfolio {
+  background: #f2f2f2;
+}
+
 .port-sect {
   border-top: 2px solid black;
+}
+
+@media (min-width: 1280px) {
+  .port-sect {
+    padding: 7rem 0 5rem 0;
+  }
 }
 
 .port-sect .flex-projects {
@@ -1093,6 +1065,19 @@ nav span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .port-sect .proj-wrap {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .port-sect .proj-wrap {
+    width: 25%;
   }
 }
 
@@ -1105,18 +1090,13 @@ nav span {
   font-family: 'Montserrat Subrayada', sans-serif;
   font-size: 1.75rem;
   margin-bottom: 2rem;
+  color: #062131;
 }
 
 @media (min-width: 768px) {
   .port-sect h2 {
-    font-size: 3.5rem;
-    margin: 3rem 0 2.5rem 0;
-  }
-}
-
-@media (min-width: 1324px) {
-  .port-sect h2 {
-    font-size: 4rem;
+    font-size: 2.5rem;
+    margin: 0 0 5rem 0;
   }
 }
 
@@ -1129,19 +1109,18 @@ nav span {
 @media (min-width: 768px) {
   .port-sect h3 {
     margin: 2.5rem 0 2rem 0;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 }
 
-@media (min-width: 1324px) {
+@media (min-width: 1280px) {
   .port-sect h3 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 }
 
 .port-sect .project {
   position: relative;
-  max-width: 620px;
   -webkit-transition: -webkit-transform .4s ease;
   transition: -webkit-transform .4s ease;
   transition: transform .4s ease;
@@ -1152,7 +1131,14 @@ nav span {
 
 @media (min-width: 768px) {
   .port-sect .project {
-    max-width: 500px;
+    margin: 0;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .port-sect .project {
+    max-width: none;
   }
 }
 
@@ -1190,6 +1176,12 @@ nav span {
   margin: 2rem 0;
 }
 
+@media (min-width: 768px) {
+  .port-sect .project-overlay .hidden-content p {
+    margin: 0 0 2rem 0;
+  }
+}
+
 .port-sect .project-overlay:hover .hidden-content {
   opacity: 1;
   max-height: 200px;
@@ -1202,7 +1194,7 @@ nav span {
 
 @media (min-width: 768px) {
   .port-sect .project-overlay button {
-    font-size: 1.3rem;
+    font-size: .95rem;
   }
 }
 
@@ -1214,12 +1206,18 @@ nav span {
 
 @media (min-width: 768px) {
   .contact-sect {
-    padding: 4rem 1rem;
+    padding: 1rem 1rem 5.5rem 1rem;
   }
   .contact-sect .contact-info-flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1280px) {
+  .contact-sect {
+    padding: 8rem 1rem 8rem 1rem;
   }
 }
 
@@ -1232,21 +1230,31 @@ nav span {
 
 @media (min-width: 768px) {
   .contact-sect h2 {
-    font-size: 3.5rem;
-    letter-spacing: .25rem;
+    font-size: 1.5rem;
     border-bottom: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .contact-sect h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
   }
 }
 
 .contact-sect p {
   font-size: 1rem;
+  color: #062131;
   display: block;
+  font-weight: bolder;
   text-align: center;
+  margin: 2rem 0;
 }
 
 @media (min-width: 768px) {
   .contact-sect p {
-    font-size: 1.1rem;
+    max-width: 620px;
+    margin: 2.5rem auto;
   }
 }
 
@@ -1269,16 +1277,18 @@ nav span {
   max-width: 480px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .contact-sect form {
-    border-right: 1px solid lightgray;
-    padding-right: 1.5rem;
-    margin: 0 0 0 auto;
+    max-width: 580px;
   }
 }
 
 .contact-sect form textarea {
   height: 180px;
+}
+
+.contact-sect form .form-control {
+  border: 2px solid #ced4da;
 }
 
 .contact-sect a {
@@ -1310,6 +1320,12 @@ nav span {
 
 .contact-sect .btn-wrap button {
   width: 49%;
+}
+
+@media (min-width: 1280px) {
+  .contact-sect .btn-wrap button {
+    width: 40%;
+  }
 }
 
 /*--------- ---------------------- ----------*/
@@ -1345,7 +1361,7 @@ footer span {
 
 @media (min-width: 768px) {
   footer span {
-    font-size: 1.1rem;
+    font-size: .9rem;
   }
 }
 

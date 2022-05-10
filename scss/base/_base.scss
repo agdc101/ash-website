@@ -14,12 +14,17 @@ h4 {
     font-size: .8rem;
     letter-spacing: .2rem;
     margin-bottom: 1.25rem;
+    font-weight: bold;
     @media (min-width: $tablet) {
-        font-size: 1rem;
+        font-size: .9rem;
+        margin-bottom: 2.5rem;
     }
 }
 p {
     font-size: .9rem;
+    @media (min-width: $desktop) {
+        font-size: 1.1rem;
+    }
 }
 /*----------------------------------------*/
 /*------------- BASE STYLES --------------*/

@@ -19,38 +19,11 @@
     }
 }
 /*- ------------Nav Images------------ -*/
-#globe-svg {
-    width: 65px; 
-    height: 42px;
-    position: relative;
-    top: .1rem;
-    left: .35rem;
-    transition: transform .5s ease-in;
-    @media (min-width: $tablet) {
-        height: 50px;
-    }
-    @media (min-width: $largeDesktop) {
-        height: 60px;
-    }
-}
 .about-me:active svg,
 .about-me:hover svg {
     transform: rotate(360deg);
 }
 
-#bulb-svg {
-    width: 68px; 
-    height: 53px; 
-    position: relative;
-    left: .45rem;
-    bottom: .25rem;
-    @media (min-width: $tablet) {
-        height: 60px;
-    }
-    @media (min-width: $largeDesktop) {
-        height: 70px;
-    }
-} 
 .my-skills:active #bulb,
 .my-skills:hover #bulb 
   {
@@ -90,17 +63,6 @@
     transition: fill .4s ease-in;
 }
 
-#phone-svg {
-    width: 50px; 
-    height: 40px;
-    @media (min-width: $tablet) {
-        height: 50px;
-    }
-    @media (min-width: $largeDesktop) {
-        height: 60px;
-        width: 60px;
-    }            
-}
 @for $i from 1 through 3 {
     .contact-me:active #wave-#{$i},
     .contact-me:hover #wave-#{$i} {
@@ -110,16 +72,6 @@
 .contact-me:active #phone-svg,
 .contact-me:hover #phone-svg {
     animation: ring .75s ease infinite forwards;
-}
-#git-svg {
-    width: 60px; 
-    height: 45px;
-    @media (min-width: $tablet) {
-        height: 55px;
-    }
-    @media (min-width: $largeDesktop) {
-        height: 65px;
-    }
 }
 #git-logo {
     transition: fill .4s ease;
@@ -159,6 +111,31 @@
         display: block;
     }
 }
+.tech_sub_div img  {
+    width: 35px;
+    height: 35px;
+    @media (min-width: $desktop) {
+        width: 40px;
+        height: 40px;
+    }
+}
+.skills-icns img {
+    width: 37px;
+    height: 35px;
+    @media (min-width: $desktop) {
+        width: 42px;
+        height: 40px;
+    }
+    
+}
+img[alt="shopify icon"] {
+    width: 40px;
+    height: 40px;
+    @media (min-width: $desktop) {
+        width: 55px;
+        height: 55px;
+    }
+}
 /*- ------------------------------------------------------------ -*/
 /*- ----------------- Portfolio Section Image ------------------ -*/
 .port-sect {
@@ -170,13 +147,7 @@
         height: 100%;
         transition: border-radius .3s ease;
         @media (min-width: $tablet) {
-            max-width: 340px;
-        }
-        @media (min-width: $desktop) {
-            max-width: 375px;
-        }
-        @media (min-width: $largeDesktop) {
-            max-width: 400px;
+            margin-bottom:1rem;
         }
     }
 }
