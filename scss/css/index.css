@@ -311,8 +311,8 @@ main {
 
 @media (min-width: 1280px) {
   .tech_sub_div img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -323,8 +323,8 @@ main {
 
 @media (min-width: 1280px) {
   .skills-icns img {
-    width: 42px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -335,8 +335,8 @@ img[alt="shopify icon"] {
 
 @media (min-width: 1280px) {
   img[alt="shopify icon"] {
-    width: 55px;
-    height: 55px;
+    width: 65px;
+    height: 65px;
   }
 }
 
@@ -538,7 +538,7 @@ h4 {
 @media (min-width: 768px) {
   h4 {
     font-size: .9rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
   }
 }
 
@@ -632,9 +632,50 @@ nav {
           box-shadow: 0px 0px 22px #ededed;
 }
 
+@media (min-width: 768px) {
+  nav {
+    height: 7vh;
+  }
+}
+
+nav .menu-wrap {
+  display: none;
+  margin: 0 auto;
+  width: 30%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  nav .menu-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 nav span {
   letter-spacing: .1rem;
   font-size: .7rem;
+}
+
+@media (min-width: 768px) {
+  nav span {
+    position: absolute;
+    top: 10;
+    right: 0;
+  }
+}
+
+nav a {
+  color: #062131;
+  letter-spacing: .1rem;
+}
+
+@media (min-width: 768px) {
+  nav .hamburger {
+    display: none;
+  }
 }
 
 .top {
@@ -854,7 +895,7 @@ nav span {
   font-size: 1rem;
   padding: 3rem 1rem;
   text-align: center;
-  background-color: #18262f;
+  background-color: #000000;
 }
 
 @media (min-width: 1280px) {
@@ -892,6 +933,14 @@ nav span {
 
 /*--------- ---------------------- ----------*/
 /*--------- Skills section styles ----------*/
+@media (min-width: 1280px) {
+  .skill-tech-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .technologies {
   background: black;
   background: url("/img/skills.jpg");
@@ -899,14 +948,26 @@ nav span {
   background-size: 85%;
   text-align: center;
   color: white;
-  -webkit-box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.99);
-          box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.99);
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.98);
+          box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.98);
 }
 
 @media (min-width: 768px) {
   .technologies {
     padding: 8rem 1rem;
     background-size: 65%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .technologies {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -939,18 +1000,36 @@ nav span {
   }
 }
 
+@media (min-width: 1280px) {
+  .technologies .tech_icons {
+    margin-top: 5rem;
+  }
+}
+
 .skill-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+@media (min-width: 1280px) {
+  .skill-flex {
+    width: 50%;
+  }
+}
+
 .skill-flex .skills-sect {
   width: 100%;
   background: url(/img/skills.jpg);
   background-size: 85%;
-  -webkit-box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.99);
-          box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.99);
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.98);
+          box-shadow: inset 0 0 0 2000px rgba(6, 33, 49, 0.98);
+}
+
+@media (min-width: 1280px) {
+  .skill-flex .skills-sect {
+    background-size: 55%;
+  }
 }
 
 .skill-flex .skills-sect .skills-content {
@@ -1115,7 +1194,7 @@ nav span {
 
 @media (min-width: 1280px) {
   .port-sect h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 

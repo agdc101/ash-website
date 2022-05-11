@@ -5,7 +5,7 @@
     font-size: 1rem;
     padding: 3rem 1rem;
     text-align: center;
-    background-color: #18262f;
+    background-color: #000000;
     @media (min-width: $desktop) {
         padding: 5rem 1rem;
     }
@@ -31,6 +31,11 @@
 
 /*--------- ---------------------- ----------*/
 /*--------- Skills section styles ----------*/
+.skill-tech-wrap {
+    @media (min-width: $desktop) {
+        display:flex;
+    }
+}
 .technologies {
     background: black;
     background: url('/img/skills.jpg');
@@ -38,10 +43,15 @@
     background-size: 85%;
     text-align: center;
     color: white;
-    box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.99);
+    box-shadow: inset 0 0 0 2000px rgba(19, 19, 19, 0.98);
     @media (min-width: $tablet) {
         padding: 8rem 1rem;
         background-size: 65%;
+    }
+    @media (min-width: $desktop) {
+        width:50%;
+        display:flex;
+        justify-content: center;
     }
     p {
         @media (min-width: $tablet) {
@@ -61,16 +71,25 @@
         @media (min-width: $tablet) {
             margin-top: 3rem;
         }
+        @media (min-width: $desktop) {
+            margin-top: 5rem;
+        }
     }
 }
 
 .skill-flex {
     display: flex;
+    @media (min-width: $desktop) {
+        width:50%;
+    }
     .skills-sect {
         width: 100%;
         background: url(/img/skills.jpg);
         background-size: 85%;
-        box-shadow:inset 0 0 0 2000px rgba(6, 33, 49 , 0.99);
+        box-shadow:inset 0 0 0 2000px rgba(6, 33, 49 , 0.98);
+        @media (min-width: $desktop) {
+            background-size: 55%;
+        }
         .skills-content {
             text-align: center;
             color: white;
@@ -175,7 +194,7 @@
             font-size: 1.2rem;
         }
         @media (min-width: $desktop) {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
     }
     .project {
