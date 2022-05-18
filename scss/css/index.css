@@ -1,95 +1,18 @@
 /*- -----BREAKPOINTS----- -*/
-main {
-  scroll-behavior: smooth;
-}
-
-/*- ----------------------------- -*/
-@-webkit-keyframes fade {
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes ring {
-  0% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  50% {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@keyframes ring {
-  0% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  50% {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-  }
-  50% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  100% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-  }
-  50% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  100% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-  }
-}
-
 /* --------- ----------- -------------*/
 .listener {
-  -webkit-transition: opacity .4s ease-in, -webkit-transform .5s ease;
-  transition: opacity .4s ease-in, -webkit-transform .5s ease;
-  transition: transform .5s ease, opacity .4s ease-in;
-  transition: transform .5s ease, opacity .4s ease-in, -webkit-transform .5s ease;
-  -webkit-transform: translateX(-40%);
-          transform: translateX(-40%);
+  -webkit-transition: opacity .6s ease-in;
+  transition: opacity .6s ease-in;
   opacity: 0;
 }
 
 .slide-back {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
   opacity: 1;
+}
+
+.slide {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 /*- ----------Top Page-------------- -*/
@@ -463,9 +386,10 @@ img[alt="shopify icon"] {
 
 #exampleModal #modal-pic {
   margin: 0 auto 1rem auto;
+  border: 1px solid lightgrey;
   width: 100%;
-  max-width: 345px;
-  max-height: 290px;
+  max-width: 350px;
+  height: 210px;
 }
 
 @media (min-width: 1280px) {
@@ -482,6 +406,7 @@ img[alt="shopify icon"] {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  background-color: #e1e1e1;
 }
 
 #exampleModal .modal-footer a {
@@ -514,6 +439,10 @@ img[alt="shopify icon"] {
 }
 
 /*- ----- universal styles ------ -*/
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -630,17 +559,21 @@ nav {
   padding: .3rem .5rem;
   -webkit-box-shadow: 0px 0px 22px #ededed;
           box-shadow: 0px 0px 22px #ededed;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: white;
+  z-index: 99;
 }
 
 @media (min-width: 768px) {
   nav {
-    height: 7vh;
+    height: 6vh;
   }
 }
 
 nav .menu-wrap {
   display: none;
-  margin: 0 auto;
   width: 30%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -662,14 +595,14 @@ nav span {
 @media (min-width: 768px) {
   nav span {
     position: absolute;
-    top: 10;
-    right: 0;
+    right: 10px;
   }
 }
 
 nav a {
   color: #062131;
   letter-spacing: .1rem;
+  font-size: .9rem;
 }
 
 @media (min-width: 768px) {
@@ -690,7 +623,7 @@ nav a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .top h1,
@@ -712,13 +645,13 @@ nav a {
 
 @media (min-width: 768px) {
   .top h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 1324px) {
   .top h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -735,13 +668,13 @@ nav a {
 
 @media (min-width: 768px) {
   .top h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
 @media (min-width: 1324px) {
   .top h2 {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -888,6 +821,46 @@ nav a {
   }
 }
 
+#nav_overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 7%;
+  bottom: 0;
+  width: 100vw;
+  -webkit-transition: -webkit-transform .75s ease-out;
+  transition: -webkit-transform .75s ease-out;
+  transition: transform .75s ease-out;
+  transition: transform .75s ease-out, -webkit-transform .75s ease-out;
+  background-color: #062131;
+  z-index: 2;
+}
+
+#nav_overlay a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav_overlay a:hover {
+  background-color: #082f46;
+}
+
 /*--------- ---------------------- ----------*/
 /*--------- About Me section styles ----------*/
 .about_me {
@@ -895,7 +868,7 @@ nav a {
   font-size: 1rem;
   padding: 3rem 1rem;
   text-align: center;
-  background-color: #000000;
+  background-color: #4b5157;
 }
 
 @media (min-width: 1280px) {
@@ -1119,6 +1092,24 @@ nav a {
   background: #f2f2f2;
 }
 
+#portfolio .port-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #062131;
+  font-size: .9rem;
+}
+
+@media (min-width: 1280px) {
+  #portfolio .port-intro {
+    font-size: 1.1rem;
+  }
+}
+
+#portfolio .port-intro a {
+  color: #062131;
+  text-decoration: underline;
+}
+
 .port-sect {
   border-top: 2px solid black;
 }
@@ -1168,14 +1159,13 @@ nav a {
 .port-sect h2 {
   font-family: 'Montserrat Subrayada', sans-serif;
   font-size: 1.75rem;
-  margin-bottom: 2rem;
   color: #062131;
 }
 
 @media (min-width: 768px) {
   .port-sect h2 {
     font-size: 2.5rem;
-    margin: 0 0 5rem 0;
+    margin: 0 0 2rem 0;
   }
 }
 
@@ -1280,7 +1270,7 @@ nav a {
 /*--------- ---------------------- ----------*/
 /*--------- Contact section styles ----------*/
 .contact-sect {
-  padding: 0.5rem 1rem 3rem 1rem;
+  padding: 2rem 1rem 3rem 1rem;
 }
 
 @media (min-width: 768px) {
@@ -1499,11 +1489,6 @@ footer span {
   .sticky-footer a:hover {
     color: #062131;
   }
-}
-
-.slide {
-  -webkit-transform: translate(0, 2.7rem);
-          transform: translate(0, 2.7rem);
 }
 
 /*--------- ---------------------- ----------*/

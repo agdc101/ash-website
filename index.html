@@ -20,9 +20,9 @@
                     </span>
                 </button>
                 <div class="menu-wrap">
-                    <a href="">skills</a>
-                    <a href="">portfolio</a>
-                    <a href="">contact</a>
+                    <a href="#skills-nav">skills</a>
+                    <a href="#portfolio">portfolio</a>
+                    <a href="#contact-nav">contact</a>
                 </div>
                 <span>campbellwebdev.com®</span>
             </nav>
@@ -35,6 +35,13 @@
                     </svg>
                 </a> 
             </div> 
+            <!---- hamburger nav overlay ---->
+            <div id='nav_overlay' class='slide'>
+              <a href='#skills-nav'>Skills</a>
+              <a href='#portfolio'>Portfolio</a>
+              <a href='#contact-nav'>Contact</a>
+            </div>
+            <!--  ------------------------ -->
         </header>          
             <main class='sticky'>
                 <section class="about_me">
@@ -45,7 +52,7 @@
                     </div>
                 </section>
                 <div class="skill-tech-wrap">
-                    <section class='technologies'>
+                    <section id="skills-nav" class='technologies'>
                         <div class="tech-wrapper">
                             <h4>TECHNOLOGY</h4>
                             <p>Proficient in front and back-end languages, frameworks and libraries.</p>
@@ -73,7 +80,7 @@
                                 <div class='skills-content'>
                                     <h4>OTHER SKILLS</h4>                                                               
                                     <div class='flex-skills'>
-                                        <li>Full Shopify development.</li>
+                                        <li>Shopify development.</li>
                                         <li>Git - version control. working with Github repositories through a unix terminal.</li>
                                         <li>JSON, AJAX, anime.js.</li>
                                         <li>Adobe Coldfusion - writing CFML applications. Connecting CFML pages to databases using SQL server.</li>
@@ -91,6 +98,7 @@
                 </div>
                 <section id='portfolio' class='port-sect'>
                     <h2>Portfolio</h2>
+                    <p class="port-intro">Please take a look some of my work. Code for all projects can be found on my <a href='https://github.com/agdc101'>github</a> page.</p>
                     <div class='flex-projects'>
                         <div class='sass-portfolio navigate listener proj-wrap'>
                             <div class='project'>
@@ -118,7 +126,7 @@
                         </div>     
                         <div class='gallery-portfolio listener proj-wrap'>
                             <div class='project'>
-                                <img src="/img/screenshots/gallery.png" alt="jquery. photo gallery">
+                                <img src="/img/screenshots/gallery.png" alt="jquery photo gallery">
                                 <div class='project-overlay shade_pink'>
                                     <div class="hidden-content">
                                         <p>Interactive photo gallery built with Jquery.</p>
@@ -170,7 +178,7 @@
                                 <div class='project-overlay shade_darkblue'>
                                     <div class="hidden-content">
                                         <p>A set number of guesses to guess the movie title!</p>
-                                        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='5'>SEE MORE</button>
+                                        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='6'>SEE MORE</button>
                                     </div>
                                     <h3>Movie Guessing Game</h3>
                                 </div>               
@@ -182,7 +190,7 @@
                                 <div class='project-overlay shade_purple'>
                                     <div class="hidden-content">
                                         <p>Creating a respnsive page for a new Javascript framework, Firebase.js</p>
-                                        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='5'>SEE MORE</button>
+                                        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-index='7'>SEE MORE</button>
                                     </div>
                                     <h3>Firebase</h3>
                                 </div>               
@@ -191,7 +199,7 @@
                     </div>
                 </section> 
             </main> 
-            <section class='contact-sect navigate hide-sticky'>
+            <section id="contact-nav" class='contact-sect navigate hide-sticky'>
                 <h2>Get In Contact</h2>
                 <p>Please fill in the contact form below and I will respond to your message as soon as possible.</p>
                 <div class='contact-info-flex'>

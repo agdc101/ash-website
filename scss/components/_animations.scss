@@ -1,42 +1,13 @@
-main {
-    scroll-behavior: smooth;
-}
-/*- ----------------------------- -*/
-@keyframes fade {
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes ring {
-    0% {
-        transform: rotate(-20deg);
-    }
-    50% {
-        transform: rotate(20deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-@keyframes bounce {
-    0% {
-        transform: translateY(50%);
-    }
-    50% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(50%);
-    }
-}
+
 /* --------- ----------- -------------*/
 
 .listener {
-    transition: transform .5s ease, opacity .4s ease-in;
-    transform: translateX(-40%);
+    transition: opacity .6s ease-in;
     opacity: 0;
 }
 .slide-back {
-    transform: translateX(0);
     opacity: 1;
+}
+.slide {
+    transform: translateX(-100%);
 }

@@ -6,12 +6,16 @@ nav {
     align-items: center;
     padding: .3rem .5rem;
     box-shadow: 0px 0px 22px #ededed;
+    position:fixed;
+    right:0;
+    left:0;
+    background:white;
+    z-index:99;
     @media (min-width: $tablet) {
-        height:7vh;
+        height:6vh;
     } 
     .menu-wrap {
         display:none;
-        margin: 0 auto;
         width: 30%;
         justify-content: space-around;
         @media (min-width: $tablet) {
@@ -23,13 +27,13 @@ nav {
         font-size: .7rem;
         @media (min-width: $tablet) {
             position: absolute;
-            top: 10;
-            right: 0;
+            right: 10px;
         } 
     }
     a {
         color:$primary;
-        letter-spacing: .1rem;;
+        letter-spacing: .1rem;
+        font-size:.9rem;
     }
     .hamburger {
         @media (min-width: $tablet) {
@@ -42,7 +46,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height:90vh;
+    height:100vh;
     h1,
     h2,
     h3 {
@@ -57,10 +61,10 @@ nav {
         margin: 2.5rem auto;
         max-width:90%;
         @media (min-width: $tablet) {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         @media (min-width: $largeDesktop) {
-            font-size: 4rem;
+            font-size: 3rem;
         }       
         @media (min-width: $tablet) and  (min-height: 1023px) {
             top: 0;
@@ -70,10 +74,10 @@ nav {
         font-size: 1.25rem;
         font-family: 'Montserrat Subrayada', sans-serif;
         @media (min-width: $tablet) {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
         @media (min-width: $largeDesktop) {
-            font-size: 1.9rem;
+            font-size: 1.6rem;
         }
     }
     h3 {
@@ -165,5 +169,28 @@ nav {
                 font-size: 2.1rem;
             }
         }          
+    }
+}
+#nav_overlay {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 7%;
+    bottom: 0;
+    width: 100vw;
+    transition: transform .75s ease-out;
+    background-color: $primary;
+    z-index: 2;
+    a {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background-color: rgb(8, 47, 70);
+        }
     }
 }

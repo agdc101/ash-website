@@ -18,11 +18,20 @@ burger.addEventListener('click', () => {
     document.querySelector('nav').style.position = 'none';
     document.querySelector('#nav_overlay').classList.toggle('slide');
 })
+const burgerLinks = document.querySelectorAll('#nav_overlay a');
+
+burgerLinks.forEach(element => {
+    element.addEventListener('click', () => {
+        document.querySelector('#nav_overlay').classList.toggle('slide');
+        burger.classList.toggle('is-active');
+    });
+})
+
 // For the portfolio modal feature.
 const projects = [
     {
         title: 'SASS Web Layout',
-        imageLink: 'img/screenshots/modal-sass-screenshot.png',
+        gifLink: 'img/gifs/sass.gif',
         imageAlt: 'SASS. a CSS preprocessor, has many great features',
         description: 'Responsive SASS project demonstrating the power and flexibility of the SASS preprocessor. Featuring SASS loops, maps and functions creating a complex layout with a bare amount of code.',
         technologies: 'HTML, SASS/CSS.',
@@ -33,9 +42,9 @@ const projects = [
     },
     {
         title: 'Phrase Hunter',
-        imageLink: 'img/screenshots/modal-game-screenshot.png',
+        gifLink: 'img/gifs/phrase_hunter.gif',
         imageAlt: 'you can make really cool games with javascript',
-        description: 'A javascript driven movie guessing game. The game allows the user 5 lives to guess the correct title. The game also allows the user to restart the game and features a losing and winning end-screen. Give it a try!',
+        description: 'A javascript driven phrase guessing game. The game allows the user 5 lives to guess the correct phrase. The game also allows the user to restart the game and features a losing and winning end-screen. Give it a try!',
         technologies: 'HTML, CSS, Javascript.',
         skills: 'Javasript Classes, Javascript Math methods, Array iteration, functions, loops and other JS methods.',
         responsive: `&#x2718`,
@@ -44,7 +53,7 @@ const projects = [
     },
     {
         title: 'Interactive Photo Gallery',
-        imageLink: 'img/screenshots/modal-gallery-screenshot.png',
+        gifLink: 'img/gifs/gallery.gif',
         imageAlt: 'wonderful photo gallery snapshot',
         description: 'Responsive interactive photo gallery built and driven with the Jquery framework. Photos can be filtered and searched for using a live search-bar and a Jquery plug-in is used for the carousel modal. The modal is interactive and allows the user to scroll through the images.',
         technologies: 'HTML, CSS/SASS, Jquery.',
@@ -56,7 +65,7 @@ const projects = [
     },
     {
         title: 'Web App Dashboard',
-        imageLink: 'img/screenshots/modal-dash-screenshot.png',
+        gifLink: 'img/gifs/dashboard.gif',
         imageAlt: 'a mockup design of a web app dashboard. many cool interactive features',
         description: 'This is a web app dashboard design. The page demonstrates the interactivity that Javascript can bring to web pages. There is a notification icon which displays some example notifications and an alert message. The Javascript graphs allows for great user interactivity.',
         technologies: 'HTML, CSS, Jquery.',
@@ -67,7 +76,7 @@ const projects = [
     },
     {
         title: 'Employee Directory',
-        imageLink: 'img/screenshots/modal-direct-screenshot.png',
+        gifLink: 'img/gifs/directory.gif',
         imageAlt: 'using the fetch api to build an awesome directory',
         description: 'An employee directory. The directory communicates with a third-party API to retrieve 12 random employees everytime the page is loaded. The page also features a modal containing more information about any specific employee. The page also has a live search bar so the user can search and filter the employees as shown in the picture!',
         technologies: 'HTML, CSS, Javascript, JSON.',
@@ -78,11 +87,33 @@ const projects = [
     },
     {
         title: 'Javascript Form Validation',
-        imageLink: 'img/screenshots/modal-form-screenshot.png',
+        gifLink: 'img/gifs/form.gif',
         imageAlt: 'javascript is a very useful language for validating forms.',
         description: 'An example project of how javascipt can be used to effectively validate all types of form entries, which is especially important for people with accessibility issues.',
         technologies: 'HTML, CSS, Javascript.',
         skills: 'HTML forms, Javascript Regular Expressions.',
+        responsive: `&#x2714`,
+        siteLink: 'https://agdc101.github.io/interactive_form/ ',
+        githubLink: 'https://github.com/agdc101/interactive_form'
+    },
+    {
+        title: 'Movie Guessing Game',
+        gifLink: 'img/gifs/movie-game.gif',
+        imageAlt: 'a gif demonstrating a movie guessing game.',
+        description: 'Guess the movie! a hangman-style movie guessing game allowing the user five lives to guess the correct title. I plan on improving this project by utlisiing an API so that a largr database of movies can be used.',
+        technologies: 'HTML, CSS, Javascript.',
+        skills: 'Javascript Math methods, Array iteration, functions, loops and other JS methods.',
+        responsive: `&#x2714`,
+        siteLink: 'https://agdc101.github.io/wheel-of-success-game/',
+        githubLink: 'https://github.com/agdc101/wheel-of-success-game'
+    },
+    {
+        title: 'Firebase',
+        gifLink: 'img/gifs/firebase.gif',
+        imageAlt: 'a gif displaying a page based around firebase.js.',
+        description: 'a fully responsive mock page layout for a new Javascript framework called Firebase.js. Firebase.js is a new fictional Javascript framework.',
+        technologies: 'HTML, CSS.',
+        skills: 'Responsive CSS, Design.',
         responsive: `&#x2714`,
         siteLink: 'https://agdc101.github.io/interactive_form/ ',
         githubLink: 'https://github.com/agdc101/interactive_form'
@@ -105,7 +136,7 @@ const buildModal = (index) => {
                     <span aria-hidden="true">&times;</span>`;
     modalHeader.innerHTML = headerHTML;
 
-    let bodyHTML = `<img id='modal-pic' src=${projects[index].imageLink} alt='${projects[index].imageAlt}'>`;
+    let bodyHTML = `<img id='modal-pic' src=${projects[index].gifLink} alt='${projects[index].imageAlt}'>`;
     bodyHTML += `<div class='text-flex'><p><strong>Description:</strong> ${projects[index].description}</p>`;
     bodyHTML += `<span><strong>Languages:</strong> ${projects[index].technologies}</span>`;
     bodyHTML += `<p><strong>Skills/Techinques used:</strong> ${projects[index].skills}</p>`;
@@ -113,8 +144,8 @@ const buildModal = (index) => {
     modalBodyContent.innerHTML = bodyHTML;
 
     let footerIcons =  `
-                        <a href=${projects[index].githubLink} class='btn btn-outline-info' target='_blank'>See the Code</a>
-                        <a href=${projects[index].siteLink} class='btn btn-outline-info' target='_blank'>See it Live</a>`;  
+                        <a href=${projects[index].githubLink} class='btn btn-light' target='_blank'>See the Code</a>
+                        <a href=${projects[index].siteLink} class='btn btn-light' target='_blank'>See it Live</a>`;  
     modalFooter.innerHTML = footerIcons;                
 };
 /*-------------- --------------------------- --------------*/
@@ -133,26 +164,6 @@ for (let j = 0; j < navButtons.length; j += 1) {
 window.onbeforeunload = () => {  
     window.scrollTo(0, 0);   
 };
-/*-------------- sticky footer functionality --------------*/
-/* if the main content of the page is visible = hide the footer! */
-const main = document.querySelector('main');
-const appearOptions = {
-    threshold: 0.8,
-    rootMargin: '50px 0px 0px 0px'
-}
-const appearFooter = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            stickyFooter.classList.toggle('slide');
-            stickyFooter.style.opacity = '1';
-           
-        } else {
-            stickyFooter.classList.toggle('slide');
-        }
-    });
-},appearOptions);
-
-appearFooter.observe(main);
 
 /*--------------- --------------- ---------------*/
 /*-------------- Open live project --------------*/
