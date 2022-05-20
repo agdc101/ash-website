@@ -15,12 +15,60 @@
           transform: translateX(-100%);
 }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
+  }
+  50% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
+  }
+  50% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
+  }
+}
+
 /*- ----------Top Page-------------- -*/
 #arrow {
   cursor: pointer;
   opacity: 0;
-  -webkit-animation: fade .75s ease-in .5s forwards, bounce 1.5s ease-in-out 1.5s infinite;
-          animation: fade .75s ease-in .5s forwards, bounce 1.5s ease-in-out 1.5s infinite;
+  -webkit-animation: fade .75s ease-in 2s forwards, bounce 1.5s ease-in-out 1.5s infinite;
+          animation: fade .75s ease-in 2s forwards, bounce 1.5s ease-in-out 1.5s infinite;
   padding: .7rem;
   width: 40px;
   height: 40px;
@@ -329,7 +377,8 @@ img[alt="shopify icon"] {
 
 @media (min-width: 1280px) {
   #exampleModal .modal-dialog {
-    max-width: 800px;
+    max-width: 900px;
+    margin: 6rem auto;
   }
 }
 
@@ -351,6 +400,12 @@ img[alt="shopify icon"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -371,13 +426,6 @@ img[alt="shopify icon"] {
   }
 }
 
-@media (min-width: 1280px) {
-  #exampleModal .modal-body p,
-  #exampleModal .modal-body span {
-    font-size: 1.05rem;
-  }
-}
-
 #exampleModal p,
 #exampleModal span,
 #exampleModal #modal-pic {
@@ -395,8 +443,8 @@ img[alt="shopify icon"] {
 @media (min-width: 1280px) {
   #exampleModal #modal-pic {
     margin: 0 1.5rem 1rem 0;
-    max-width: 420px;
-    max-height: 410px;
+    max-width: 500px;
+    height: 300px;
   }
 }
 
@@ -416,6 +464,11 @@ img[alt="shopify icon"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#exampleModal strong {
+  text-decoration: underline;
+  color: #062131;
 }
 
 .phpDiv {
@@ -632,8 +685,8 @@ nav a {
   opacity: 0;
   text-align: center;
   position: relative;
-  -webkit-animation: fade 1s ease-in 1.5s forwards;
-          animation: fade 1s ease-in 1.5s forwards;
+  -webkit-animation: fade 2.5s 1.1s forwards;
+          animation: fade 2.5s 1.1s forwards;
 }
 
 .top h1 {

@@ -3,7 +3,8 @@
     padding: 0 !important;
     .modal-dialog {
         @media (min-width: $desktop) {
-            max-width: 800px;
+            max-width: 900px;
+            margin: 6rem auto;
         }
     }
     .modal-header {
@@ -17,6 +18,8 @@
         padding-bottom: 0 !important;
         @media (min-width: $desktop) {
             display: flex;
+            justify-content: space-evenly;
+            align-items: center;
         }
         span {
             font-size: .9rem;
@@ -27,9 +30,6 @@
             max-width: 320px; 
             @media (min-width: $tablet) {
                 font-size: .95rem;
-            }
-            @media (min-width: $desktop) {
-                font-size: 1.05rem;
             }
         }
     }
@@ -46,8 +46,8 @@
         height:210px;
         @media (min-width: $desktop) {
             margin: 0 1.5rem 1rem 0;
-            max-width: 420px;
-            max-height: 410px;
+            max-width: 500px;
+            height:300px;
         }
     }
     .modal-footer {
@@ -58,5 +58,9 @@
             display: flex;
             justify-content: center;
         }       
+    }
+    strong {
+        text-decoration: underline;
+        color: $primary;
     }
 }

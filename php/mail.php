@@ -12,7 +12,7 @@ mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 
 <html>
     <head>
-        <link rel='stylesheet' href='../css/styles.css'>
+        <link rel='stylesheet' href='../css/index.css'>
     </head>
     <body>
         <div class='phpDiv'>

@@ -137,9 +137,9 @@ const buildModal = (index) => {
     modalHeader.innerHTML = headerHTML;
 
     let bodyHTML = `<img id='modal-pic' src=${projects[index].gifLink} alt='${projects[index].imageAlt}'>`;
-    bodyHTML += `<div class='text-flex'><p><strong>Description:</strong> ${projects[index].description}</p>`;
-    bodyHTML += `<span><strong>Languages:</strong> ${projects[index].technologies}</span>`;
-    bodyHTML += `<p><strong>Skills/Techinques used:</strong> ${projects[index].skills}</p>`;
+    bodyHTML += `<div class='text-flex'><p><strong>Description:</strong><br> ${projects[index].description}</p>`;
+    bodyHTML += `<span><strong>Languages:</strong><br> ${projects[index].technologies}</span>`;
+    bodyHTML += `<p><strong>Skills/Techinques:</strong><br> ${projects[index].skills}</p>`;
     bodyHTML += `<p><strong>Mobile Responsive:</strong>  ${projects[index].responsive}</p>`;
     modalBodyContent.innerHTML = bodyHTML;
 
