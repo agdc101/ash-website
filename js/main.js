@@ -100,7 +100,7 @@ const projects = [
         title: 'Movie Guessing Game',
         gifLink: 'img/gifs/movie-game.gif',
         imageAlt: 'a gif demonstrating a movie guessing game.',
-        description: 'Guess the movie! a hangman-style movie guessing game allowing the user five lives to guess the correct title. I plan on improving this project by utlisiing an API so that a largr database of movies can be used.',
+        description: 'Guess the movie! a hangman-style movie guessing game allowing the user five lives to guess the correct title. I plan on improving this project by utilising an API so that a larger database of movies can be used.',
         technologies: 'HTML, CSS, Javascript.',
         skills: 'Javascript Math methods, Array iteration, functions, loops and other JS methods.',
         responsive: `&#x2714`,
