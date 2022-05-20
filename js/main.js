@@ -115,8 +115,8 @@ const projects = [
         technologies: 'HTML, CSS.',
         skills: 'Responsive CSS, Design.',
         responsive: `&#x2714`,
-        siteLink: 'https://agdc101.github.io/interactive_form/ ',
-        githubLink: 'https://github.com/agdc101/interactive_form'
+        siteLink: 'https://agdc101.github.io/firebase.js_web_page/',
+        githubLink: 'https://github.com/agdc101/firebase.js_web_page'
     }
 ]
 /*-------------- --------------------------- --------------*/
